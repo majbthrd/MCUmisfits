@@ -1,0 +1,21 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Cypress_PSoC4_Package" target="8" version="2">
+  <configuration Name="Common" batch_build_configurations="Common" />
+  <project Name="BUILDME">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Cypress_PSoC4/.hg -exclude targets/Cypress_PSoC4/.hgignore -exclude targets/Cypress_PSoC4/Loader/build -exclude targets/Cypress_PSoC4/Loader/Loader.hzs Cypress_PSoC4.hzq Cypress_PSoC4_package.xml targets/Cypress_PSoC4"
+      stage_post_build_command_wd="$(ProjectDir)" />
+    <file file_name="Cypress_PSoC4_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="targets/Cypress_PSoC4/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="targets/Cypress_PSoC4/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+</solution>

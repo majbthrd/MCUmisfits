@@ -1,0 +1,6 @@
+*.bak
+*.hzs
+*.hzq
+./Cypress_PSoC4/targets/Cypress_PSoC4/build/*
+./Synwit_SWM/targets/Synwit_SWM/build/*
+
