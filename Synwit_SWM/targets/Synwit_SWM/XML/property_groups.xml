@@ -1,0 +1,33 @@
+<!DOCTYPE CrossStudio_Group_Values>
+<propertyGroups>
+  <group short="Target Processor" group="Build Options" long="Select a set of target options" name="Target" default="SWM050">
+    <groupEntry name="SWM050" family="SWM">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="SWM050" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Synwit_SWM/CMSIS/Device/SWM/Include;DeviceHeaderFile=$(TargetsDir)/Synwit_SWM/CMSIS/Device/SWM/Include/swm050.h;DeviceMemoryMapFile=$(TargetsDir)/Synwit_SWM/XML/SWM_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Synwit_SWM/XML/SWM050_Registers.xml;DeviceSystemFile=$(TargetsDir)/Synwit_SWM/CMSIS/Device/SWM/Source/system_SWM050.c;DeviceFamily=SWM;DeviceVectorsFile=$(TargetsDir)/Synwit_SWM/Source/SWM050_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Synwit_SWM/Loader/SWM050_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x2000;RAM_SIZE=0x400" />
+      <cdefine name="__SWM050__" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+  </group>
+  <group short="Section Placement" group="Build Options" long="Select a set of options based on section placement." name="Placement" default="Flash">
+    <groupEntry name="Flash">
+      <property name="linker_section_placement_file" value="$(StudioDir)/targets/Cortex_M/flash_placement.xml" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+      <cdefine name="FLASH_PLACEMENT" value="1" />
+    </groupEntry>
+  </group>
+  <group short="Startup From Reset" group="Build Options" long="Specify whether application will startup up by itself from reset." name="Startup" default="Release Only">
+    <groupEntry name="No" />
+    <groupEntry name="Release Only">
+      <cdefine name="STARTUP_FROM_RESET" configuration="Release" />
+    </groupEntry>
+    <groupEntry name="Yes">
+      <cdefine name="STARTUP_FROM_RESET" />
+    </groupEntry>
+  </group>
+</propertyGroups>

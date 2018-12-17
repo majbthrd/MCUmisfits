@@ -1,0 +1,310 @@
+<!DOCTYPE Register_Definition_File>
+<Processor name="SWM050" description="Synwit SWM050">
+  <RegisterGroup name="SYS" start="0x400F0000" description="SYS">
+    <Register start="+0x0" name="CLK_CFG" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="10" name="CORE_CLK_DIV" />
+      <BitField start="16" size="6" name="TMRSE_CLK_DIV" />
+    </Register>
+    <Register start="+0x4" name="PCLK_EN" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="4" size="1" name="WDT_CLK" />
+      <BitField start="6" size="1" name="TMRSE0_CLK" />
+      <BitField start="17" size="1" name="TMRSE1_CLK" />
+    </Register>
+    <Register start="+0x8" name="DBL_IRC" access="Read/Write" reset_value="0x00000000" reset_mask="DBL_IRC">
+      <BitField start="0" size="1" name="DBL_IRC">
+        <Enum name="18M" start="0x0" description="18M" />
+        <Enum name="36M" start="0x1" description="36M" />
+      </BitField>
+    </Register>
+    <Register start="+0xC" name="OSC_DIS" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="OSC_DIS" />
+      <BitField start="4" size="1" name="PWR_DWN" />
+      <BitField start="5" size="1" name="MOS_DIS" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="PORT" start="0x40000000" description="PORT">
+    <Register start="+0x30" name="SWD_SEL" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="SWDEN" />
+    </Register>
+    <Register start="+0x80" name="PORTA_SEL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="2" name="PA00">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="TIMER_SE0_IN" start="0x1" description="TIMER_SE0_IN" />
+      </BitField>
+      <BitField start="2" size="2" name="PA01">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="TIMER_SE0_OUT" start="0x1" description="TIMER_SE0_OUT" />
+      </BitField>
+      <BitField start="4" size="2" name="PA20">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="TIMER_SE1_IN" start="0x1" description="TIMER_SE1_IN" />
+      </BitField>
+      <BitField start="14" size="2" name="PA07">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="TIMER_SE1_OUT" start="0x1" description="TIMER_SE1_OUT" />
+      </BitField>
+    </Register>
+    <Register start="+0x90" name="PORTA_PULLUP" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="PA0" />
+      <BitField start="1" size="1" name="PA1" />
+      <BitField start="2" size="1" name="PA2" />
+      <BitField start="3" size="1" name="PA3" />
+      <BitField start="4" size="1" name="PA4" />
+      <BitField start="5" size="1" name="PA5" />
+      <BitField start="6" size="1" name="PA6" />
+      <BitField start="7" size="1" name="PA7" />
+    </Register>
+    <Register start="+0xE0" name="PORTA_INDIS" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="PA0" />
+      <BitField start="1" size="1" name="PA1" />
+      <BitField start="2" size="1" name="PA2" />
+      <BitField start="3" size="1" name="PA3" />
+      <BitField start="4" size="1" name="PA4" />
+      <BitField start="5" size="1" name="PA5" />
+      <BitField start="6" size="1" name="PA6" />
+      <BitField start="7" size="1" name="PA7" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="GPIOA" start="0x40001000" description="GPIOA">
+    <Register start="+0x0" name="DAT" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="DAT_0" />
+      <BitField start="1" size="1" name="DAT_1" />
+      <BitField start="2" size="1" name="DAT_2" />
+      <BitField start="3" size="1" name="DAT_3" />
+      <BitField start="4" size="1" name="DAT_4" />
+      <BitField start="5" size="1" name="DAT_5" />
+      <BitField start="6" size="1" name="DAT_6" />
+      <BitField start="7" size="1" name="DAT_7" />
+      <BitField start="8" size="1" name="DAT_8" />
+      <BitField start="9" size="1" name="DAT_9" />
+    </Register>
+    <Register start="+0x4" name="DIR" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="DIR_0" />
+      <BitField start="1" size="1" name="DIR_1" />
+      <BitField start="2" size="1" name="DIR_2" />
+      <BitField start="3" size="1" name="DIR_3" />
+      <BitField start="4" size="1" name="DIR_4" />
+      <BitField start="5" size="1" name="DIR_5" />
+      <BitField start="6" size="1" name="DIR_6" />
+      <BitField start="7" size="1" name="DIR_7" />
+      <BitField start="8" size="1" name="DIR_8" />
+      <BitField start="9" size="1" name="DIR_9" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="GPIO_EXTA" start="0x40001050" description="GPIO_EXTA">
+    <Register start="+0x0" name="EXT" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EXT0" />
+      <BitField start="1" size="1" name="EXT1" />
+      <BitField start="2" size="1" name="EXT2" />
+      <BitField start="3" size="1" name="EXT3" />
+      <BitField start="4" size="1" name="EXT4" />
+      <BitField start="5" size="1" name="EXT5" />
+      <BitField start="6" size="1" name="EXT6" />
+      <BitField start="7" size="1" name="EXT7" />
+      <BitField start="8" size="1" name="EXT8" />
+      <BitField start="9" size="1" name="EXT9" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="EXTIA" start="0x40001030" description="EXTIA">
+    <Register start="+0x0" name="INTEN" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTEN0">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="1" size="1" name="INTEN1">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="2" size="1" name="INTEN2">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="3" size="1" name="INTEN3">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="4" size="1" name="INTEN4">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="5" size="1" name="INTEN5">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="6" size="1" name="INTEN6">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="7" size="1" name="INTEN7">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="8" size="1" name="INTEN8">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+      <BitField start="9" size="1" name="INTEN9">
+        <Enum name="GPIO" start="0x0" description="GPIO" />
+        <Enum name="Interrupt" start="0x1" description="Interrupt" />
+      </BitField>
+    </Register>
+    <Register start="+0x4" name="INTMSK" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTMSK0">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="1" size="1" name="INTMSK1">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="2" size="1" name="INTMSK2">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="3" size="1" name="INTMSK3">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="4" size="1" name="INTMSK4">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="5" size="1" name="INTMSK5">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="6" size="1" name="INTMSK6">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="7" size="1" name="INTMSK7">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="8" size="1" name="INTMSK8">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+      <BitField start="9" size="1" name="INTMSK9">
+        <Enum name="unmasked" start="0x0" description="unmasked" />
+        <Enum name="masked" start="0x1" description="masked" />
+      </BitField>
+    </Register>
+    <Register start="+0x8" name="INTMODE" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTMODE0" />
+      <BitField start="1" size="1" name="INTMODE1" />
+      <BitField start="2" size="1" name="INTMODE2" />
+      <BitField start="3" size="1" name="INTMODE3" />
+      <BitField start="4" size="1" name="INTMODE4" />
+      <BitField start="5" size="1" name="INTMODE5" />
+      <BitField start="6" size="1" name="INTMODE6" />
+      <BitField start="7" size="1" name="INTMODE7" />
+      <BitField start="8" size="1" name="INTMODE8" />
+      <BitField start="9" size="1" name="INTMODE9" />
+    </Register>
+    <Register start="+0xC" name="INTLEVEL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTLEVEL0" />
+      <BitField start="1" size="1" name="INTLEVEL1" />
+      <BitField start="2" size="1" name="INTLEVEL2" />
+      <BitField start="3" size="1" name="INTLEVEL3" />
+      <BitField start="4" size="1" name="INTLEVEL4" />
+      <BitField start="5" size="1" name="INTLEVEL5" />
+      <BitField start="6" size="1" name="INTLEVEL6" />
+      <BitField start="7" size="1" name="INTLEVEL7" />
+      <BitField start="8" size="1" name="INTLEVEL8" />
+      <BitField start="9" size="1" name="INTLEVEL9" />
+    </Register>
+    <Register start="+0x10" name="INTSTAT" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTSTAT0" />
+      <BitField start="1" size="1" name="INTSTATL1" />
+      <BitField start="2" size="1" name="INTSTAT2" />
+      <BitField start="3" size="1" name="INTSTAT3" />
+      <BitField start="4" size="1" name="INTSTAT4" />
+      <BitField start="5" size="1" name="INTSTAT5" />
+      <BitField start="6" size="1" name="INTSTAT6" />
+      <BitField start="7" size="1" name="INTSTAT7" />
+      <BitField start="8" size="1" name="INTSTAT8" />
+      <BitField start="9" size="1" name="INTSTAT9" />
+    </Register>
+    <Register start="+0x14" name="INTRAWS" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTRAWS0" />
+      <BitField start="1" size="1" name="INTRAWS1" />
+      <BitField start="2" size="1" name="INTRAWS2" />
+      <BitField start="3" size="1" name="INTRAWS3" />
+      <BitField start="4" size="1" name="INTRAWS4" />
+      <BitField start="5" size="1" name="INTRAWS5" />
+      <BitField start="6" size="1" name="INTRAWS6" />
+      <BitField start="7" size="1" name="INTRAWS7" />
+      <BitField start="8" size="1" name="INTRAWS8" />
+      <BitField start="9" size="1" name="INTRAWS9" />
+    </Register>
+    <Register start="+0x1C" name="INTCLR" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="INTCLR0" />
+      <BitField start="1" size="1" name="INTCLR1" />
+      <BitField start="2" size="1" name="INTCLR2" />
+      <BitField start="3" size="1" name="INTCLR3" />
+      <BitField start="4" size="1" name="INTCLR4" />
+      <BitField start="5" size="1" name="INTCLR5" />
+      <BitField start="6" size="1" name="INTCLR6" />
+      <BitField start="7" size="1" name="INTCLR7" />
+      <BitField start="8" size="1" name="INTCLR8" />
+      <BitField start="9" size="1" name="INTCLR9" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="WDT" start="0x40019000" description="WDT">
+    <Register start="+0x0" name="CR" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EN" />
+      <BitField start="1" size="1" name="RMOD" />
+    </Register>
+    <Register start="+0x4" name="TOR" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="4" name="TOP" />
+      <BitField start="4" size="4" name="TOP_INIT" />
+    </Register>
+    <Register start="+0x8" name="CCVR" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0xC" name="CRR" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x10" name="STAT" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x14" name="ICLR" access="ReadOnly" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+  </RegisterGroup>
+  <RegisterGroup name="TMRSE0" start="0x40002000" description="TMRSE0">
+    <Register start="+0x0" name="CTRL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EN" />
+      <BitField start="4" size="2" name="WMOD" />
+      <BitField start="8" size="1" name="OSCMOD" />
+      <BitField start="12" size="2" name="OUTMOD" />
+      <BitField start="16" size="1" name="EDGE_F" />
+      <BitField start="24" size="1" name="VALSAVE" />
+      <BitField start="28" size="1" name="SINGLE" />
+    </Register>
+    <Register start="+0x4" name="TARVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x8" name="CURVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0xC" name="CAPVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x10" name="CAPHALF" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x14" name="STATE_P" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x80" name="OUT_LVL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x84" name="INTCTRL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EN" />
+      <BitField start="1" size="1" name="MASKn" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="TMRSE1" start="0x40002400" description="TMRSE1">
+    <Register start="+0x0" name="CTRL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EN" />
+      <BitField start="4" size="2" name="WMOD" />
+      <BitField start="8" size="1" name="OSCMOD" />
+      <BitField start="12" size="2" name="OUTMOD" />
+      <BitField start="16" size="1" name="EDGE_F" />
+      <BitField start="24" size="1" name="VALSAVE" />
+      <BitField start="28" size="1" name="SINGLE" />
+    </Register>
+    <Register start="+0x4" name="TARVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x8" name="CURVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0xC" name="CAPVAL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x10" name="CAPHALF" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x14" name="STATE_P" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x80" name="OUT_LVL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF" />
+    <Register start="+0x84" name="INTCTRL" access="Read/Write" reset_value="0x00000000" reset_mask="0xFFFFFFFF">
+      <BitField start="0" size="1" name="EN" />
+      <BitField start="1" size="1" name="MASKn" />
+    </Register>
+  </RegisterGroup>
+</Processor>
