@@ -1,5 +1,5 @@
 <!DOCTYPE CrossStudio_Package_Description_File>
-<package cpu_manufacturer="Synwit" cpu_family="SWM" version="0.1" crossstudio_versions="8:1.6-" >
+<package crossstudio_versions="8:3.0-" version="0.2" dependencies="CMSIS" filetype="hzq" cpu_family="SWM" cpu_manufacturer="Synwit" name="Synwit_SWM">
   <group title="System Files">
     <file file_name="$(TargetsDir)/Synwit_SWM/Source/SWM050_Vectors.s" title="SWM050 Vector Table" />
     <file file_name="$(TargetsDir)/Synwit_SWM/Source/SWM_Startup.s" title="SWM Startup Code" />
@@ -9,8 +9,11 @@
     <file file_name="$(TargetsDir)/Synwit_SWM/Loader/Loader.hzp" title="SWM Loader Solution" />
   </group>
   <history>
+    <version name="0.2" >
+      <description>bug fix in flash loader (wrong behavior when starting writing at 0x100 or higher)</description>
+    </version>
     <version name="0.1" >
-      <description>development</description>
+      <description>in development</description>
     </version>
   </history>
   <targets>

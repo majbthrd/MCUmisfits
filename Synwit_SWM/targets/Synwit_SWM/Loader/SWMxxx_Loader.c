@@ -27,7 +27,7 @@ static libmem_geometry_t geometry[2] =
 
 static int libmem_erase_impl(libmem_driver_handle_t *h, uint8_t *start, size_t size, uint8_t **erased_start, size_t *erased_size)
 {
-  uint32_t erase_addr = ((uint32_t)start & (PAGE_SIZE - 1)); /* align downwards to a page boundary */
+  uint32_t erase_addr = ((uint32_t)start & ~(PAGE_SIZE - 1)); /* align downwards to a page boundary */
   uint32_t ending_addr = (uint32_t)start + size;
 
   /* sequentially erase pages until we've at least reached the desired end address */
