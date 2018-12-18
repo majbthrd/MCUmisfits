@@ -1,0 +1,3628 @@
+<!DOCTYPE Register_Definition_File>
+<Processor name="NUC505" description="Nuvoton NUC505">
+  <RegisterGroup name="GCR">
+    <Register start="0x40000000" name="SYS_PDID" access="Read/Write">
+      <BitField start="0" size="24" name="PDID" />
+    </Register>
+    <Register start="0x40000004" name="SYS_BOOTSET" access="Read/Write">
+      <BitField start="0" size="4" name="BOOTSET" />
+    </Register>
+    <Register start="0x40000008" name="SYS_IPRST0" access="Read/Write">
+      <BitField start="0" size="1" name="CPURST" />
+      <BitField start="1" size="1" name="CHIPRST" />
+    </Register>
+    <Register start="0x4000000c" name="SYS_LVDCTL" access="Read/Write">
+      <BitField start="0" size="1" name="LVDIF" />
+      <BitField start="1" size="1" name="LVDSEL" />
+      <BitField start="2" size="1" name="LVDEN" />
+      <BitField start="3" size="1" name="LVREN" />
+      <BitField start="4" size="1" name="PORENB" />
+    </Register>
+    <Register start="0x40000010" name="SYS_WAKEUP" access="Read/Write">
+      <BitField start="0" size="1" name="I2C0WE" />
+      <BitField start="1" size="1" name="I2C1WE" />
+      <BitField start="2" size="1" name="GPIOWE" />
+      <BitField start="3" size="1" name="RTCWE" />
+      <BitField start="4" size="1" name="WDTWE" />
+      <BitField start="5" size="1" name="TMR0WE" />
+      <BitField start="6" size="1" name="TMR1WE" />
+      <BitField start="7" size="1" name="TMR2WE" />
+      <BitField start="8" size="1" name="TMR3WE" />
+      <BitField start="9" size="1" name="UART0WE" />
+      <BitField start="10" size="1" name="UART1WE" />
+      <BitField start="11" size="1" name="UART2WE" />
+      <BitField start="12" size="1" name="USBDWE" />
+      <BitField start="13" size="1" name="USBHWE" />
+      <BitField start="16" size="1" name="I2C0WF" />
+      <BitField start="17" size="1" name="I2C1WF" />
+      <BitField start="18" size="1" name="GPIOWF" />
+      <BitField start="19" size="1" name="RTCWF" />
+      <BitField start="20" size="1" name="WDTWF" />
+      <BitField start="21" size="1" name="TMR0WF" />
+      <BitField start="22" size="1" name="TMR1WF" />
+      <BitField start="23" size="1" name="TMR2WF" />
+      <BitField start="24" size="1" name="TMR3WF" />
+      <BitField start="25" size="1" name="UART0WF" />
+      <BitField start="26" size="1" name="UART1WF" />
+      <BitField start="27" size="1" name="UART2WF" />
+      <BitField start="28" size="1" name="USBDWF" />
+      <BitField start="29" size="1" name="USBHWF" />
+    </Register>
+    <Register start="0x40000014" name="SYS_IPRST1" access="Read/Write">
+      <BitField start="0" size="1" name="UART0RST" />
+      <BitField start="1" size="1" name="UART1RST" />
+      <BitField start="2" size="1" name="TMR0RST" />
+      <BitField start="3" size="1" name="TMR1RST" />
+      <BitField start="4" size="1" name="WDTFRST" />
+      <BitField start="5" size="1" name="TMR2RST" />
+      <BitField start="6" size="1" name="UART2RST" />
+      <BitField start="7" size="1" name="PWMRST" />
+      <BitField start="8" size="1" name="I2C0RST" />
+      <BitField start="9" size="1" name="I2C1RST" />
+      <BitField start="10" size="1" name="SPIMRST" />
+      <BitField start="11" size="1" name="USBDRST" />
+      <BitField start="12" size="1" name="TMR3RST" />
+      <BitField start="13" size="1" name="WDTPRST" />
+      <BitField start="17" size="1" name="I2SRST" />
+      <BitField start="18" size="1" name="USBHRST" />
+      <BitField start="24" size="1" name="SDHRST" />
+      <BitField start="25" size="1" name="SRAMRST" />
+      <BitField start="27" size="1" name="GPIORST" />
+      <BitField start="28" size="1" name="ADCRST" />
+      <BitField start="30" size="1" name="SPI0RST" />
+      <BitField start="31" size="1" name="SPI1RST" />
+    </Register>
+    <Register start="0x40000018" name="SYS_NMICTL" access="Read/Write">
+      <BitField start="0" size="1" name="RTCIEN" />
+      <BitField start="1" size="1" name="WDTIEN" />
+      <BitField start="2" size="1" name="PORIEN" />
+      <BitField start="3" size="1" name="EINT0IEN" />
+      <BitField start="4" size="1" name="EINT1IEN" />
+      <BitField start="5" size="1" name="EINT2IEN" />
+      <BitField start="6" size="1" name="EINT3IEN" />
+      <BitField start="7" size="1" name="LVDIEN" />
+      <BitField start="16" size="1" name="RTCIF" />
+      <BitField start="17" size="1" name="WDTIF" />
+      <BitField start="18" size="1" name="PORIF" />
+      <BitField start="19" size="1" name="EINT0IF" />
+      <BitField start="20" size="1" name="EINT1IF" />
+      <BitField start="21" size="1" name="EINT2IF" />
+      <BitField start="22" size="1" name="EINT3IF" />
+      <BitField start="23" size="1" name="LVDIF" />
+    </Register>
+    <Register start="0x4000001c" name="SYS_RSTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="PINRF" />
+      <BitField start="1" size="1" name="LVRF" />
+      <BitField start="2" size="1" name="WDTRF" />
+      <BitField start="3" size="1" name="CPURF" />
+      <BitField start="4" size="1" name="PORF" />
+    </Register>
+    <Register start="0x40000020" name="SYS_AHBCTL" access="Read/Write">
+      <BitField start="0" size="1" name="PRISEL" />
+      <BitField start="4" size="1" name="CPUHPRI" />
+      <BitField start="5" size="1" name="PRISTS" />
+    </Register>
+    <Register start="0x40000030" name="SYS_GPA_MFPL" access="Read/Write">
+      <BitField start="0" size="3" name="PA0MFP" />
+      <BitField start="4" size="3" name="PA1MFP" />
+      <BitField start="8" size="3" name="PA2MFP" />
+      <BitField start="12" size="3" name="PA3MFP" />
+      <BitField start="16" size="3" name="PA4MFP" />
+      <BitField start="20" size="3" name="PA5MFP" />
+      <BitField start="24" size="3" name="PA6MFP" />
+      <BitField start="28" size="3" name="PA7MFP" />
+    </Register>
+    <Register start="0x40000034" name="SYS_GPA_MFPH" access="Read/Write">
+      <BitField start="0" size="3" name="PA8MFP" />
+      <BitField start="4" size="3" name="PA9MFP" />
+      <BitField start="8" size="3" name="PA10MFP" />
+      <BitField start="12" size="3" name="PA11MFP" />
+      <BitField start="16" size="3" name="PA12MFP" />
+      <BitField start="20" size="3" name="PA13MFP" />
+      <BitField start="24" size="3" name="PA14MFP" />
+      <BitField start="28" size="3" name="PA15MFP" />
+    </Register>
+    <Register start="0x40000038" name="SYS_GPB_MFPL" access="Read/Write">
+      <BitField start="0" size="3" name="PB0MFP" />
+      <BitField start="4" size="3" name="PB1MFP" />
+      <BitField start="8" size="3" name="PB2MFP" />
+      <BitField start="12" size="3" name="PB3MFP" />
+      <BitField start="16" size="3" name="PB4MFP" />
+      <BitField start="20" size="3" name="PB5MFP" />
+      <BitField start="24" size="3" name="PB6MFP" />
+      <BitField start="28" size="3" name="PB7MFP" />
+    </Register>
+    <Register start="0x4000003c" name="SYS_GPB_MFPH" access="Read/Write">
+      <BitField start="0" size="3" name="PB8MFP" />
+      <BitField start="4" size="3" name="PB9MFP" />
+      <BitField start="8" size="3" name="PB10MFP" />
+      <BitField start="12" size="3" name="PB11MFP" />
+      <BitField start="16" size="3" name="PB12MFP" />
+      <BitField start="20" size="3" name="PB13MFP" />
+      <BitField start="24" size="3" name="PB14MFP" />
+      <BitField start="28" size="3" name="PB15MFP" />
+    </Register>
+    <Register start="0x40000040" name="SYS_GPC_MFPL" access="Read/Write">
+      <BitField start="0" size="3" name="PC0MFP" />
+      <BitField start="4" size="3" name="PC1MFP" />
+      <BitField start="8" size="3" name="PC2MFP" />
+      <BitField start="12" size="3" name="PC3MFP" />
+      <BitField start="16" size="3" name="PC4MFP" />
+      <BitField start="20" size="3" name="PC5MFP" />
+      <BitField start="24" size="3" name="PC6MFP" />
+      <BitField start="28" size="3" name="PC7MFP" />
+    </Register>
+    <Register start="0x40000044" name="SYS_GPC_MFPH" access="Read/Write">
+      <BitField start="0" size="3" name="PC8MFP" />
+      <BitField start="4" size="3" name="PC9MFP" />
+      <BitField start="8" size="3" name="PC10MFP" />
+      <BitField start="12" size="3" name="PC11MFP" />
+      <BitField start="16" size="3" name="PC12MFP" />
+      <BitField start="20" size="3" name="PC13MFP" />
+      <BitField start="24" size="3" name="PC14MFP" />
+    </Register>
+    <Register start="0x40000048" name="SYS_GPD_MFPL" access="Read/Write">
+      <BitField start="0" size="3" name="PD0MFP" />
+      <BitField start="4" size="3" name="PD1MFP" />
+      <BitField start="8" size="3" name="PD2MFP" />
+      <BitField start="12" size="3" name="PD3MFP" />
+      <BitField start="16" size="3" name="PD4MFP" />
+    </Register>
+    <Register start="0x40000050" name="SYS_LVMPADDR" access="Read/Write">
+    </Register>
+    <Register start="0x40000054" name="SYS_LVMPLEN" access="Read/Write">
+      <BitField start="0" size="8" name="LEN" />
+    </Register>
+    <Register start="0x40000058" name="SYS_RVMPADDR" access="Read/Write">
+    </Register>
+    <Register start="0x4000005c" name="SYS_RVMPLEN" access="Read/Write">
+      <BitField start="0" size="1" name="RLDVMP" />
+      <BitField start="24" size="8" name="LEN" />
+    </Register>
+    <Register start="0x4000006c" name="SYS_EPADPUEN" access="Read/Write">
+      <BitField start="0" size="5" name="EPADPUEN" />
+    </Register>
+    <Register start="0x40000070" name="SYS_GPADS" access="Read/Write">
+      <BitField start="0" size="3" name="PA0DS" />
+      <BitField start="4" size="3" name="PA1DS" />
+      <BitField start="8" size="3" name="PA2DS" />
+      <BitField start="12" size="3" name="PA3DS" />
+      <BitField start="16" size="3" name="PA4DS" />
+      <BitField start="20" size="3" name="PA5DS" />
+      <BitField start="24" size="3" name="PA6DS" />
+      <BitField start="28" size="3" name="PA7DS" />
+    </Register>
+    <Register start="0x40000074" name="SYS_GPAIBE" access="Read/Write">
+      <BitField start="0" size="8" name="IBSELx" />
+      <BitField start="8" size="8" name="CMOSENx" />
+      <BitField start="16" size="8" name="DINONx" />
+      <BitField start="24" size="7" name="SMTENx" />
+    </Register>
+    <Register start="0x40000078" name="SYS_GPBIBE" access="Read/Write">
+      <BitField start="0" size="16" name="CMOSENx" />
+      <BitField start="16" size="15" name="SMTENx" />
+    </Register>
+    <Register start="0x4000007c" name="SYS_GPCIBE" access="Read/Write">
+      <BitField start="0" size="15" name="CMOSENx" />
+      <BitField start="16" size="15" name="SMTENx" />
+    </Register>
+    <Register start="0x40000080" name="SYS_GPDIBE" access="Read/Write">
+      <BitField start="0" size="2" name="CMOSENx" />
+      <BitField start="2" size="3" name="IBSELx" />
+      <BitField start="16" size="2" name="SMTENx" />
+      <BitField start="18" size="3" name="DINONx" />
+    </Register>
+    <Register start="0x40000084" name="SYS_GPDDS" access="Read/Write">
+      <BitField start="0" size="3" name="PD2DS" />
+      <BitField start="4" size="3" name="PD3DS" />
+      <BitField start="8" size="3" name="PD4DS" />
+    </Register>
+    <Register start="0x40000100" name="SYS_RSTDBCNT" access="Read/Write">
+      <BitField start="0" size="16" name="RSTDBCNT" />
+    </Register>
+    <Register start="0x40000104" name="SYS_RSTDBEN" access="Read/Write">
+      <BitField start="0" size="1" name="RSTDBEN" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="SCS">
+    <Register start="0xe000e010" name="SYST_CSR" access="Read/Write">
+      <BitField start="0" size="1" name="ENABLE" />
+      <BitField start="1" size="1" name="TICKINT" />
+      <BitField start="2" size="1" name="CLKSRC" />
+      <BitField start="16" size="1" name="COUNTFLAG" />
+    </Register>
+    <Register start="0xe000e014" name="SYST_RVR" access="Read/Write">
+      <BitField start="0" size="24" name="RELOAD" />
+    </Register>
+    <Register start="0xe000e018" name="SYST_CVR" access="Read/Write">
+      <BitField start="0" size="24" name="CURRENT" />
+    </Register>
+    <Register start="0xe000e100" name="NVIC_ISER0" access="Read/Write">
+    </Register>
+    <Register start="0xe000e180" name="NVIC_ICER0" access="Read/Write">
+    </Register>
+    <Register start="0xe000e200" name="NVIC_ISPR0" access="Read/Write">
+    </Register>
+    <Register start="0xe000e280" name="NVIC_ICPR0" access="Read/Write">
+    </Register>
+    <Register start="0xe000e300" name="NVIC_IABR0" access="Read/Write">
+    </Register>
+    <Register start="0xe000ed04" name="ICSR" access="Read/Write">
+      <BitField start="0" size="6" name="VECTACTIVE" />
+      <BitField start="11" size="1" name="RETTOBASE" />
+      <BitField start="12" size="6" name="VECTPENDING" />
+      <BitField start="22" size="1" name="ISRPENDING" />
+      <BitField start="23" size="1" name="ISRPREEMPT" />
+      <BitField start="25" size="1" name="PENDSTCLR" />
+      <BitField start="26" size="1" name="PENDSTSET" />
+      <BitField start="27" size="1" name="PENDSVCLR" />
+      <BitField start="28" size="1" name="PENDSVSET" />
+      <BitField start="31" size="1" name="NMIPENDSET" />
+    </Register>
+    <Register start="0xe000ed0c" name="AIRCR" access="Read/Write">
+      <BitField start="1" size="1" name="VECTCLRACTIVE" />
+      <BitField start="2" size="1" name="SYSRESETREQ" />
+      <BitField start="8" size="3" name="PRIGROUP" />
+      <BitField start="15" size="1" name="ENDIANNESS" />
+      <BitField start="16" size="16" name="VECTORKEY" />
+    </Register>
+    <Register start="0xe000ed10" name="SCR" access="Read/Write">
+      <BitField start="1" size="1" name="SLEEPONEXIT" />
+      <BitField start="2" size="1" name="SLEEPDEEP" />
+      <BitField start="4" size="1" name="SEVONPEND" />
+    </Register>
+    <Register start="0xe000ed18" name="SHPR1" access="Read/Write">
+      <BitField start="0" size="8" name="PRI_4" />
+      <BitField start="8" size="8" name="PRI_5" />
+      <BitField start="16" size="8" name="PRI_6" />
+    </Register>
+    <Register start="0xe000ed1c" name="SHPR2" access="Read/Write">
+      <BitField start="30" size="2" name="PRI_11" />
+    </Register>
+    <Register start="0xe000ed20" name="SHPR3" access="Read/Write">
+      <BitField start="22" size="2" name="PRI_14" />
+      <BitField start="30" size="2" name="PRI_15" />
+    </Register>
+    <Register start="0xe000ef00" name="NVIC_STIR" access="Read/Write">
+      <BitField start="0" size="9" name="INTID" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR0">
+    <Register start="0xe000e400" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR1">
+    <Register start="0xe000e404" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR2">
+    <Register start="0xe000e408" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR3">
+    <Register start="0xe000e40c" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR4">
+    <Register start="0xe000e410" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR5">
+    <Register start="0xe000e414" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR6">
+    <Register start="0xe000e418" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="NVIC_IPR7">
+    <Register start="0xe000e41c" name="NVIC_IPRN" access="Read/Write">
+      <BitField start="4" size="4" name="PRI_4n_0" />
+      <BitField start="12" size="4" name="PRI_4n_1" />
+      <BitField start="20" size="4" name="PRI_4n_2" />
+      <BitField start="28" size="4" name="PRI_4n_3" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="CLK">
+    <Register start="0x40000200" name="CLK_PWRCTL" access="Read/Write">
+      <BitField start="0" size="1" name="HXTEN" />
+      <BitField start="1" size="1" name="HXTCTL" />
+      <BitField start="2" size="1" name="PDWKIF" />
+      <BitField start="3" size="1" name="PDWKIEN" />
+      <BitField start="8" size="16" name="PDWKPSC" />
+      <BitField start="24" size="1" name="PDWTCPU" />
+    </Register>
+    <Register start="0x40000204" name="CLK_AHBCLK" access="Read/Write">
+      <BitField start="0" size="1" name="SRAM01CKEN" />
+      <BitField start="1" size="1" name="SRAM23CKEN" />
+      <BitField start="2" size="1" name="ROMCKEN" />
+      <BitField start="3" size="1" name="SPIMCKEN" />
+      <BitField start="5" size="1" name="SDHCKEN" />
+      <BitField start="6" size="1" name="USBDCKEN" />
+      <BitField start="9" size="1" name="USBHCKEN" />
+    </Register>
+    <Register start="0x40000208" name="CLK_APBCLK" access="Read/Write">
+      <BitField start="0" size="1" name="TMR0CKEN" />
+      <BitField start="1" size="1" name="TMR1CKEN" />
+      <BitField start="2" size="1" name="TMR2CKEN" />
+      <BitField start="3" size="1" name="TMR3CKEN" />
+      <BitField start="4" size="1" name="WDTCKEN" />
+      <BitField start="5" size="1" name="I2C0CKEN" />
+      <BitField start="6" size="1" name="I2C1CKEN" />
+      <BitField start="7" size="1" name="RTCCKEN" />
+      <BitField start="8" size="1" name="PWMCKEN" />
+      <BitField start="9" size="1" name="SPI0CKEN" />
+      <BitField start="10" size="1" name="SPI1CKEN" />
+      <BitField start="11" size="1" name="UART0CKEN" />
+      <BitField start="12" size="1" name="UART1CKEN" />
+      <BitField start="13" size="1" name="UART2CKEN" />
+      <BitField start="14" size="1" name="I2SCKEN" />
+      <BitField start="15" size="1" name="ADCCKEN" />
+    </Register>
+    <Register start="0x40000210" name="CLK_CLKDIV0" access="Read/Write">
+      <BitField start="0" size="4" name="HCLKDIV" />
+      <BitField start="7" size="1" name="HCLKSEL" />
+      <BitField start="8" size="4" name="PCLKDIV" />
+      <BitField start="16" size="5" name="USBDDIV" />
+      <BitField start="23" size="1" name="USBDSEL" />
+      <BitField start="24" size="4" name="USBHDIV" />
+      <BitField start="31" size="1" name="USBHSEL" />
+    </Register>
+    <Register start="0x40000214" name="CLK_CLKDIV1" access="Read/Write">
+      <BitField start="0" size="8" name="ADCDIV" />
+      <BitField start="8" size="8" name="STICKDIV" />
+      <BitField start="16" size="11" name="SDHDIV" />
+      <BitField start="28" size="1" name="ADCSEL" />
+      <BitField start="30" size="1" name="SDHSEL" />
+    </Register>
+    <Register start="0x40000218" name="CLK_CLKDIV2" access="Read/Write">
+      <BitField start="0" size="8" name="I2SDIV" />
+      <BitField start="24" size="2" name="I2SSEL" />
+      <BitField start="28" size="1" name="SPI0SEL" />
+      <BitField start="29" size="1" name="SPI1SEL" />
+    </Register>
+    <Register start="0x4000021c" name="CLK_CLKDIV3" access="Read/Write">
+      <BitField start="0" size="4" name="UART0DIV" />
+      <BitField start="4" size="1" name="UART0SEL" />
+      <BitField start="8" size="4" name="UART1DIV" />
+      <BitField start="12" size="1" name="UART1SEL" />
+      <BitField start="16" size="4" name="UART2DIV" />
+      <BitField start="20" size="1" name="UART2SEL" />
+    </Register>
+    <Register start="0x40000220" name="CLK_PLLCTL" access="Read/Write">
+      <BitField start="0" size="7" name="FBDIV" />
+      <BitField start="7" size="6" name="INDIV" />
+      <BitField start="13" size="3" name="OUTDIV" />
+      <BitField start="16" size="1" name="BP" />
+      <BitField start="17" size="1" name="PD" />
+    </Register>
+    <Register start="0x40000228" name="CLK_APLLCTL" access="Read/Write">
+      <BitField start="0" size="6" name="INDIV" />
+      <BitField start="6" size="7" name="FBDIV" />
+      <BitField start="13" size="3" name="OUTDIV" />
+      <BitField start="16" size="1" name="PD" />
+      <BitField start="18" size="1" name="MODE" />
+      <BitField start="20" size="12" name="FRAC" />
+    </Register>
+    <Register start="0x40000230" name="CLK_CLKDIV4" access="Read/Write">
+      <BitField start="0" size="8" name="TMR0DIV" />
+      <BitField start="8" size="8" name="TMR1DIV" />
+      <BitField start="16" size="8" name="TMR2DIV" />
+      <BitField start="24" size="1" name="TMR0SEL" />
+      <BitField start="25" size="1" name="TMR1SEL" />
+      <BitField start="26" size="1" name="TMR2SEL" />
+    </Register>
+    <Register start="0x40000234" name="CLK_CLKDIV5" access="Read/Write">
+      <BitField start="0" size="8" name="TMR3DIV" />
+      <BitField start="8" size="8" name="WDTDIV" />
+      <BitField start="16" size="8" name="PWMDIV" />
+      <BitField start="24" size="1" name="TMR3SEL" />
+      <BitField start="25" size="1" name="WDTSEL" />
+      <BitField start="26" size="1" name="PWMSEL" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="GPIO">
+    <Register start="0x400e3000" name="PA_MODE" access="Read/Write">
+      <BitField start="0" size="1" name="MODE0" />
+      <BitField start="1" size="1" name="MODE1" />
+      <BitField start="2" size="1" name="MODE2" />
+      <BitField start="3" size="1" name="MODE3" />
+      <BitField start="4" size="1" name="MODE4" />
+      <BitField start="5" size="1" name="MODE5" />
+      <BitField start="6" size="1" name="MODE6" />
+      <BitField start="7" size="1" name="MODE7" />
+      <BitField start="8" size="1" name="MODE8" />
+      <BitField start="9" size="1" name="MODE9" />
+      <BitField start="10" size="1" name="MODE10" />
+      <BitField start="11" size="1" name="MODE11" />
+      <BitField start="12" size="1" name="MODE12" />
+      <BitField start="13" size="1" name="MODE13" />
+      <BitField start="14" size="1" name="MODE14" />
+      <BitField start="15" size="1" name="MODE15" />
+    </Register>
+    <Register start="0x400e3004" name="PA_PUEN" access="Read/Write">
+      <BitField start="0" size="2" name="PULLSEL0" />
+      <BitField start="2" size="2" name="PULLSEL1" />
+      <BitField start="4" size="2" name="PULLSEL2" />
+      <BitField start="6" size="2" name="PULLSEL3" />
+      <BitField start="8" size="2" name="PULLSEL4" />
+      <BitField start="10" size="2" name="PULLSEL5" />
+      <BitField start="12" size="2" name="PULLSEL6" />
+      <BitField start="14" size="2" name="PULLSEL7" />
+      <BitField start="16" size="2" name="PULLSEL8" />
+      <BitField start="18" size="2" name="PULLSEL9" />
+      <BitField start="20" size="2" name="PULLSEL10" />
+      <BitField start="22" size="2" name="PULLSEL11" />
+      <BitField start="24" size="2" name="PULLSEL12" />
+      <BitField start="26" size="2" name="PULLSEL13" />
+      <BitField start="28" size="2" name="PULLSEL14" />
+      <BitField start="30" size="2" name="PULLSEL15" />
+    </Register>
+    <Register start="0x400e3008" name="PA_DOUT" access="Read/Write">
+      <BitField start="0" size="1" name="DOUT0" />
+      <BitField start="1" size="1" name="DOUT1" />
+      <BitField start="2" size="1" name="DOUT2" />
+      <BitField start="3" size="1" name="DOUT3" />
+      <BitField start="4" size="1" name="DOUT4" />
+      <BitField start="5" size="1" name="DOUT5" />
+      <BitField start="6" size="1" name="DOUT6" />
+      <BitField start="7" size="1" name="DOUT7" />
+      <BitField start="8" size="1" name="DOUT8" />
+      <BitField start="9" size="1" name="DOUT9" />
+      <BitField start="10" size="1" name="DOUT10" />
+      <BitField start="11" size="1" name="DOUT11" />
+      <BitField start="12" size="1" name="DOUT12" />
+      <BitField start="13" size="1" name="DOUT13" />
+      <BitField start="14" size="1" name="DOUT14" />
+      <BitField start="15" size="1" name="DOUT15" />
+    </Register>
+    <Register start="0x400e300c" name="PA_PIN" access="Read/Write">
+      <BitField start="0" size="1" name="PIN0" />
+      <BitField start="1" size="1" name="PIN1" />
+      <BitField start="2" size="1" name="PIN2" />
+      <BitField start="3" size="1" name="PIN3" />
+      <BitField start="4" size="1" name="PIN4" />
+      <BitField start="5" size="1" name="PIN5" />
+      <BitField start="6" size="1" name="PIN6" />
+      <BitField start="7" size="1" name="PIN7" />
+      <BitField start="8" size="1" name="PIN8" />
+      <BitField start="9" size="1" name="PIN9" />
+      <BitField start="10" size="1" name="PIN10" />
+      <BitField start="11" size="1" name="PIN11" />
+      <BitField start="12" size="1" name="PIN12" />
+      <BitField start="13" size="1" name="PIN13" />
+      <BitField start="14" size="1" name="PIN14" />
+      <BitField start="15" size="1" name="PIN15" />
+    </Register>
+    <Register start="0x400e3010" name="PB_MODE" access="Read/Write">
+      <BitField start="0" size="1" name="MODE0" />
+      <BitField start="1" size="1" name="MODE1" />
+      <BitField start="2" size="1" name="MODE2" />
+      <BitField start="3" size="1" name="MODE3" />
+      <BitField start="4" size="1" name="MODE4" />
+      <BitField start="5" size="1" name="MODE5" />
+      <BitField start="6" size="1" name="MODE6" />
+      <BitField start="7" size="1" name="MODE7" />
+      <BitField start="8" size="1" name="MODE8" />
+      <BitField start="9" size="1" name="MODE9" />
+      <BitField start="10" size="1" name="MODE10" />
+      <BitField start="11" size="1" name="MODE11" />
+      <BitField start="12" size="1" name="MODE12" />
+      <BitField start="13" size="1" name="MODE13" />
+      <BitField start="14" size="1" name="MODE14" />
+      <BitField start="15" size="1" name="MODE15" />
+    </Register>
+    <Register start="0x400e3014" name="PB_PUEN" access="Read/Write">
+      <BitField start="0" size="2" name="PULLSEL0" />
+      <BitField start="2" size="2" name="PULLSEL1" />
+      <BitField start="4" size="2" name="PULLSEL2" />
+      <BitField start="6" size="2" name="PULLSEL3" />
+      <BitField start="8" size="2" name="PULLSEL4" />
+      <BitField start="10" size="2" name="PULLSEL5" />
+      <BitField start="12" size="2" name="PULLSEL6" />
+      <BitField start="14" size="2" name="PULLSEL7" />
+      <BitField start="16" size="2" name="PULLSEL8" />
+      <BitField start="18" size="2" name="PULLSEL9" />
+      <BitField start="20" size="2" name="PULLSEL10" />
+      <BitField start="22" size="2" name="PULLSEL11" />
+      <BitField start="24" size="2" name="PULLSEL12" />
+      <BitField start="26" size="2" name="PULLSEL13" />
+      <BitField start="28" size="2" name="PULLSEL14" />
+      <BitField start="30" size="2" name="PULLSEL15" />
+    </Register>
+    <Register start="0x400e3018" name="PB_DOUT" access="Read/Write">
+      <BitField start="0" size="1" name="DOUT0" />
+      <BitField start="1" size="1" name="DOUT1" />
+      <BitField start="2" size="1" name="DOUT2" />
+      <BitField start="3" size="1" name="DOUT3" />
+      <BitField start="4" size="1" name="DOUT4" />
+      <BitField start="5" size="1" name="DOUT5" />
+      <BitField start="6" size="1" name="DOUT6" />
+      <BitField start="7" size="1" name="DOUT7" />
+      <BitField start="8" size="1" name="DOUT8" />
+      <BitField start="9" size="1" name="DOUT9" />
+      <BitField start="10" size="1" name="DOUT10" />
+      <BitField start="11" size="1" name="DOUT11" />
+      <BitField start="12" size="1" name="DOUT12" />
+      <BitField start="13" size="1" name="DOUT13" />
+      <BitField start="14" size="1" name="DOUT14" />
+      <BitField start="15" size="1" name="DOUT15" />
+    </Register>
+    <Register start="0x400e301c" name="PB_PIN" access="Read/Write">
+      <BitField start="0" size="1" name="PIN0" />
+      <BitField start="1" size="1" name="PIN1" />
+      <BitField start="2" size="1" name="PIN2" />
+      <BitField start="3" size="1" name="PIN3" />
+      <BitField start="4" size="1" name="PIN4" />
+      <BitField start="5" size="1" name="PIN5" />
+      <BitField start="6" size="1" name="PIN6" />
+      <BitField start="7" size="1" name="PIN7" />
+      <BitField start="8" size="1" name="PIN8" />
+      <BitField start="9" size="1" name="PIN9" />
+      <BitField start="10" size="1" name="PIN10" />
+      <BitField start="11" size="1" name="PIN11" />
+      <BitField start="12" size="1" name="PIN12" />
+      <BitField start="13" size="1" name="PIN13" />
+      <BitField start="14" size="1" name="PIN14" />
+      <BitField start="15" size="1" name="PIN15" />
+    </Register>
+    <Register start="0x400e3020" name="PC_MODE" access="Read/Write">
+      <BitField start="0" size="1" name="MODE0" />
+      <BitField start="1" size="1" name="MODE1" />
+      <BitField start="2" size="1" name="MODE2" />
+      <BitField start="3" size="1" name="MODE3" />
+      <BitField start="4" size="1" name="MODE4" />
+      <BitField start="5" size="1" name="MODE5" />
+      <BitField start="6" size="1" name="MODE6" />
+      <BitField start="7" size="1" name="MODE7" />
+      <BitField start="8" size="1" name="MODE8" />
+      <BitField start="9" size="1" name="MODE9" />
+      <BitField start="10" size="1" name="MODE10" />
+      <BitField start="11" size="1" name="MODE11" />
+      <BitField start="12" size="1" name="MODE12" />
+      <BitField start="13" size="1" name="MODE13" />
+      <BitField start="14" size="1" name="MODE14" />
+      <BitField start="15" size="1" name="MODE15" />
+    </Register>
+    <Register start="0x400e3024" name="PC_PUEN" access="Read/Write">
+      <BitField start="0" size="2" name="PULLSEL0" />
+      <BitField start="2" size="2" name="PULLSEL1" />
+      <BitField start="4" size="2" name="PULLSEL2" />
+      <BitField start="6" size="2" name="PULLSEL3" />
+      <BitField start="8" size="2" name="PULLSEL4" />
+      <BitField start="10" size="2" name="PULLSEL5" />
+      <BitField start="12" size="2" name="PULLSEL6" />
+      <BitField start="14" size="2" name="PULLSEL7" />
+      <BitField start="16" size="2" name="PULLSEL8" />
+      <BitField start="18" size="2" name="PULLSEL9" />
+      <BitField start="20" size="2" name="PULLSEL10" />
+      <BitField start="22" size="2" name="PULLSEL11" />
+      <BitField start="24" size="2" name="PULLSEL12" />
+      <BitField start="26" size="2" name="PULLSEL13" />
+      <BitField start="28" size="2" name="PULLSEL14" />
+      <BitField start="30" size="2" name="PULLSEL15" />
+    </Register>
+    <Register start="0x400e3028" name="PC_DOUT" access="Read/Write">
+      <BitField start="0" size="1" name="DOUT0" />
+      <BitField start="1" size="1" name="DOUT1" />
+      <BitField start="2" size="1" name="DOUT2" />
+      <BitField start="3" size="1" name="DOUT3" />
+      <BitField start="4" size="1" name="DOUT4" />
+      <BitField start="5" size="1" name="DOUT5" />
+      <BitField start="6" size="1" name="DOUT6" />
+      <BitField start="7" size="1" name="DOUT7" />
+      <BitField start="8" size="1" name="DOUT8" />
+      <BitField start="9" size="1" name="DOUT9" />
+      <BitField start="10" size="1" name="DOUT10" />
+      <BitField start="11" size="1" name="DOUT11" />
+      <BitField start="12" size="1" name="DOUT12" />
+      <BitField start="13" size="1" name="DOUT13" />
+      <BitField start="14" size="1" name="DOUT14" />
+      <BitField start="15" size="1" name="DOUT15" />
+    </Register>
+    <Register start="0x400e302c" name="PC_PIN" access="Read/Write">
+      <BitField start="0" size="1" name="PIN0" />
+      <BitField start="1" size="1" name="PIN1" />
+      <BitField start="2" size="1" name="PIN2" />
+      <BitField start="3" size="1" name="PIN3" />
+      <BitField start="4" size="1" name="PIN4" />
+      <BitField start="5" size="1" name="PIN5" />
+      <BitField start="6" size="1" name="PIN6" />
+      <BitField start="7" size="1" name="PIN7" />
+      <BitField start="8" size="1" name="PIN8" />
+      <BitField start="9" size="1" name="PIN9" />
+      <BitField start="10" size="1" name="PIN10" />
+      <BitField start="11" size="1" name="PIN11" />
+      <BitField start="12" size="1" name="PIN12" />
+      <BitField start="13" size="1" name="PIN13" />
+      <BitField start="14" size="1" name="PIN14" />
+      <BitField start="15" size="1" name="PIN15" />
+    </Register>
+    <Register start="0x400e3030" name="PD_MODE" access="Read/Write">
+      <BitField start="0" size="1" name="MODE0" />
+      <BitField start="1" size="1" name="MODE1" />
+      <BitField start="2" size="1" name="MODE2" />
+      <BitField start="3" size="1" name="MODE3" />
+      <BitField start="4" size="1" name="MODE4" />
+      <BitField start="5" size="1" name="MODE5" />
+      <BitField start="6" size="1" name="MODE6" />
+      <BitField start="7" size="1" name="MODE7" />
+      <BitField start="8" size="1" name="MODE8" />
+      <BitField start="9" size="1" name="MODE9" />
+      <BitField start="10" size="1" name="MODE10" />
+      <BitField start="11" size="1" name="MODE11" />
+      <BitField start="12" size="1" name="MODE12" />
+      <BitField start="13" size="1" name="MODE13" />
+      <BitField start="14" size="1" name="MODE14" />
+      <BitField start="15" size="1" name="MODE15" />
+    </Register>
+    <Register start="0x400e3034" name="PD_PUEN" access="Read/Write">
+      <BitField start="0" size="2" name="PULLSEL0" />
+      <BitField start="2" size="2" name="PULLSEL1" />
+      <BitField start="4" size="2" name="PULLSEL2" />
+      <BitField start="6" size="2" name="PULLSEL3" />
+      <BitField start="8" size="2" name="PULLSEL4" />
+      <BitField start="10" size="2" name="PULLSEL5" />
+      <BitField start="12" size="2" name="PULLSEL6" />
+      <BitField start="14" size="2" name="PULLSEL7" />
+      <BitField start="16" size="2" name="PULLSEL8" />
+      <BitField start="18" size="2" name="PULLSEL9" />
+      <BitField start="20" size="2" name="PULLSEL10" />
+      <BitField start="22" size="2" name="PULLSEL11" />
+      <BitField start="24" size="2" name="PULLSEL12" />
+      <BitField start="26" size="2" name="PULLSEL13" />
+      <BitField start="28" size="2" name="PULLSEL14" />
+      <BitField start="30" size="2" name="PULLSEL15" />
+    </Register>
+    <Register start="0x400e3038" name="PD_DOUT" access="Read/Write">
+      <BitField start="0" size="1" name="DOUT0" />
+      <BitField start="1" size="1" name="DOUT1" />
+      <BitField start="2" size="1" name="DOUT2" />
+      <BitField start="3" size="1" name="DOUT3" />
+      <BitField start="4" size="1" name="DOUT4" />
+      <BitField start="5" size="1" name="DOUT5" />
+      <BitField start="6" size="1" name="DOUT6" />
+      <BitField start="7" size="1" name="DOUT7" />
+      <BitField start="8" size="1" name="DOUT8" />
+      <BitField start="9" size="1" name="DOUT9" />
+      <BitField start="10" size="1" name="DOUT10" />
+      <BitField start="11" size="1" name="DOUT11" />
+      <BitField start="12" size="1" name="DOUT12" />
+      <BitField start="13" size="1" name="DOUT13" />
+      <BitField start="14" size="1" name="DOUT14" />
+      <BitField start="15" size="1" name="DOUT15" />
+    </Register>
+    <Register start="0x400e303c" name="PD_PIN" access="Read/Write">
+      <BitField start="0" size="1" name="PIN0" />
+      <BitField start="1" size="1" name="PIN1" />
+      <BitField start="2" size="1" name="PIN2" />
+      <BitField start="3" size="1" name="PIN3" />
+      <BitField start="4" size="1" name="PIN4" />
+      <BitField start="5" size="1" name="PIN5" />
+      <BitField start="6" size="1" name="PIN6" />
+      <BitField start="7" size="1" name="PIN7" />
+      <BitField start="8" size="1" name="PIN8" />
+      <BitField start="9" size="1" name="PIN9" />
+      <BitField start="10" size="1" name="PIN10" />
+      <BitField start="11" size="1" name="PIN11" />
+      <BitField start="12" size="1" name="PIN12" />
+      <BitField start="13" size="1" name="PIN13" />
+      <BitField start="14" size="1" name="PIN14" />
+      <BitField start="15" size="1" name="PIN15" />
+    </Register>
+    <Register start="0x400e3070" name="GPIO_DBCTL" access="Read/Write">
+      <BitField start="0" size="1" name="DBEN0" />
+      <BitField start="1" size="1" name="DBEN1" />
+      <BitField start="2" size="1" name="DBEN2" />
+      <BitField start="3" size="1" name="DBEN3" />
+      <BitField start="4" size="4" name="DBCLKSEL" />
+    </Register>
+    <Register start="0x400e3080" name="PA_INTSRCGP" access="Read/Write">
+      <BitField start="0" size="2" name="INTSEL0" />
+      <BitField start="2" size="2" name="INTSEL1" />
+      <BitField start="4" size="2" name="INTSEL2" />
+      <BitField start="6" size="2" name="INTSEL3" />
+      <BitField start="8" size="2" name="INTSEL4" />
+      <BitField start="10" size="2" name="INTSEL5" />
+      <BitField start="12" size="2" name="INTSEL6" />
+      <BitField start="14" size="2" name="INTSEL7" />
+      <BitField start="16" size="2" name="INTSEL8" />
+      <BitField start="18" size="2" name="INTSEL9" />
+      <BitField start="20" size="2" name="INTSEL10" />
+      <BitField start="22" size="2" name="INTSEL11" />
+      <BitField start="24" size="2" name="INTSEL12" />
+      <BitField start="26" size="2" name="INTSEL13" />
+      <BitField start="28" size="2" name="INTSEL14" />
+      <BitField start="30" size="2" name="INTSEL15" />
+    </Register>
+    <Register start="0x400e3084" name="PB_INTSRCGP" access="Read/Write">
+      <BitField start="0" size="2" name="INTSEL0" />
+      <BitField start="2" size="2" name="INTSEL1" />
+      <BitField start="4" size="2" name="INTSEL2" />
+      <BitField start="6" size="2" name="INTSEL3" />
+      <BitField start="8" size="2" name="INTSEL4" />
+      <BitField start="10" size="2" name="INTSEL5" />
+      <BitField start="12" size="2" name="INTSEL6" />
+      <BitField start="14" size="2" name="INTSEL7" />
+      <BitField start="16" size="2" name="INTSEL8" />
+      <BitField start="18" size="2" name="INTSEL9" />
+      <BitField start="20" size="2" name="INTSEL10" />
+      <BitField start="22" size="2" name="INTSEL11" />
+      <BitField start="24" size="2" name="INTSEL12" />
+      <BitField start="26" size="2" name="INTSEL13" />
+      <BitField start="28" size="2" name="INTSEL14" />
+      <BitField start="30" size="2" name="INTSEL15" />
+    </Register>
+    <Register start="0x400e3088" name="PC_INTSRCGP" access="Read/Write">
+      <BitField start="0" size="2" name="INTSEL0" />
+      <BitField start="2" size="2" name="INTSEL1" />
+      <BitField start="4" size="2" name="INTSEL2" />
+      <BitField start="6" size="2" name="INTSEL3" />
+      <BitField start="8" size="2" name="INTSEL4" />
+      <BitField start="10" size="2" name="INTSEL5" />
+      <BitField start="12" size="2" name="INTSEL6" />
+      <BitField start="14" size="2" name="INTSEL7" />
+      <BitField start="16" size="2" name="INTSEL8" />
+      <BitField start="18" size="2" name="INTSEL9" />
+      <BitField start="20" size="2" name="INTSEL10" />
+      <BitField start="22" size="2" name="INTSEL11" />
+      <BitField start="24" size="2" name="INTSEL12" />
+      <BitField start="26" size="2" name="INTSEL13" />
+      <BitField start="28" size="2" name="INTSEL14" />
+      <BitField start="30" size="2" name="INTSEL15" />
+    </Register>
+    <Register start="0x400e308c" name="PD_INTSRCGP" access="Read/Write">
+      <BitField start="0" size="2" name="INTSEL0" />
+      <BitField start="2" size="2" name="INTSEL1" />
+      <BitField start="4" size="2" name="INTSEL2" />
+      <BitField start="6" size="2" name="INTSEL3" />
+      <BitField start="8" size="2" name="INTSEL4" />
+      <BitField start="10" size="2" name="INTSEL5" />
+      <BitField start="12" size="2" name="INTSEL6" />
+      <BitField start="14" size="2" name="INTSEL7" />
+      <BitField start="16" size="2" name="INTSEL8" />
+      <BitField start="18" size="2" name="INTSEL9" />
+      <BitField start="20" size="2" name="INTSEL10" />
+      <BitField start="22" size="2" name="INTSEL11" />
+      <BitField start="24" size="2" name="INTSEL12" />
+      <BitField start="26" size="2" name="INTSEL13" />
+      <BitField start="28" size="2" name="INTSEL14" />
+      <BitField start="30" size="2" name="INTSEL15" />
+    </Register>
+    <Register start="0x400e3090" name="PA_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="FEIEN0" />
+      <BitField start="1" size="1" name="FEIEN1" />
+      <BitField start="2" size="1" name="FEIEN2" />
+      <BitField start="3" size="1" name="FEIEN3" />
+      <BitField start="4" size="1" name="FEIEN4" />
+      <BitField start="5" size="1" name="FEIEN5" />
+      <BitField start="6" size="1" name="FEIEN6" />
+      <BitField start="7" size="1" name="FEIEN7" />
+      <BitField start="8" size="1" name="FEIEN8" />
+      <BitField start="9" size="1" name="FEIEN9" />
+      <BitField start="10" size="1" name="FEIEN10" />
+      <BitField start="11" size="1" name="FEIEN11" />
+      <BitField start="12" size="1" name="FEIEN12" />
+      <BitField start="13" size="1" name="FEIEN13" />
+      <BitField start="14" size="1" name="FEIEN14" />
+      <BitField start="15" size="1" name="FEIEN15" />
+      <BitField start="16" size="1" name="REIEN0" />
+      <BitField start="17" size="1" name="REIEN1" />
+      <BitField start="18" size="1" name="REIEN2" />
+      <BitField start="19" size="1" name="REIEN3" />
+      <BitField start="20" size="1" name="REIEN4" />
+      <BitField start="21" size="1" name="REIEN5" />
+      <BitField start="22" size="1" name="REIEN6" />
+      <BitField start="23" size="1" name="REIEN7" />
+      <BitField start="24" size="1" name="REIEN8" />
+      <BitField start="25" size="1" name="REIEN9" />
+      <BitField start="26" size="1" name="REIEN10" />
+      <BitField start="27" size="1" name="REIEN11" />
+      <BitField start="28" size="1" name="REIEN12" />
+      <BitField start="29" size="1" name="REIEN13" />
+      <BitField start="30" size="1" name="REIEN14" />
+      <BitField start="31" size="1" name="REIEN15" />
+    </Register>
+    <Register start="0x400e3094" name="PB_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="FEIEN0" />
+      <BitField start="1" size="1" name="FEIEN1" />
+      <BitField start="2" size="1" name="FEIEN2" />
+      <BitField start="3" size="1" name="FEIEN3" />
+      <BitField start="4" size="1" name="FEIEN4" />
+      <BitField start="5" size="1" name="FEIEN5" />
+      <BitField start="6" size="1" name="FEIEN6" />
+      <BitField start="7" size="1" name="FEIEN7" />
+      <BitField start="8" size="1" name="FEIEN8" />
+      <BitField start="9" size="1" name="FEIEN9" />
+      <BitField start="10" size="1" name="FEIEN10" />
+      <BitField start="11" size="1" name="FEIEN11" />
+      <BitField start="12" size="1" name="FEIEN12" />
+      <BitField start="13" size="1" name="FEIEN13" />
+      <BitField start="14" size="1" name="FEIEN14" />
+      <BitField start="15" size="1" name="FEIEN15" />
+      <BitField start="16" size="1" name="REIEN0" />
+      <BitField start="17" size="1" name="REIEN1" />
+      <BitField start="18" size="1" name="REIEN2" />
+      <BitField start="19" size="1" name="REIEN3" />
+      <BitField start="20" size="1" name="REIEN4" />
+      <BitField start="21" size="1" name="REIEN5" />
+      <BitField start="22" size="1" name="REIEN6" />
+      <BitField start="23" size="1" name="REIEN7" />
+      <BitField start="24" size="1" name="REIEN8" />
+      <BitField start="25" size="1" name="REIEN9" />
+      <BitField start="26" size="1" name="REIEN10" />
+      <BitField start="27" size="1" name="REIEN11" />
+      <BitField start="28" size="1" name="REIEN12" />
+      <BitField start="29" size="1" name="REIEN13" />
+      <BitField start="30" size="1" name="REIEN14" />
+      <BitField start="31" size="1" name="REIEN15" />
+    </Register>
+    <Register start="0x400e3098" name="PC_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="FEIEN0" />
+      <BitField start="1" size="1" name="FEIEN1" />
+      <BitField start="2" size="1" name="FEIEN2" />
+      <BitField start="3" size="1" name="FEIEN3" />
+      <BitField start="4" size="1" name="FEIEN4" />
+      <BitField start="5" size="1" name="FEIEN5" />
+      <BitField start="6" size="1" name="FEIEN6" />
+      <BitField start="7" size="1" name="FEIEN7" />
+      <BitField start="8" size="1" name="FEIEN8" />
+      <BitField start="9" size="1" name="FEIEN9" />
+      <BitField start="10" size="1" name="FEIEN10" />
+      <BitField start="11" size="1" name="FEIEN11" />
+      <BitField start="12" size="1" name="FEIEN12" />
+      <BitField start="13" size="1" name="FEIEN13" />
+      <BitField start="14" size="1" name="FEIEN14" />
+      <BitField start="15" size="1" name="FEIEN15" />
+      <BitField start="16" size="1" name="REIEN0" />
+      <BitField start="17" size="1" name="REIEN1" />
+      <BitField start="18" size="1" name="REIEN2" />
+      <BitField start="19" size="1" name="REIEN3" />
+      <BitField start="20" size="1" name="REIEN4" />
+      <BitField start="21" size="1" name="REIEN5" />
+      <BitField start="22" size="1" name="REIEN6" />
+      <BitField start="23" size="1" name="REIEN7" />
+      <BitField start="24" size="1" name="REIEN8" />
+      <BitField start="25" size="1" name="REIEN9" />
+      <BitField start="26" size="1" name="REIEN10" />
+      <BitField start="27" size="1" name="REIEN11" />
+      <BitField start="28" size="1" name="REIEN12" />
+      <BitField start="29" size="1" name="REIEN13" />
+      <BitField start="30" size="1" name="REIEN14" />
+      <BitField start="31" size="1" name="REIEN15" />
+    </Register>
+    <Register start="0x400e309c" name="PD_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="FEIEN0" />
+      <BitField start="1" size="1" name="FEIEN1" />
+      <BitField start="2" size="1" name="FEIEN2" />
+      <BitField start="3" size="1" name="FEIEN3" />
+      <BitField start="4" size="1" name="FEIEN4" />
+      <BitField start="5" size="1" name="FEIEN5" />
+      <BitField start="6" size="1" name="FEIEN6" />
+      <BitField start="7" size="1" name="FEIEN7" />
+      <BitField start="8" size="1" name="FEIEN8" />
+      <BitField start="9" size="1" name="FEIEN9" />
+      <BitField start="10" size="1" name="FEIEN10" />
+      <BitField start="11" size="1" name="FEIEN11" />
+      <BitField start="12" size="1" name="FEIEN12" />
+      <BitField start="13" size="1" name="FEIEN13" />
+      <BitField start="14" size="1" name="FEIEN14" />
+      <BitField start="15" size="1" name="FEIEN15" />
+      <BitField start="16" size="1" name="REIEN0" />
+      <BitField start="17" size="1" name="REIEN1" />
+      <BitField start="18" size="1" name="REIEN2" />
+      <BitField start="19" size="1" name="REIEN3" />
+      <BitField start="20" size="1" name="REIEN4" />
+      <BitField start="21" size="1" name="REIEN5" />
+      <BitField start="22" size="1" name="REIEN6" />
+      <BitField start="23" size="1" name="REIEN7" />
+      <BitField start="24" size="1" name="REIEN8" />
+      <BitField start="25" size="1" name="REIEN9" />
+      <BitField start="26" size="1" name="REIEN10" />
+      <BitField start="27" size="1" name="REIEN11" />
+      <BitField start="28" size="1" name="REIEN12" />
+      <BitField start="29" size="1" name="REIEN13" />
+      <BitField start="30" size="1" name="REIEN14" />
+      <BitField start="31" size="1" name="REIEN15" />
+    </Register>
+    <Register start="0x400e30a0" name="GPIO_INTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="INTLHEN0" />
+      <BitField start="1" size="1" name="INTLHEN1" />
+      <BitField start="2" size="1" name="INTLHEN2" />
+      <BitField start="3" size="1" name="INTLHEN3" />
+      <BitField start="4" size="1" name="WKEN0" />
+      <BitField start="5" size="1" name="WKEN1" />
+      <BitField start="6" size="1" name="WKEN2" />
+      <BitField start="7" size="1" name="WKEN3" />
+      <BitField start="8" size="1" name="INTCTL" />
+    </Register>
+    <Register start="0x400e30a4" name="PA_LATCHDAT" access="Read/Write">
+      <BitField start="0" size="1" name="DAT0" />
+      <BitField start="1" size="1" name="DAT1" />
+      <BitField start="2" size="1" name="DAT2" />
+      <BitField start="3" size="1" name="DAT3" />
+      <BitField start="4" size="1" name="DAT4" />
+      <BitField start="5" size="1" name="DAT5" />
+      <BitField start="6" size="1" name="DAT6" />
+      <BitField start="7" size="1" name="DAT7" />
+      <BitField start="8" size="1" name="DAT8" />
+      <BitField start="9" size="1" name="DAT9" />
+      <BitField start="10" size="1" name="DAT10" />
+      <BitField start="11" size="1" name="DAT11" />
+      <BitField start="12" size="1" name="DAT12" />
+      <BitField start="13" size="1" name="DAT13" />
+      <BitField start="14" size="1" name="DAT14" />
+      <BitField start="15" size="1" name="DAT15" />
+    </Register>
+    <Register start="0x400e30a8" name="PB_LATCHDAT" access="Read/Write">
+      <BitField start="0" size="1" name="DAT0" />
+      <BitField start="1" size="1" name="DAT1" />
+      <BitField start="2" size="1" name="DAT2" />
+      <BitField start="3" size="1" name="DAT3" />
+      <BitField start="4" size="1" name="DAT4" />
+      <BitField start="5" size="1" name="DAT5" />
+      <BitField start="6" size="1" name="DAT6" />
+      <BitField start="7" size="1" name="DAT7" />
+      <BitField start="8" size="1" name="DAT8" />
+      <BitField start="9" size="1" name="DAT9" />
+      <BitField start="10" size="1" name="DAT10" />
+      <BitField start="11" size="1" name="DAT11" />
+      <BitField start="12" size="1" name="DAT12" />
+      <BitField start="13" size="1" name="DAT13" />
+      <BitField start="14" size="1" name="DAT14" />
+      <BitField start="15" size="1" name="DAT15" />
+    </Register>
+    <Register start="0x400e30ac" name="PC_LATCHDAT" access="Read/Write">
+      <BitField start="0" size="1" name="DAT0" />
+      <BitField start="1" size="1" name="DAT1" />
+      <BitField start="2" size="1" name="DAT2" />
+      <BitField start="3" size="1" name="DAT3" />
+      <BitField start="4" size="1" name="DAT4" />
+      <BitField start="5" size="1" name="DAT5" />
+      <BitField start="6" size="1" name="DAT6" />
+      <BitField start="7" size="1" name="DAT7" />
+      <BitField start="8" size="1" name="DAT8" />
+      <BitField start="9" size="1" name="DAT9" />
+      <BitField start="10" size="1" name="DAT10" />
+      <BitField start="11" size="1" name="DAT11" />
+      <BitField start="12" size="1" name="DAT12" />
+      <BitField start="13" size="1" name="DAT13" />
+      <BitField start="14" size="1" name="DAT14" />
+      <BitField start="15" size="1" name="DAT15" />
+    </Register>
+    <Register start="0x400e30b0" name="PD_LATCHDAT" access="Read/Write">
+      <BitField start="0" size="1" name="DAT0" />
+      <BitField start="1" size="1" name="DAT1" />
+      <BitField start="2" size="1" name="DAT2" />
+      <BitField start="3" size="1" name="DAT3" />
+      <BitField start="4" size="1" name="DAT4" />
+      <BitField start="5" size="1" name="DAT5" />
+      <BitField start="6" size="1" name="DAT6" />
+      <BitField start="7" size="1" name="DAT7" />
+      <BitField start="8" size="1" name="DAT8" />
+      <BitField start="9" size="1" name="DAT9" />
+      <BitField start="10" size="1" name="DAT10" />
+      <BitField start="11" size="1" name="DAT11" />
+      <BitField start="12" size="1" name="DAT12" />
+      <BitField start="13" size="1" name="DAT13" />
+      <BitField start="14" size="1" name="DAT14" />
+      <BitField start="15" size="1" name="DAT15" />
+    </Register>
+    <Register start="0x400e30b4" name="GPIO_INTSTSA_B" access="Read/Write">
+      <BitField start="0" size="1" name="PAIF0" />
+      <BitField start="1" size="1" name="PAIF1" />
+      <BitField start="2" size="1" name="PAIF2" />
+      <BitField start="3" size="1" name="PAIF3" />
+      <BitField start="4" size="1" name="PAIF4" />
+      <BitField start="5" size="1" name="PAIF5" />
+      <BitField start="6" size="1" name="PAIF6" />
+      <BitField start="7" size="1" name="PAIF7" />
+      <BitField start="8" size="1" name="PAIF8" />
+      <BitField start="9" size="1" name="PAIF9" />
+      <BitField start="10" size="1" name="PAIF10" />
+      <BitField start="11" size="1" name="PAIF11" />
+      <BitField start="12" size="1" name="PAIF12" />
+      <BitField start="13" size="1" name="PAIF13" />
+      <BitField start="14" size="1" name="PAIF14" />
+      <BitField start="15" size="1" name="PAIF15" />
+      <BitField start="16" size="1" name="PBIF0" />
+      <BitField start="17" size="1" name="PBIF1" />
+      <BitField start="18" size="1" name="PBIF2" />
+      <BitField start="19" size="1" name="PBIF3" />
+      <BitField start="20" size="1" name="PBIF4" />
+      <BitField start="21" size="1" name="PBIF5" />
+      <BitField start="22" size="1" name="PBIF6" />
+      <BitField start="23" size="1" name="PBIF7" />
+      <BitField start="24" size="1" name="PBIF8" />
+      <BitField start="25" size="1" name="PBIF9" />
+      <BitField start="26" size="1" name="PBIF10" />
+      <BitField start="27" size="1" name="PBIF11" />
+      <BitField start="28" size="1" name="PBIF12" />
+      <BitField start="29" size="1" name="PBIF13" />
+      <BitField start="30" size="1" name="PBIF14" />
+      <BitField start="31" size="1" name="PBIF15" />
+    </Register>
+    <Register start="0x400e30b8" name="GPIO_INTSTSC_D" access="Read/Write">
+      <BitField start="0" size="1" name="PCIF0" />
+      <BitField start="1" size="1" name="PCIF1" />
+      <BitField start="2" size="1" name="PCIF2" />
+      <BitField start="3" size="1" name="PCIF3" />
+      <BitField start="4" size="1" name="PCIF4" />
+      <BitField start="5" size="1" name="PCIF5" />
+      <BitField start="6" size="1" name="PCIF6" />
+      <BitField start="7" size="1" name="PCIF7" />
+      <BitField start="8" size="1" name="PCIF8" />
+      <BitField start="9" size="1" name="PCIF9" />
+      <BitField start="10" size="1" name="PCIF10" />
+      <BitField start="11" size="1" name="PCIF11" />
+      <BitField start="12" size="1" name="PCIF12" />
+      <BitField start="13" size="1" name="PCIF13" />
+      <BitField start="14" size="1" name="PCIF14" />
+      <BitField start="16" size="1" name="PDIF0" />
+      <BitField start="17" size="1" name="PDIF1" />
+      <BitField start="18" size="1" name="PDIF2" />
+      <BitField start="19" size="1" name="PDIF3" />
+      <BitField start="20" size="1" name="PDIF4" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="TIMER01">
+    <Register start="0x400ea000" name="TIMER0_CTL" access="Read/Write">
+      <BitField start="0" size="8" name="PSC" />
+      <BitField start="16" size="1" name="CNTDATEN" />
+      <BitField start="23" size="1" name="WKEN" />
+      <BitField start="24" size="1" name="EXTCNTEN" />
+      <BitField start="25" size="1" name="ACTSTS" />
+      <BitField start="26" size="1" name="RSTCNT" />
+      <BitField start="27" size="2" name="OPMODE" />
+      <BitField start="29" size="1" name="INTEN" />
+      <BitField start="30" size="1" name="CNTEN" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400ea004" name="TIMER0_CMP" access="Read/Write">
+      <BitField start="0" size="24" name="CMPDAT" />
+    </Register>
+    <Register start="0x400ea008" name="TIMER0_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="TIF" />
+      <BitField start="1" size="1" name="TWKF" />
+    </Register>
+    <Register start="0x400ea00c" name="TIMER0_CNT" access="Read/Write">
+      <BitField start="0" size="24" name="CNT" />
+    </Register>
+    <Register start="0x400ea010" name="TIMER0_CAP" access="Read/Write">
+      <BitField start="0" size="24" name="CAPDAT" />
+    </Register>
+    <Register start="0x400ea014" name="TIMER0_EXTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="CNTPHASE" />
+      <BitField start="1" size="2" name="CAPEDGE" />
+      <BitField start="3" size="1" name="CAPEN" />
+      <BitField start="4" size="1" name="CAPFUNCS" />
+      <BitField start="5" size="1" name="CAPIEN" />
+      <BitField start="6" size="1" name="CAPDBEN" />
+      <BitField start="7" size="1" name="CNTDBEN" />
+    </Register>
+    <Register start="0x400ea018" name="TIMER0_EINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CAPIF" />
+    </Register>
+    <Register start="0x400ea020" name="TIMER1_CTL" access="Read/Write">
+      <BitField start="0" size="8" name="PSC" />
+      <BitField start="16" size="1" name="CNTDATEN" />
+      <BitField start="23" size="1" name="WKEN" />
+      <BitField start="24" size="1" name="EXTCNTEN" />
+      <BitField start="25" size="1" name="ACTSTS" />
+      <BitField start="26" size="1" name="RSTCNT" />
+      <BitField start="27" size="2" name="OPMODE" />
+      <BitField start="29" size="1" name="INTEN" />
+      <BitField start="30" size="1" name="CNTEN" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400ea024" name="TIMER1_CMP" access="Read/Write">
+      <BitField start="0" size="24" name="CMPDAT" />
+    </Register>
+    <Register start="0x400ea028" name="TIMER1_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="TIF" />
+      <BitField start="1" size="1" name="TWKF" />
+    </Register>
+    <Register start="0x400ea02c" name="TIMER1_CNT" access="Read/Write">
+      <BitField start="0" size="24" name="CNT" />
+    </Register>
+    <Register start="0x400ea030" name="TIMER1_CAP" access="Read/Write">
+      <BitField start="0" size="24" name="CAPDAT" />
+    </Register>
+    <Register start="0x400ea034" name="TIMER1_EXTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="CNTPHASE" />
+      <BitField start="1" size="2" name="CAPEDGE" />
+      <BitField start="3" size="1" name="CAPEN" />
+      <BitField start="4" size="1" name="CAPFUNCS" />
+      <BitField start="5" size="1" name="CAPIEN" />
+      <BitField start="6" size="1" name="CAPDBEN" />
+      <BitField start="7" size="1" name="CNTDBEN" />
+    </Register>
+    <Register start="0x400ea038" name="TIMER1_EINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CAPIF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="TIMER23">
+    <Register start="0x400eb000" name="TIMER2_CTL" access="Read/Write">
+      <BitField start="0" size="8" name="PSC" />
+      <BitField start="16" size="1" name="CNTDATEN" />
+      <BitField start="23" size="1" name="WKEN" />
+      <BitField start="24" size="1" name="EXTCNTEN" />
+      <BitField start="25" size="1" name="ACTSTS" />
+      <BitField start="26" size="1" name="RSTCNT" />
+      <BitField start="27" size="2" name="OPMODE" />
+      <BitField start="29" size="1" name="INTEN" />
+      <BitField start="30" size="1" name="CNTEN" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400eb004" name="TIMER2_CMP" access="Read/Write">
+      <BitField start="0" size="24" name="CMPDAT" />
+    </Register>
+    <Register start="0x400eb008" name="TIMER2_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="TIF" />
+      <BitField start="1" size="1" name="TWKF" />
+    </Register>
+    <Register start="0x400eb00c" name="TIMER2_CNT" access="Read/Write">
+      <BitField start="0" size="24" name="CNT" />
+    </Register>
+    <Register start="0x400eb010" name="TIMER2_CAP" access="Read/Write">
+      <BitField start="0" size="24" name="CAPDAT" />
+    </Register>
+    <Register start="0x400eb014" name="TIMER2_EXTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="CNTPHASE" />
+      <BitField start="1" size="2" name="CAPEDGE" />
+      <BitField start="3" size="1" name="CAPEN" />
+      <BitField start="4" size="1" name="CAPFUNCS" />
+      <BitField start="5" size="1" name="CAPIEN" />
+      <BitField start="6" size="1" name="CAPDBEN" />
+      <BitField start="7" size="1" name="CNTDBEN" />
+    </Register>
+    <Register start="0x400eb018" name="TIMER2_EINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CAPIF" />
+    </Register>
+    <Register start="0x400eb020" name="TIMER3_CTL" access="Read/Write">
+      <BitField start="0" size="8" name="PSC" />
+      <BitField start="16" size="1" name="CNTDATEN" />
+      <BitField start="23" size="1" name="WKEN" />
+      <BitField start="24" size="1" name="EXTCNTEN" />
+      <BitField start="25" size="1" name="ACTSTS" />
+      <BitField start="26" size="1" name="RSTCNT" />
+      <BitField start="27" size="2" name="OPMODE" />
+      <BitField start="29" size="1" name="INTEN" />
+      <BitField start="30" size="1" name="CNTEN" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400eb024" name="TIMER3_CMP" access="Read/Write">
+      <BitField start="0" size="24" name="CMPDAT" />
+    </Register>
+    <Register start="0x400eb028" name="TIMER3_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="TIF" />
+      <BitField start="1" size="1" name="TWKF" />
+    </Register>
+    <Register start="0x400eb02c" name="TIMER3_CNT" access="Read/Write">
+      <BitField start="0" size="24" name="CNT" />
+    </Register>
+    <Register start="0x400eb030" name="TIMER3_CAP" access="Read/Write">
+      <BitField start="0" size="24" name="CAPDAT" />
+    </Register>
+    <Register start="0x400eb034" name="TIMER3_EXTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="CNTPHASE" />
+      <BitField start="1" size="2" name="CAPEDGE" />
+      <BitField start="3" size="1" name="CAPEN" />
+      <BitField start="4" size="1" name="CAPFUNCS" />
+      <BitField start="5" size="1" name="CAPIEN" />
+      <BitField start="6" size="1" name="CAPDBEN" />
+      <BitField start="7" size="1" name="CNTDBEN" />
+    </Register>
+    <Register start="0x400eb038" name="TIMER3_EINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CAPIF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="PWM">
+    <Register start="0x400e6000" name="PWM_CLKPSC" access="Read/Write">
+      <BitField start="0" size="8" name="CLKPSC01" />
+      <BitField start="8" size="8" name="CLKPSC23" />
+      <BitField start="16" size="8" name="DZCNT01" />
+      <BitField start="24" size="8" name="DZCNT23" />
+    </Register>
+    <Register start="0x400e6004" name="PWM_CLKDIV" access="Read/Write">
+      <BitField start="0" size="3" name="CLKDIV0" />
+      <BitField start="4" size="3" name="CLKDIV1" />
+      <BitField start="8" size="3" name="CLKDIV2" />
+      <BitField start="12" size="3" name="CLKDIV3" />
+    </Register>
+    <Register start="0x400e6008" name="PWM_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="CNTEN0" />
+      <BitField start="2" size="1" name="PINV0" />
+      <BitField start="3" size="1" name="CNTMODE0" />
+      <BitField start="4" size="1" name="DTEN01" />
+      <BitField start="5" size="1" name="DTEN23" />
+      <BitField start="8" size="1" name="CNTEN1" />
+      <BitField start="10" size="1" name="PINV1" />
+      <BitField start="11" size="1" name="CNTMODE1" />
+      <BitField start="16" size="1" name="CNTEN2" />
+      <BitField start="18" size="1" name="PINV2" />
+      <BitField start="19" size="1" name="CNTMODE2" />
+      <BitField start="24" size="1" name="CNTEN3" />
+      <BitField start="26" size="1" name="PINV3" />
+      <BitField start="27" size="1" name="CNTMODE3" />
+    </Register>
+    <Register start="0x400e600c" name="PWM_PERIOD0" access="Read/Write">
+      <BitField start="0" size="16" name="PERIOD" />
+    </Register>
+    <Register start="0x400e6010" name="PWM_CMPDAT0" access="Read/Write">
+      <BitField start="0" size="16" name="CMP" />
+    </Register>
+    <Register start="0x400e6014" name="PWM_CNT0" access="Read/Write">
+      <BitField start="0" size="16" name="CNT" />
+    </Register>
+    <Register start="0x400e6018" name="PWM_PERIOD1" access="Read/Write">
+      <BitField start="0" size="16" name="PERIOD" />
+    </Register>
+    <Register start="0x400e601c" name="PWM_CMPDAT1" access="Read/Write">
+      <BitField start="0" size="16" name="CMP" />
+    </Register>
+    <Register start="0x400e6020" name="PWM_CNT1" access="Read/Write">
+      <BitField start="0" size="16" name="CNT" />
+    </Register>
+    <Register start="0x400e6024" name="PWM_PERIOD2" access="Read/Write">
+      <BitField start="0" size="16" name="PERIOD" />
+    </Register>
+    <Register start="0x400e6028" name="PWM_CMPDAT2" access="Read/Write">
+      <BitField start="0" size="16" name="CMP" />
+    </Register>
+    <Register start="0x400e602c" name="PWM_CNT2" access="Read/Write">
+      <BitField start="0" size="16" name="CNT" />
+    </Register>
+    <Register start="0x400e6030" name="PWM_PERIOD3" access="Read/Write">
+      <BitField start="0" size="16" name="PERIOD" />
+    </Register>
+    <Register start="0x400e6034" name="PWM_CMPDAT3" access="Read/Write">
+      <BitField start="0" size="16" name="CMP" />
+    </Register>
+    <Register start="0x400e6038" name="PWM_CNT3" access="Read/Write">
+      <BitField start="0" size="16" name="CNT" />
+    </Register>
+    <Register start="0x400e6040" name="PWM_INTEN" access="Read/Write">
+      <BitField start="0" size="4" name="PIEN" />
+    </Register>
+    <Register start="0x400e6044" name="PWM_INTSTS" access="Read/Write">
+      <BitField start="0" size="4" name="PIF" />
+    </Register>
+    <Register start="0x400e6050" name="PWM_CAPCTL01" access="Read/Write">
+      <BitField start="0" size="1" name="CAPINV0" />
+      <BitField start="1" size="1" name="CRLIEN0" />
+      <BitField start="2" size="1" name="CFLIEN0" />
+      <BitField start="3" size="1" name="CAPEN0" />
+      <BitField start="4" size="1" name="CAPIF0" />
+      <BitField start="6" size="1" name="CRLIF0" />
+      <BitField start="7" size="1" name="CFLIF0" />
+      <BitField start="16" size="1" name="CAPINV1" />
+      <BitField start="17" size="1" name="CRLIEN1" />
+      <BitField start="18" size="1" name="CFLIEN1" />
+      <BitField start="19" size="1" name="CAPEN1" />
+      <BitField start="20" size="1" name="CAPIF1" />
+      <BitField start="22" size="1" name="CRLIF1" />
+      <BitField start="23" size="1" name="CFLIF1" />
+    </Register>
+    <Register start="0x400e6054" name="PWM_CAPCTL23" access="Read/Write">
+      <BitField start="0" size="1" name="CAPINV2" />
+      <BitField start="1" size="1" name="CRLIEN2" />
+      <BitField start="2" size="1" name="CFLIEN2" />
+      <BitField start="3" size="1" name="CAPEN2" />
+      <BitField start="4" size="1" name="CAPIF2" />
+      <BitField start="6" size="1" name="CRLIF2" />
+      <BitField start="7" size="1" name="CFLIF2" />
+      <BitField start="16" size="1" name="CAPINV3" />
+      <BitField start="17" size="1" name="CRLIEN3" />
+      <BitField start="18" size="1" name="CFLIEN3" />
+      <BitField start="19" size="1" name="CAPEN3" />
+      <BitField start="20" size="1" name="CAPIF3" />
+      <BitField start="22" size="1" name="CRLIF3" />
+      <BitField start="23" size="1" name="CFLIF3" />
+    </Register>
+    <Register start="0x400e6058" name="PWM_RCAPDAT0" access="Read/Write">
+      <BitField start="0" size="16" name="RCAPDAT" />
+    </Register>
+    <Register start="0x400e605c" name="PWM_FCAPDAT0" access="Read/Write">
+      <BitField start="0" size="16" name="FCAPDAT" />
+    </Register>
+    <Register start="0x400e6060" name="PWM_RCAPDAT1" access="Read/Write">
+      <BitField start="0" size="16" name="RCAPDAT" />
+    </Register>
+    <Register start="0x400e6064" name="PWM_FCAPDAT1" access="Read/Write">
+      <BitField start="0" size="16" name="FCAPDAT" />
+    </Register>
+    <Register start="0x400e6068" name="PWM_RCAPDAT2" access="Read/Write">
+      <BitField start="0" size="16" name="RCAPDAT" />
+    </Register>
+    <Register start="0x400e606c" name="PWM_FCAPDAT2" access="Read/Write">
+      <BitField start="0" size="16" name="FCAPDAT" />
+    </Register>
+    <Register start="0x400e6070" name="PWM_RCAPDAT3" access="Read/Write">
+      <BitField start="0" size="16" name="RCAPDAT" />
+    </Register>
+    <Register start="0x400e6074" name="PWM_FCAPDAT3" access="Read/Write">
+      <BitField start="0" size="16" name="FCAPDAT" />
+    </Register>
+    <Register start="0x400e6078" name="PWM_CAPINEN" access="Read/Write">
+      <BitField start="0" size="1" name="CAPINEN" />
+    </Register>
+    <Register start="0x400e607c" name="PWM_POEN" access="Read/Write">
+      <BitField start="0" size="4" name="POEN" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="WDT">
+    <Register start="0x400ef000" name="WDT_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="RSTCNT" />
+      <BitField start="1" size="1" name="RSTEN" />
+      <BitField start="2" size="1" name="RSTFC" />
+      <BitField start="3" size="1" name="IF" />
+      <BitField start="4" size="1" name="WKEN" />
+      <BitField start="5" size="1" name="WKF" />
+      <BitField start="6" size="1" name="INTEN" />
+      <BitField start="7" size="1" name="WDTEN" />
+      <BitField start="8" size="3" name="TOUTSEL" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400ef004" name="WDT_ALTCTL" access="Read/Write">
+      <BitField start="0" size="2" name="RSTDSEL" />
+    </Register>
+    <Register start="0x400ef010" name="WDT_RSTSTS" access="Read/Write">
+      <BitField start="2" size="1" name="RSTF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="WWDT">
+    <Register start="0x400ef100" name="WWDT_RLDCNT" access="Read/Write">
+    </Register>
+    <Register start="0x400ef104" name="WWDT_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="WWDTEN" />
+      <BitField start="1" size="1" name="INTEN" />
+      <BitField start="8" size="4" name="PSCSEL" />
+      <BitField start="16" size="6" name="CMPDAT" />
+      <BitField start="31" size="1" name="ICEDEBUG" />
+    </Register>
+    <Register start="0x400ef108" name="WWDT_STATUS" access="Read/Write">
+      <BitField start="0" size="1" name="WWDTIF" />
+      <BitField start="1" size="1" name="WWDTRFC" />
+    </Register>
+    <Register start="0x400ef10c" name="WWDT_CNT" access="Read/Write">
+      <BitField start="0" size="6" name="CNTDAT" />
+    </Register>
+    <Register start="0x400ef118" name="WWDT_RSTSTS" access="Read/Write">
+      <BitField start="1" size="1" name="WWDTRF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="RTC">
+    <Register start="0x400e7000" name="RTC_INIT" access="Read/Write">
+      <BitField start="0" size="1" name="ACTIVE" />
+      <BitField start="1" size="31" name="INIT_STS" />
+    </Register>
+    <Register start="0x400e7004" name="RTC_RWEN" access="Read/Write">
+      <BitField start="0" size="16" name="RWEN" />
+      <BitField start="16" size="1" name="RWENF" />
+    </Register>
+    <Register start="0x400e7008" name="RTC_FREQADJ" access="Read/Write">
+      <BitField start="0" size="6" name="FRACTION" />
+      <BitField start="8" size="16" name="INTEGER" />
+      <BitField start="24" size="4" name="PKEYTIME" />
+      <BitField start="31" size="1" name="ADJTRG" />
+    </Register>
+    <Register start="0x400e700c" name="RTC_TIME" access="Read/Write">
+      <BitField start="0" size="4" name="SEC" />
+      <BitField start="4" size="3" name="TENSEC" />
+      <BitField start="8" size="4" name="MIN" />
+      <BitField start="12" size="3" name="TENMIN" />
+      <BitField start="16" size="4" name="HR" />
+      <BitField start="20" size="2" name="TENHR" />
+    </Register>
+    <Register start="0x400e7010" name="RTC_CAL" access="Read/Write">
+      <BitField start="0" size="4" name="DAY" />
+      <BitField start="4" size="2" name="TENDAY" />
+      <BitField start="8" size="4" name="MON" />
+      <BitField start="12" size="1" name="TENMON" />
+      <BitField start="16" size="4" name="YEAR" />
+      <BitField start="20" size="4" name="TENYEAR" />
+    </Register>
+    <Register start="0x400e7014" name="RTC_CLKFMT" access="Read/Write">
+      <BitField start="0" size="1" name="24HEN" />
+    </Register>
+    <Register start="0x400e7018" name="RTC_WEEKDAY" access="Read/Write">
+      <BitField start="0" size="3" name="WEEKDAY" />
+    </Register>
+    <Register start="0x400e701c" name="RTC_TALM" access="Read/Write">
+      <BitField start="0" size="4" name="SEC" />
+      <BitField start="4" size="3" name="TENSEC" />
+      <BitField start="7" size="1" name="MSKSEC" />
+      <BitField start="8" size="4" name="MIN" />
+      <BitField start="12" size="3" name="TENMIN" />
+      <BitField start="15" size="1" name="MSKMIN" />
+      <BitField start="16" size="4" name="HR" />
+      <BitField start="20" size="2" name="TENHR" />
+      <BitField start="23" size="1" name="MSKHR" />
+    </Register>
+    <Register start="0x400e7020" name="RTC_CALM" access="Read/Write">
+      <BitField start="0" size="4" name="DAY" />
+      <BitField start="4" size="2" name="TENDAY" />
+      <BitField start="7" size="1" name="MSKDAY" />
+      <BitField start="8" size="4" name="MON" />
+      <BitField start="12" size="1" name="TENMON" />
+      <BitField start="15" size="1" name="MSKMON" />
+      <BitField start="16" size="4" name="YEAR" />
+      <BitField start="20" size="4" name="TENYEAR" />
+      <BitField start="24" size="1" name="MSKYEAR" />
+      <BitField start="28" size="3" name="WEEKDAY" />
+      <BitField start="31" size="1" name="MSKWEEKDAY" />
+    </Register>
+    <Register start="0x400e7024" name="RTC_LEAPYEAR" access="Read/Write">
+      <BitField start="0" size="1" name="LEAPYEAR" />
+    </Register>
+    <Register start="0x400e7028" name="RTC_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="ALMIEN" />
+      <BitField start="1" size="1" name="TICKIEN" />
+      <BitField start="2" size="1" name="PKEYIEN" />
+      <BitField start="3" size="1" name="RALMIEN" />
+    </Register>
+    <Register start="0x400e702c" name="RTC_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="ALMIF" />
+      <BitField start="1" size="1" name="TICKIF" />
+      <BitField start="2" size="1" name="POWKEYIF" />
+      <BitField start="3" size="1" name="RELALMIF" />
+    </Register>
+    <Register start="0x400e7030" name="RTC_TICK" access="Read/Write">
+      <BitField start="0" size="3" name="TICKSEL" />
+    </Register>
+    <Register start="0x400e7034" name="RTC_POWCTL" access="Read/Write">
+      <BitField start="0" size="1" name="POWEN" />
+      <BitField start="1" size="1" name="SWPOWOFF" />
+      <BitField start="2" size="1" name="POWOFFEN" />
+      <BitField start="3" size="1" name="ALMIEN" />
+      <BitField start="4" size="1" name="RALMIEN" />
+      <BitField start="5" size="1" name="EDGE_TRIG" />
+      <BitField start="7" size="1" name="POWKEY" />
+      <BitField start="16" size="4" name="POWOFFT" />
+      <BitField start="20" size="12" name="RALMTIME" />
+    </Register>
+    <Register start="0x400e7038" name="RTC_SET" access="Read/Write">
+      <BitField start="1" size="1" name="CBEN" />
+      <BitField start="2" size="1" name="IOMSEL" />
+      <BitField start="3" size="1" name="XININDAT" />
+      <BitField start="4" size="1" name="XOUTDAT" />
+    </Register>
+    <Register start="0x400e703c" name="RTC_CLKSRC" access="Read/Write">
+      <BitField start="0" size="1" name="CKSRC" />
+    </Register>
+    <Register start="0x400e7040" name="RTC_CALCNT" access="Read/Write">
+    </Register>
+    <Register start="0x400e7044" name="RTC_SYNC" access="Read/Write">
+      <BitField start="0" size="1" name="SYNC" />
+    </Register>
+    <Register start="0x400e7054" name="RTC_SPR0" access="Read/Write">
+    </Register>
+    <Register start="0x400e7058" name="RTC_SPR1" access="Read/Write">
+    </Register>
+    <Register start="0x400e705c" name="RTC_SPR2" access="Read/Write">
+    </Register>
+    <Register start="0x400e7060" name="RTC_SPR3" access="Read/Write">
+    </Register>
+    <Register start="0x400e7064" name="RTC_SPR4" access="Read/Write">
+    </Register>
+    <Register start="0x400e7068" name="RTC_SPR5" access="Read/Write">
+    </Register>
+    <Register start="0x400e706c" name="RTC_SPR6" access="Read/Write">
+    </Register>
+    <Register start="0x400e7070" name="RTC_SPR7" access="Read/Write">
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="UART0">
+    <Register start="0x400ec000" name="UART_DAT" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+    </Register>
+    <Register start="0x400ec004" name="UART_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIEN" />
+      <BitField start="1" size="1" name="THREIEN" />
+      <BitField start="2" size="1" name="RLSIEN" />
+      <BitField start="3" size="1" name="MODEMIEN" />
+      <BitField start="4" size="1" name="RXTOIEN" />
+      <BitField start="5" size="1" name="BUFERRIEN" />
+      <BitField start="8" size="1" name="LINIEN" />
+      <BitField start="9" size="1" name="WKCTSIEN" />
+      <BitField start="10" size="1" name="WKDATIEN" />
+      <BitField start="11" size="1" name="TOCNTEN" />
+      <BitField start="12" size="1" name="ATORTSEN" />
+      <BitField start="13" size="1" name="ATOCTSEN" />
+      <BitField start="18" size="1" name="ABRIEN" />
+    </Register>
+    <Register start="0x400ec008" name="UART_FIFO" access="Read/Write">
+      <BitField start="1" size="1" name="RXRST" />
+      <BitField start="2" size="1" name="TXRST" />
+      <BitField start="4" size="4" name="RFITL" />
+      <BitField start="8" size="1" name="RXOFF" />
+      <BitField start="16" size="4" name="RTSTRGLV" />
+    </Register>
+    <Register start="0x400ec00c" name="UART_LINE" access="Read/Write">
+      <BitField start="0" size="2" name="WLS" />
+      <BitField start="2" size="1" name="NSB" />
+      <BitField start="3" size="1" name="PBE" />
+      <BitField start="4" size="1" name="EPE" />
+      <BitField start="5" size="1" name="SPE" />
+      <BitField start="6" size="1" name="BCB" />
+    </Register>
+    <Register start="0x400ec010" name="UART_MODEM" access="Read/Write">
+      <BitField start="1" size="1" name="RTS" />
+      <BitField start="9" size="1" name="RTSACTLV" />
+      <BitField start="13" size="1" name="RTSSTS" />
+    </Register>
+    <Register start="0x400ec014" name="UART_MODEMSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CTSDETF" />
+      <BitField start="4" size="1" name="CTSSTS" />
+      <BitField start="8" size="1" name="CTSACTLV" />
+    </Register>
+    <Register start="0x400ec018" name="UART_FIFOSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RXOVIF" />
+      <BitField start="1" size="1" name="ABRDIF" />
+      <BitField start="2" size="1" name="ABRDTOIF" />
+      <BitField start="3" size="1" name="ADDRDETF" />
+      <BitField start="4" size="1" name="PEF" />
+      <BitField start="5" size="1" name="FEF" />
+      <BitField start="6" size="1" name="BIF" />
+      <BitField start="8" size="6" name="RXPTR" />
+      <BitField start="14" size="1" name="RXEMPTY" />
+      <BitField start="15" size="1" name="RXFULL" />
+      <BitField start="16" size="6" name="TXPTR" />
+      <BitField start="22" size="1" name="TXEMPTY" />
+      <BitField start="23" size="1" name="TXFULL" />
+      <BitField start="24" size="1" name="TXOVIF" />
+      <BitField start="28" size="1" name="TXEMPTYF" />
+    </Register>
+    <Register start="0x400ec01c" name="UART_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIF" />
+      <BitField start="1" size="1" name="THREIF" />
+      <BitField start="2" size="1" name="RLSIF" />
+      <BitField start="3" size="1" name="MODEMIF" />
+      <BitField start="4" size="1" name="RXTOIF" />
+      <BitField start="5" size="1" name="BUFERRIF" />
+      <BitField start="6" size="1" name="WKIF" />
+      <BitField start="7" size="1" name="LINIF" />
+      <BitField start="8" size="1" name="RDAINT" />
+      <BitField start="9" size="1" name="THREINT" />
+      <BitField start="10" size="1" name="RLSINT" />
+      <BitField start="11" size="1" name="MODEMINT" />
+      <BitField start="12" size="1" name="RXTOINT" />
+      <BitField start="13" size="1" name="BUFERRINT" />
+      <BitField start="14" size="1" name="WKINT" />
+      <BitField start="15" size="1" name="LININT" />
+      <BitField start="16" size="1" name="CTSWKIF" />
+      <BitField start="17" size="1" name="DATWKIF" />
+    </Register>
+    <Register start="0x400ec020" name="UART_TOUT" access="Read/Write">
+      <BitField start="0" size="8" name="TOIC" />
+      <BitField start="8" size="8" name="DLY" />
+    </Register>
+    <Register start="0x400ec024" name="UART_BAUD" access="Read/Write">
+      <BitField start="0" size="16" name="BRD" />
+      <BitField start="24" size="4" name="EDIVM1" />
+      <BitField start="28" size="1" name="BAUDM0" />
+      <BitField start="29" size="1" name="BAUDM1" />
+    </Register>
+    <Register start="0x400ec028" name="UART_IRDA" access="Read/Write">
+      <BitField start="1" size="1" name="TXEN" />
+      <BitField start="5" size="1" name="TXINV" />
+      <BitField start="6" size="1" name="RXINV" />
+    </Register>
+    <Register start="0x400ec02c" name="UART_ALTCTL" access="Read/Write">
+      <BitField start="0" size="4" name="BRKFL" />
+      <BitField start="6" size="1" name="LINRXEN" />
+      <BitField start="7" size="1" name="LINTXEN" />
+      <BitField start="8" size="1" name="RS485NMM" />
+      <BitField start="9" size="1" name="RS485AAD" />
+      <BitField start="10" size="1" name="RS485AUD" />
+      <BitField start="15" size="1" name="ADDRDEN" />
+      <BitField start="17" size="1" name="ABRIF" />
+      <BitField start="18" size="1" name="ABRDEN" />
+      <BitField start="19" size="2" name="ABRDBITS" />
+      <BitField start="24" size="8" name="ADDRMV" />
+    </Register>
+    <Register start="0x400ec030" name="UART_FUNCSEL" access="Read/Write">
+      <BitField start="0" size="2" name="FUNCSEL" />
+    </Register>
+    <Register start="0x400ec034" name="UART_LINCTL" access="Read/Write">
+      <BitField start="0" size="1" name="SLVEN" />
+      <BitField start="1" size="1" name="SLVHDEN" />
+      <BitField start="2" size="1" name="SLVAREN" />
+      <BitField start="3" size="1" name="SLVDUEN" />
+      <BitField start="4" size="1" name="MUTE" />
+      <BitField start="8" size="1" name="SENDH" />
+      <BitField start="9" size="1" name="IDPEN" />
+      <BitField start="10" size="1" name="BRKDETEN" />
+      <BitField start="11" size="1" name="RXOFF" />
+      <BitField start="12" size="1" name="BITERREN" />
+      <BitField start="16" size="4" name="BRKFL" />
+      <BitField start="20" size="2" name="BSL" />
+      <BitField start="22" size="2" name="HSEL" />
+      <BitField start="24" size="8" name="PID" />
+    </Register>
+    <Register start="0x400ec038" name="UART_LINSTS" access="Read/Write">
+      <BitField start="0" size="1" name="SLVHDETF" />
+      <BitField start="1" size="1" name="SLVHEF" />
+      <BitField start="2" size="1" name="SLVIDPEF" />
+      <BitField start="3" size="1" name="SLVSYNCF" />
+      <BitField start="8" size="1" name="BRKDETF" />
+      <BitField start="9" size="1" name="BITEF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="UART1">
+    <Register start="0x400ed000" name="UART_DAT" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+    </Register>
+    <Register start="0x400ed004" name="UART_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIEN" />
+      <BitField start="1" size="1" name="THREIEN" />
+      <BitField start="2" size="1" name="RLSIEN" />
+      <BitField start="3" size="1" name="MODEMIEN" />
+      <BitField start="4" size="1" name="RXTOIEN" />
+      <BitField start="5" size="1" name="BUFERRIEN" />
+      <BitField start="8" size="1" name="LINIEN" />
+      <BitField start="9" size="1" name="WKCTSIEN" />
+      <BitField start="10" size="1" name="WKDATIEN" />
+      <BitField start="11" size="1" name="TOCNTEN" />
+      <BitField start="12" size="1" name="ATORTSEN" />
+      <BitField start="13" size="1" name="ATOCTSEN" />
+      <BitField start="18" size="1" name="ABRIEN" />
+    </Register>
+    <Register start="0x400ed008" name="UART_FIFO" access="Read/Write">
+      <BitField start="1" size="1" name="RXRST" />
+      <BitField start="2" size="1" name="TXRST" />
+      <BitField start="4" size="4" name="RFITL" />
+      <BitField start="8" size="1" name="RXOFF" />
+      <BitField start="16" size="4" name="RTSTRGLV" />
+    </Register>
+    <Register start="0x400ed00c" name="UART_LINE" access="Read/Write">
+      <BitField start="0" size="2" name="WLS" />
+      <BitField start="2" size="1" name="NSB" />
+      <BitField start="3" size="1" name="PBE" />
+      <BitField start="4" size="1" name="EPE" />
+      <BitField start="5" size="1" name="SPE" />
+      <BitField start="6" size="1" name="BCB" />
+    </Register>
+    <Register start="0x400ed010" name="UART_MODEM" access="Read/Write">
+      <BitField start="1" size="1" name="RTS" />
+      <BitField start="9" size="1" name="RTSACTLV" />
+      <BitField start="13" size="1" name="RTSSTS" />
+    </Register>
+    <Register start="0x400ed014" name="UART_MODEMSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CTSDETF" />
+      <BitField start="4" size="1" name="CTSSTS" />
+      <BitField start="8" size="1" name="CTSACTLV" />
+    </Register>
+    <Register start="0x400ed018" name="UART_FIFOSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RXOVIF" />
+      <BitField start="1" size="1" name="ABRDIF" />
+      <BitField start="2" size="1" name="ABRDTOIF" />
+      <BitField start="3" size="1" name="ADDRDETF" />
+      <BitField start="4" size="1" name="PEF" />
+      <BitField start="5" size="1" name="FEF" />
+      <BitField start="6" size="1" name="BIF" />
+      <BitField start="8" size="6" name="RXPTR" />
+      <BitField start="14" size="1" name="RXEMPTY" />
+      <BitField start="15" size="1" name="RXFULL" />
+      <BitField start="16" size="6" name="TXPTR" />
+      <BitField start="22" size="1" name="TXEMPTY" />
+      <BitField start="23" size="1" name="TXFULL" />
+      <BitField start="24" size="1" name="TXOVIF" />
+      <BitField start="28" size="1" name="TXEMPTYF" />
+    </Register>
+    <Register start="0x400ed01c" name="UART_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIF" />
+      <BitField start="1" size="1" name="THREIF" />
+      <BitField start="2" size="1" name="RLSIF" />
+      <BitField start="3" size="1" name="MODEMIF" />
+      <BitField start="4" size="1" name="RXTOIF" />
+      <BitField start="5" size="1" name="BUFERRIF" />
+      <BitField start="6" size="1" name="WKIF" />
+      <BitField start="7" size="1" name="LINIF" />
+      <BitField start="8" size="1" name="RDAINT" />
+      <BitField start="9" size="1" name="THREINT" />
+      <BitField start="10" size="1" name="RLSINT" />
+      <BitField start="11" size="1" name="MODEMINT" />
+      <BitField start="12" size="1" name="RXTOINT" />
+      <BitField start="13" size="1" name="BUFERRINT" />
+      <BitField start="14" size="1" name="WKINT" />
+      <BitField start="15" size="1" name="LININT" />
+      <BitField start="16" size="1" name="CTSWKIF" />
+      <BitField start="17" size="1" name="DATWKIF" />
+    </Register>
+    <Register start="0x400ed020" name="UART_TOUT" access="Read/Write">
+      <BitField start="0" size="8" name="TOIC" />
+      <BitField start="8" size="8" name="DLY" />
+    </Register>
+    <Register start="0x400ed024" name="UART_BAUD" access="Read/Write">
+      <BitField start="0" size="16" name="BRD" />
+      <BitField start="24" size="4" name="EDIVM1" />
+      <BitField start="28" size="1" name="BAUDM0" />
+      <BitField start="29" size="1" name="BAUDM1" />
+    </Register>
+    <Register start="0x400ed028" name="UART_IRDA" access="Read/Write">
+      <BitField start="1" size="1" name="TXEN" />
+      <BitField start="5" size="1" name="TXINV" />
+      <BitField start="6" size="1" name="RXINV" />
+    </Register>
+    <Register start="0x400ed02c" name="UART_ALTCTL" access="Read/Write">
+      <BitField start="0" size="4" name="BRKFL" />
+      <BitField start="6" size="1" name="LINRXEN" />
+      <BitField start="7" size="1" name="LINTXEN" />
+      <BitField start="8" size="1" name="RS485NMM" />
+      <BitField start="9" size="1" name="RS485AAD" />
+      <BitField start="10" size="1" name="RS485AUD" />
+      <BitField start="15" size="1" name="ADDRDEN" />
+      <BitField start="17" size="1" name="ABRIF" />
+      <BitField start="18" size="1" name="ABRDEN" />
+      <BitField start="19" size="2" name="ABRDBITS" />
+      <BitField start="24" size="8" name="ADDRMV" />
+    </Register>
+    <Register start="0x400ed030" name="UART_FUNCSEL" access="Read/Write">
+      <BitField start="0" size="2" name="FUNCSEL" />
+    </Register>
+    <Register start="0x400ed034" name="UART_LINCTL" access="Read/Write">
+      <BitField start="0" size="1" name="SLVEN" />
+      <BitField start="1" size="1" name="SLVHDEN" />
+      <BitField start="2" size="1" name="SLVAREN" />
+      <BitField start="3" size="1" name="SLVDUEN" />
+      <BitField start="4" size="1" name="MUTE" />
+      <BitField start="8" size="1" name="SENDH" />
+      <BitField start="9" size="1" name="IDPEN" />
+      <BitField start="10" size="1" name="BRKDETEN" />
+      <BitField start="11" size="1" name="RXOFF" />
+      <BitField start="12" size="1" name="BITERREN" />
+      <BitField start="16" size="4" name="BRKFL" />
+      <BitField start="20" size="2" name="BSL" />
+      <BitField start="22" size="2" name="HSEL" />
+      <BitField start="24" size="8" name="PID" />
+    </Register>
+    <Register start="0x400ed038" name="UART_LINSTS" access="Read/Write">
+      <BitField start="0" size="1" name="SLVHDETF" />
+      <BitField start="1" size="1" name="SLVHEF" />
+      <BitField start="2" size="1" name="SLVIDPEF" />
+      <BitField start="3" size="1" name="SLVSYNCF" />
+      <BitField start="8" size="1" name="BRKDETF" />
+      <BitField start="9" size="1" name="BITEF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="UART2">
+    <Register start="0x400ee000" name="UART_DAT" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+    </Register>
+    <Register start="0x400ee004" name="UART_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIEN" />
+      <BitField start="1" size="1" name="THREIEN" />
+      <BitField start="2" size="1" name="RLSIEN" />
+      <BitField start="3" size="1" name="MODEMIEN" />
+      <BitField start="4" size="1" name="RXTOIEN" />
+      <BitField start="5" size="1" name="BUFERRIEN" />
+      <BitField start="8" size="1" name="LINIEN" />
+      <BitField start="9" size="1" name="WKCTSIEN" />
+      <BitField start="10" size="1" name="WKDATIEN" />
+      <BitField start="11" size="1" name="TOCNTEN" />
+      <BitField start="12" size="1" name="ATORTSEN" />
+      <BitField start="13" size="1" name="ATOCTSEN" />
+      <BitField start="18" size="1" name="ABRIEN" />
+    </Register>
+    <Register start="0x400ee008" name="UART_FIFO" access="Read/Write">
+      <BitField start="1" size="1" name="RXRST" />
+      <BitField start="2" size="1" name="TXRST" />
+      <BitField start="4" size="4" name="RFITL" />
+      <BitField start="8" size="1" name="RXOFF" />
+      <BitField start="16" size="4" name="RTSTRGLV" />
+    </Register>
+    <Register start="0x400ee00c" name="UART_LINE" access="Read/Write">
+      <BitField start="0" size="2" name="WLS" />
+      <BitField start="2" size="1" name="NSB" />
+      <BitField start="3" size="1" name="PBE" />
+      <BitField start="4" size="1" name="EPE" />
+      <BitField start="5" size="1" name="SPE" />
+      <BitField start="6" size="1" name="BCB" />
+    </Register>
+    <Register start="0x400ee010" name="UART_MODEM" access="Read/Write">
+      <BitField start="1" size="1" name="RTS" />
+      <BitField start="9" size="1" name="RTSACTLV" />
+      <BitField start="13" size="1" name="RTSSTS" />
+    </Register>
+    <Register start="0x400ee014" name="UART_MODEMSTS" access="Read/Write">
+      <BitField start="0" size="1" name="CTSDETF" />
+      <BitField start="4" size="1" name="CTSSTS" />
+      <BitField start="8" size="1" name="CTSACTLV" />
+    </Register>
+    <Register start="0x400ee018" name="UART_FIFOSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RXOVIF" />
+      <BitField start="1" size="1" name="ABRDIF" />
+      <BitField start="2" size="1" name="ABRDTOIF" />
+      <BitField start="3" size="1" name="ADDRDETF" />
+      <BitField start="4" size="1" name="PEF" />
+      <BitField start="5" size="1" name="FEF" />
+      <BitField start="6" size="1" name="BIF" />
+      <BitField start="8" size="6" name="RXPTR" />
+      <BitField start="14" size="1" name="RXEMPTY" />
+      <BitField start="15" size="1" name="RXFULL" />
+      <BitField start="16" size="6" name="TXPTR" />
+      <BitField start="22" size="1" name="TXEMPTY" />
+      <BitField start="23" size="1" name="TXFULL" />
+      <BitField start="24" size="1" name="TXOVIF" />
+      <BitField start="28" size="1" name="TXEMPTYF" />
+    </Register>
+    <Register start="0x400ee01c" name="UART_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="RDAIF" />
+      <BitField start="1" size="1" name="THREIF" />
+      <BitField start="2" size="1" name="RLSIF" />
+      <BitField start="3" size="1" name="MODEMIF" />
+      <BitField start="4" size="1" name="RXTOIF" />
+      <BitField start="5" size="1" name="BUFERRIF" />
+      <BitField start="6" size="1" name="WKIF" />
+      <BitField start="7" size="1" name="LINIF" />
+      <BitField start="8" size="1" name="RDAINT" />
+      <BitField start="9" size="1" name="THREINT" />
+      <BitField start="10" size="1" name="RLSINT" />
+      <BitField start="11" size="1" name="MODEMINT" />
+      <BitField start="12" size="1" name="RXTOINT" />
+      <BitField start="13" size="1" name="BUFERRINT" />
+      <BitField start="14" size="1" name="WKINT" />
+      <BitField start="15" size="1" name="LININT" />
+      <BitField start="16" size="1" name="CTSWKIF" />
+      <BitField start="17" size="1" name="DATWKIF" />
+    </Register>
+    <Register start="0x400ee020" name="UART_TOUT" access="Read/Write">
+      <BitField start="0" size="8" name="TOIC" />
+      <BitField start="8" size="8" name="DLY" />
+    </Register>
+    <Register start="0x400ee024" name="UART_BAUD" access="Read/Write">
+      <BitField start="0" size="16" name="BRD" />
+      <BitField start="24" size="4" name="EDIVM1" />
+      <BitField start="28" size="1" name="BAUDM0" />
+      <BitField start="29" size="1" name="BAUDM1" />
+    </Register>
+    <Register start="0x400ee028" name="UART_IRDA" access="Read/Write">
+      <BitField start="1" size="1" name="TXEN" />
+      <BitField start="5" size="1" name="TXINV" />
+      <BitField start="6" size="1" name="RXINV" />
+    </Register>
+    <Register start="0x400ee02c" name="UART_ALTCTL" access="Read/Write">
+      <BitField start="0" size="4" name="BRKFL" />
+      <BitField start="6" size="1" name="LINRXEN" />
+      <BitField start="7" size="1" name="LINTXEN" />
+      <BitField start="8" size="1" name="RS485NMM" />
+      <BitField start="9" size="1" name="RS485AAD" />
+      <BitField start="10" size="1" name="RS485AUD" />
+      <BitField start="15" size="1" name="ADDRDEN" />
+      <BitField start="17" size="1" name="ABRIF" />
+      <BitField start="18" size="1" name="ABRDEN" />
+      <BitField start="19" size="2" name="ABRDBITS" />
+      <BitField start="24" size="8" name="ADDRMV" />
+    </Register>
+    <Register start="0x400ee030" name="UART_FUNCSEL" access="Read/Write">
+      <BitField start="0" size="2" name="FUNCSEL" />
+    </Register>
+    <Register start="0x400ee034" name="UART_LINCTL" access="Read/Write">
+      <BitField start="0" size="1" name="SLVEN" />
+      <BitField start="1" size="1" name="SLVHDEN" />
+      <BitField start="2" size="1" name="SLVAREN" />
+      <BitField start="3" size="1" name="SLVDUEN" />
+      <BitField start="4" size="1" name="MUTE" />
+      <BitField start="8" size="1" name="SENDH" />
+      <BitField start="9" size="1" name="IDPEN" />
+      <BitField start="10" size="1" name="BRKDETEN" />
+      <BitField start="11" size="1" name="RXOFF" />
+      <BitField start="12" size="1" name="BITERREN" />
+      <BitField start="16" size="4" name="BRKFL" />
+      <BitField start="20" size="2" name="BSL" />
+      <BitField start="22" size="2" name="HSEL" />
+      <BitField start="24" size="8" name="PID" />
+    </Register>
+    <Register start="0x400ee038" name="UART_LINSTS" access="Read/Write">
+      <BitField start="0" size="1" name="SLVHDETF" />
+      <BitField start="1" size="1" name="SLVHEF" />
+      <BitField start="2" size="1" name="SLVIDPEF" />
+      <BitField start="3" size="1" name="SLVSYNCF" />
+      <BitField start="8" size="1" name="BRKDETF" />
+      <BitField start="9" size="1" name="BITEF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="I2C0">
+    <Register start="0x400e4000" name="I2C_CTL" access="Read/Write">
+      <BitField start="2" size="1" name="AA" />
+      <BitField start="3" size="1" name="SI" />
+      <BitField start="4" size="1" name="STO" />
+      <BitField start="5" size="1" name="STA" />
+      <BitField start="6" size="1" name="I2CEN" />
+      <BitField start="7" size="1" name="INTEN" />
+    </Register>
+    <Register start="0x400e4004" name="I2C_ADDR0" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e4008" name="I2C_DAT" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+    </Register>
+    <Register start="0x400e400c" name="I2C_STATUS" access="Read/Write">
+      <BitField start="0" size="8" name="STATUS" />
+    </Register>
+    <Register start="0x400e4010" name="I2C_CLKDIV" access="Read/Write">
+      <BitField start="0" size="8" name="DIVIDER" />
+    </Register>
+    <Register start="0x400e4014" name="I2C_TOCTL" access="Read/Write">
+      <BitField start="0" size="1" name="TOIF" />
+      <BitField start="1" size="1" name="TOCDIV4" />
+      <BitField start="2" size="1" name="TOCEN" />
+    </Register>
+    <Register start="0x400e4018" name="I2C_ADDR1" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e401c" name="I2C_ADDR2" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e4020" name="I2C_ADDR3" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e4024" name="I2C_ADDRMSK0" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e4028" name="I2C_ADDRMSK1" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e402c" name="I2C_ADDRMSK2" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e4030" name="I2C_ADDRMSK3" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e403c" name="I2C_WKCTL" access="Read/Write">
+      <BitField start="0" size="1" name="WKEN" />
+    </Register>
+    <Register start="0x400e4040" name="I2C_WKSTS" access="Read/Write">
+      <BitField start="0" size="1" name="WKIF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="I2C1">
+    <Register start="0x400e5000" name="I2C_CTL" access="Read/Write">
+      <BitField start="2" size="1" name="AA" />
+      <BitField start="3" size="1" name="SI" />
+      <BitField start="4" size="1" name="STO" />
+      <BitField start="5" size="1" name="STA" />
+      <BitField start="6" size="1" name="I2CEN" />
+      <BitField start="7" size="1" name="INTEN" />
+    </Register>
+    <Register start="0x400e5004" name="I2C_ADDR0" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e5008" name="I2C_DAT" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+    </Register>
+    <Register start="0x400e500c" name="I2C_STATUS" access="Read/Write">
+      <BitField start="0" size="8" name="STATUS" />
+    </Register>
+    <Register start="0x400e5010" name="I2C_CLKDIV" access="Read/Write">
+      <BitField start="0" size="8" name="DIVIDER" />
+    </Register>
+    <Register start="0x400e5014" name="I2C_TOCTL" access="Read/Write">
+      <BitField start="0" size="1" name="TOIF" />
+      <BitField start="1" size="1" name="TOCDIV4" />
+      <BitField start="2" size="1" name="TOCEN" />
+    </Register>
+    <Register start="0x400e5018" name="I2C_ADDR1" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e501c" name="I2C_ADDR2" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e5020" name="I2C_ADDR3" access="Read/Write">
+      <BitField start="0" size="1" name="GC" />
+      <BitField start="1" size="7" name="ADDR" />
+    </Register>
+    <Register start="0x400e5024" name="I2C_ADDRMSK0" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e5028" name="I2C_ADDRMSK1" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e502c" name="I2C_ADDRMSK2" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e5030" name="I2C_ADDRMSK3" access="Read/Write">
+      <BitField start="1" size="7" name="ADDRMSK" />
+    </Register>
+    <Register start="0x400e503c" name="I2C_WKCTL" access="Read/Write">
+      <BitField start="0" size="1" name="WKEN" />
+    </Register>
+    <Register start="0x400e5040" name="I2C_WKSTS" access="Read/Write">
+      <BitField start="0" size="1" name="WKIF" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="SPI0">
+    <Register start="0x400e9000" name="SPI_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="SPIEN" />
+      <BitField start="1" size="1" name="RXNEG" />
+      <BitField start="2" size="1" name="TXNEG" />
+      <BitField start="3" size="1" name="CLKPOL" />
+      <BitField start="4" size="4" name="SUSPITV" />
+      <BitField start="8" size="5" name="DWIDTH" />
+      <BitField start="13" size="1" name="LSB" />
+      <BitField start="17" size="1" name="UNITIEN" />
+      <BitField start="18" size="1" name="SLAVE" />
+      <BitField start="19" size="1" name="REORDER" />
+    </Register>
+    <Register start="0x400e9004" name="SPI_CLKDIV" access="Read/Write">
+      <BitField start="0" size="8" name="DIVIDER" />
+    </Register>
+    <Register start="0x400e9008" name="SPI_SSCTL" access="Read/Write">
+      <BitField start="0" size="1" name="SS" />
+      <BitField start="2" size="1" name="SSACTPOL" />
+      <BitField start="3" size="1" name="AUTOSS" />
+      <BitField start="4" size="1" name="SLV3WIRE" />
+      <BitField start="5" size="1" name="SLVTOIEN" />
+      <BitField start="6" size="1" name="SLVTORST" />
+      <BitField start="8" size="1" name="SLVBEIEN" />
+      <BitField start="9" size="1" name="SLVURIEN" />
+      <BitField start="12" size="1" name="SSACTIEN" />
+      <BitField start="13" size="1" name="SSINAIEN" />
+      <BitField start="16" size="16" name="SLVTOCNT" />
+    </Register>
+    <Register start="0x400e9010" name="SPI_FIFOCTL" access="Read/Write">
+      <BitField start="0" size="1" name="RXRST" />
+      <BitField start="1" size="1" name="TXRST" />
+      <BitField start="2" size="1" name="RXTHIEN" />
+      <BitField start="3" size="1" name="TXTHIEN" />
+      <BitField start="4" size="1" name="RXTOIEN" />
+      <BitField start="5" size="1" name="RXOVIEN" />
+      <BitField start="6" size="1" name="TXUFPOL" />
+      <BitField start="7" size="1" name="TXUFIEN" />
+      <BitField start="8" size="1" name="RXFBCLR" />
+      <BitField start="9" size="1" name="TXFBCLR" />
+      <BitField start="24" size="3" name="RXTH" />
+      <BitField start="28" size="3" name="TXTH" />
+    </Register>
+    <Register start="0x400e9014" name="SPI_STATUS" access="Read/Write">
+      <BitField start="0" size="1" name="BUSY" />
+      <BitField start="1" size="1" name="UNITIF" />
+      <BitField start="2" size="1" name="SSACTIF" />
+      <BitField start="3" size="1" name="SSINAIF" />
+      <BitField start="4" size="1" name="SSLINE" />
+      <BitField start="5" size="1" name="SLVTOIF" />
+      <BitField start="6" size="1" name="SLVBEIF" />
+      <BitField start="7" size="1" name="SLVURIF" />
+      <BitField start="8" size="1" name="RXEMPTY" />
+      <BitField start="9" size="1" name="RXFULL" />
+      <BitField start="10" size="1" name="RXTHIF" />
+      <BitField start="11" size="1" name="RXOVIF" />
+      <BitField start="12" size="1" name="RXTOIF" />
+      <BitField start="15" size="1" name="SPIENSTS" />
+      <BitField start="16" size="1" name="TXEMPTY" />
+      <BitField start="17" size="1" name="TXFULL" />
+      <BitField start="18" size="1" name="TXTHIF" />
+      <BitField start="19" size="1" name="TXUFIF" />
+      <BitField start="23" size="1" name="TXRXRST" />
+      <BitField start="24" size="4" name="RXCNT" />
+      <BitField start="28" size="4" name="TXCNT" />
+    </Register>
+    <Register start="0x400e9020" name="SPI_TX" access="Read/Write">
+    </Register>
+    <Register start="0x400e9030" name="SPI_RX" access="Read/Write">
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="SPI1">
+    <Register start="0x400e1000" name="SPI_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="SPIEN" />
+      <BitField start="1" size="1" name="RXNEG" />
+      <BitField start="2" size="1" name="TXNEG" />
+      <BitField start="3" size="1" name="CLKPOL" />
+      <BitField start="4" size="4" name="SUSPITV" />
+      <BitField start="8" size="5" name="DWIDTH" />
+      <BitField start="13" size="1" name="LSB" />
+      <BitField start="17" size="1" name="UNITIEN" />
+      <BitField start="18" size="1" name="SLAVE" />
+      <BitField start="19" size="1" name="REORDER" />
+    </Register>
+    <Register start="0x400e1004" name="SPI_CLKDIV" access="Read/Write">
+      <BitField start="0" size="8" name="DIVIDER" />
+    </Register>
+    <Register start="0x400e1008" name="SPI_SSCTL" access="Read/Write">
+      <BitField start="0" size="1" name="SS" />
+      <BitField start="2" size="1" name="SSACTPOL" />
+      <BitField start="3" size="1" name="AUTOSS" />
+      <BitField start="4" size="1" name="SLV3WIRE" />
+      <BitField start="5" size="1" name="SLVTOIEN" />
+      <BitField start="6" size="1" name="SLVTORST" />
+      <BitField start="8" size="1" name="SLVBEIEN" />
+      <BitField start="9" size="1" name="SLVURIEN" />
+      <BitField start="12" size="1" name="SSACTIEN" />
+      <BitField start="13" size="1" name="SSINAIEN" />
+      <BitField start="16" size="16" name="SLVTOCNT" />
+    </Register>
+    <Register start="0x400e1010" name="SPI_FIFOCTL" access="Read/Write">
+      <BitField start="0" size="1" name="RXRST" />
+      <BitField start="1" size="1" name="TXRST" />
+      <BitField start="2" size="1" name="RXTHIEN" />
+      <BitField start="3" size="1" name="TXTHIEN" />
+      <BitField start="4" size="1" name="RXTOIEN" />
+      <BitField start="5" size="1" name="RXOVIEN" />
+      <BitField start="6" size="1" name="TXUFPOL" />
+      <BitField start="7" size="1" name="TXUFIEN" />
+      <BitField start="8" size="1" name="RXFBCLR" />
+      <BitField start="9" size="1" name="TXFBCLR" />
+      <BitField start="24" size="3" name="RXTH" />
+      <BitField start="28" size="3" name="TXTH" />
+    </Register>
+    <Register start="0x400e1014" name="SPI_STATUS" access="Read/Write">
+      <BitField start="0" size="1" name="BUSY" />
+      <BitField start="1" size="1" name="UNITIF" />
+      <BitField start="2" size="1" name="SSACTIF" />
+      <BitField start="3" size="1" name="SSINAIF" />
+      <BitField start="4" size="1" name="SSLINE" />
+      <BitField start="5" size="1" name="SLVTOIF" />
+      <BitField start="6" size="1" name="SLVBEIF" />
+      <BitField start="7" size="1" name="SLVURIF" />
+      <BitField start="8" size="1" name="RXEMPTY" />
+      <BitField start="9" size="1" name="RXFULL" />
+      <BitField start="10" size="1" name="RXTHIF" />
+      <BitField start="11" size="1" name="RXOVIF" />
+      <BitField start="12" size="1" name="RXTOIF" />
+      <BitField start="15" size="1" name="SPIENSTS" />
+      <BitField start="16" size="1" name="TXEMPTY" />
+      <BitField start="17" size="1" name="TXFULL" />
+      <BitField start="18" size="1" name="TXTHIF" />
+      <BitField start="19" size="1" name="TXUFIF" />
+      <BitField start="23" size="1" name="TXRXRST" />
+      <BitField start="24" size="4" name="RXCNT" />
+      <BitField start="28" size="4" name="TXCNT" />
+    </Register>
+    <Register start="0x400e1020" name="SPI_TX" access="Read/Write">
+    </Register>
+    <Register start="0x400e1030" name="SPI_RX" access="Read/Write">
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="SPIM">
+    <Register start="0x40007000" name="SPIM_CTL0" access="Read/Write">
+      <BitField start="0" size="1" name="CIPHOFF" />
+      <BitField start="2" size="1" name="BALEN" />
+      <BitField start="5" size="1" name="B4ADDREN" />
+      <BitField start="6" size="1" name="IEN" />
+      <BitField start="7" size="1" name="IF" />
+      <BitField start="8" size="5" name="DWIDTH" />
+      <BitField start="13" size="2" name="BURSTNUM" />
+      <BitField start="15" size="1" name="QDIODIR" />
+      <BitField start="16" size="4" name="SUSPITV" />
+      <BitField start="20" size="2" name="BITMODE" />
+      <BitField start="22" size="2" name="OPMODE" />
+      <BitField start="24" size="8" name="CMDCODE" />
+    </Register>
+    <Register start="0x40007004" name="SPIM_CTL1" access="Read/Write">
+      <BitField start="0" size="1" name="SPIMEN" />
+      <BitField start="4" size="1" name="SS" />
+      <BitField start="5" size="1" name="SSACTPOL" />
+      <BitField start="6" size="2" name="IFSEL" />
+      <BitField start="8" size="4" name="IDLECNT" />
+      <BitField start="16" size="16" name="DIVIDER" />
+    </Register>
+    <Register start="0x40007008" name="SPIM_VALIDCTL" access="Read/Write">
+      <BitField start="0" size="1" name="VALIDSTS" />
+      <BitField start="16" size="1" name="VALIDEN" />
+    </Register>
+    <Register start="0x40007010" name="SPIM_RX0" access="Read/Write">
+    </Register>
+    <Register start="0x40007014" name="SPIM_RX1" access="Read/Write">
+    </Register>
+    <Register start="0x40007018" name="SPIM_RX2" access="Read/Write">
+    </Register>
+    <Register start="0x4000701c" name="SPIM_RX3" access="Read/Write">
+    </Register>
+    <Register start="0x40007020" name="SPIM_TX0" access="Read/Write">
+    </Register>
+    <Register start="0x40007024" name="SPIM_TX1" access="Read/Write">
+    </Register>
+    <Register start="0x40007028" name="SPIM_TX2" access="Read/Write">
+    </Register>
+    <Register start="0x4000702c" name="SPIM_TX3" access="Read/Write">
+    </Register>
+    <Register start="0x40007030" name="SPIM_SRAMADDR" access="Read/Write">
+    </Register>
+    <Register start="0x40007034" name="SPIM_DMATBCNT" access="Read/Write">
+      <BitField start="0" size="24" name="CNT" />
+    </Register>
+    <Register start="0x40007038" name="SPIM_FADDR" access="Read/Write">
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="I2S">
+    <Register start="0x400e8000" name="I2S_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="I2SEN" />
+      <BitField start="1" size="1" name="TXEN" />
+      <BitField start="2" size="1" name="RXEN" />
+      <BitField start="3" size="1" name="MUTE" />
+      <BitField start="4" size="2" name="WDWIDTH" />
+      <BitField start="6" size="1" name="MONO" />
+      <BitField start="7" size="1" name="FORMAT" />
+      <BitField start="8" size="4" name="TXTH" />
+      <BitField start="12" size="4" name="RXTH" />
+      <BitField start="16" size="1" name="RZCEN" />
+      <BitField start="17" size="1" name="LZCEN" />
+      <BitField start="18" size="1" name="TXCLR" />
+      <BitField start="19" size="1" name="RXCLR" />
+      <BitField start="20" size="1" name="TXDMAEN" />
+      <BitField start="21" size="1" name="RXDMAEN" />
+      <BitField start="23" size="1" name="RXLCH" />
+      <BitField start="24" size="1" name="PCMEN" />
+      <BitField start="25" size="1" name="MCLKEN" />
+      <BitField start="26" size="1" name="SLAVE" />
+      <BitField start="28" size="1" name="CODECSEL" />
+      <BitField start="29" size="1" name="CODECRST" />
+    </Register>
+    <Register start="0x400e8004" name="I2S_CLKDIV" access="Read/Write">
+      <BitField start="0" size="6" name="MCLKDIV" />
+      <BitField start="8" size="9" name="BCLKDIV" />
+    </Register>
+    <Register start="0x400e8008" name="I2S_IEN" access="Read/Write">
+      <BitField start="0" size="1" name="RXUDIEN" />
+      <BitField start="1" size="1" name="RXOVIEN" />
+      <BitField start="2" size="1" name="RXTHIEN" />
+      <BitField start="4" size="1" name="RDMAEIEN" />
+      <BitField start="5" size="1" name="RDMATIEN" />
+      <BitField start="6" size="1" name="TDMAEIEN" />
+      <BitField start="7" size="1" name="TDMATIEN" />
+      <BitField start="8" size="1" name="TXUDIEN" />
+      <BitField start="9" size="1" name="TXOVIEN" />
+      <BitField start="10" size="1" name="TXTHIEN" />
+      <BitField start="11" size="1" name="RZCIEN" />
+      <BitField start="12" size="1" name="LZCIEN" />
+    </Register>
+    <Register start="0x400e800c" name="I2S_STATUS" access="Read/Write">
+      <BitField start="0" size="1" name="I2SIF" />
+      <BitField start="1" size="1" name="RXIF" />
+      <BitField start="2" size="1" name="TXIF" />
+      <BitField start="3" size="1" name="RIGHT" />
+      <BitField start="4" size="1" name="RDMAEIF" />
+      <BitField start="5" size="1" name="RDMATIF" />
+      <BitField start="6" size="1" name="TDMAEIF" />
+      <BitField start="7" size="1" name="TDMATIF" />
+      <BitField start="8" size="1" name="RXUDIF" />
+      <BitField start="9" size="1" name="RXOVIF" />
+      <BitField start="10" size="1" name="RXTHIF" />
+      <BitField start="11" size="1" name="RXFULL" />
+      <BitField start="12" size="1" name="RXEMPTY" />
+      <BitField start="16" size="1" name="TXUDIF" />
+      <BitField start="17" size="1" name="TXOVIF" />
+      <BitField start="18" size="1" name="TXTHIF" />
+      <BitField start="19" size="1" name="TXFULL" />
+      <BitField start="20" size="1" name="TXEMPTY" />
+      <BitField start="21" size="1" name="TXBUSY" />
+      <BitField start="22" size="1" name="RZCIF" />
+      <BitField start="23" size="1" name="LZCIF" />
+      <BitField start="24" size="4" name="RXCNT" />
+      <BitField start="28" size="4" name="TXCNT" />
+    </Register>
+    <Register start="0x400e8010" name="I2S_TX" access="Read/Write">
+    </Register>
+    <Register start="0x400e8014" name="I2S_RX" access="Read/Write">
+    </Register>
+    <Register start="0x400e8018" name="I2S_CODECCTL" access="Read/Write">
+      <BitField start="0" size="8" name="DAT" />
+      <BitField start="8" size="8" name="ADDR" />
+      <BitField start="16" size="1" name="RW" />
+      <BitField start="17" size="7" name="DEVID" />
+      <BitField start="24" size="7" name="I2CCKDIV" />
+      <BitField start="31" size="1" name="BUSY" />
+    </Register>
+    <Register start="0x400e8020" name="I2S_TXSTADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8024" name="I2S_TXTHADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8028" name="I2S_TXEADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e802c" name="I2S_TXCADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8030" name="I2S_RXSTADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8034" name="I2S_RXTHADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8038" name="I2S_RXEADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e803c" name="I2S_RXCADDR" access="Read/Write">
+    </Register>
+    <Register start="0x400e8040" name="I2S_RXAVGCTL" access="Read/Write">
+      <BitField start="0" size="4" name="WINSEL" />
+    </Register>
+    <Register start="0x400e8044" name="I2S_RXLCHAVG" access="Read/Write">
+    </Register>
+    <Register start="0x400e8048" name="I2S_RXRCHAVG" access="Read/Write">
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="USBD">
+    <Register start="0x40009000" name="USBD_GINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="USBIF" />
+      <BitField start="1" size="1" name="CEPIF" />
+      <BitField start="2" size="1" name="EPAIF" />
+      <BitField start="3" size="1" name="EPBIF" />
+      <BitField start="4" size="1" name="EPCIF" />
+      <BitField start="5" size="1" name="EPDIF" />
+      <BitField start="6" size="1" name="EPEIF" />
+      <BitField start="7" size="1" name="EPFIF" />
+      <BitField start="8" size="1" name="EPGIF" />
+      <BitField start="9" size="1" name="EPHIF" />
+      <BitField start="10" size="1" name="EPIIF" />
+      <BitField start="11" size="1" name="EPJIF" />
+      <BitField start="12" size="1" name="EPKIF" />
+      <BitField start="13" size="1" name="EPLIF" />
+    </Register>
+    <Register start="0x40009008" name="USBD_GINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="USBIEN" />
+      <BitField start="1" size="1" name="CEPIEN" />
+      <BitField start="2" size="1" name="EPAIEN" />
+      <BitField start="3" size="1" name="EPBIEN" />
+      <BitField start="4" size="1" name="EPCIEN" />
+      <BitField start="5" size="1" name="EPDIEN" />
+      <BitField start="6" size="1" name="EPEIEN" />
+      <BitField start="7" size="1" name="EPFIEN" />
+      <BitField start="8" size="1" name="EPGIEN" />
+      <BitField start="9" size="1" name="EPHIEN" />
+      <BitField start="10" size="1" name="EPIIEN" />
+      <BitField start="11" size="1" name="EPJIEN" />
+      <BitField start="12" size="1" name="EPKIEN" />
+      <BitField start="13" size="1" name="EPLIEN" />
+    </Register>
+    <Register start="0x40009010" name="USBD_BUSINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="SOFIF" />
+      <BitField start="1" size="1" name="RSTIF" />
+      <BitField start="2" size="1" name="RESUMEIF" />
+      <BitField start="3" size="1" name="SUSPENDIF" />
+      <BitField start="4" size="1" name="HISPDIF" />
+      <BitField start="5" size="1" name="DMADONEIF" />
+      <BitField start="6" size="1" name="PHYCLKVLDIF" />
+      <BitField start="8" size="1" name="VBUSDETIF" />
+    </Register>
+    <Register start="0x40009014" name="USBD_BUSINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="SOFIEN" />
+      <BitField start="1" size="1" name="RSTIEN" />
+      <BitField start="2" size="1" name="RESUMEIEN" />
+      <BitField start="3" size="1" name="SUSPENDIEN" />
+      <BitField start="4" size="1" name="HISPDIEN" />
+      <BitField start="5" size="1" name="DMADONEIEN" />
+      <BitField start="6" size="1" name="PHYCLKVLDIEN" />
+      <BitField start="8" size="1" name="VBUSDETIEN" />
+    </Register>
+    <Register start="0x40009018" name="USBD_OPER" access="Read/Write">
+      <BitField start="0" size="1" name="RESUMEEN" />
+      <BitField start="1" size="1" name="HISPDEN" />
+      <BitField start="2" size="1" name="CURSPD" />
+    </Register>
+    <Register start="0x4000901c" name="USBD_FRAMECNT" access="Read/Write">
+      <BitField start="0" size="3" name="MFRAMECNT" />
+      <BitField start="3" size="11" name="FRAMECNT" />
+    </Register>
+    <Register start="0x40009020" name="USBD_FADDR" access="Read/Write">
+      <BitField start="0" size="7" name="FADDR" />
+    </Register>
+    <Register start="0x40009024" name="USBD_TEST" access="Read/Write">
+      <BitField start="0" size="3" name="TESTMODE" />
+    </Register>
+    <Register start="0x40009028" name="USBD_CEPDAT" access="Read/Write">
+    </Register>
+    <Register start="0x4000902c" name="USBD_CEPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="NAKCLR" />
+      <BitField start="1" size="1" name="STALLEN" />
+      <BitField start="2" size="1" name="ZEROLEN" />
+      <BitField start="3" size="1" name="FLUSH" />
+    </Register>
+    <Register start="0x40009030" name="USBD_CEPINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="SETUPTKIEN" />
+      <BitField start="1" size="1" name="SETUPPKIEN" />
+      <BitField start="2" size="1" name="OUTTKIEN" />
+      <BitField start="3" size="1" name="INTKIEN" />
+      <BitField start="4" size="1" name="PINGIEN" />
+      <BitField start="5" size="1" name="TXPKIEN" />
+      <BitField start="6" size="1" name="RXPKIEN" />
+      <BitField start="7" size="1" name="NAKIEN" />
+      <BitField start="8" size="1" name="STALLIEN" />
+      <BitField start="9" size="1" name="ERRIEN" />
+      <BitField start="10" size="1" name="STSDONEIEN" />
+      <BitField start="11" size="1" name="BUFFULLIEN" />
+      <BitField start="12" size="1" name="BUFEMPTYIEN" />
+    </Register>
+    <Register start="0x40009034" name="USBD_CEPINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="SETUPTKIF" />
+      <BitField start="1" size="1" name="SETUPPKIF" />
+      <BitField start="2" size="1" name="OUTTKIF" />
+      <BitField start="3" size="1" name="INTKIF" />
+      <BitField start="4" size="1" name="PINGIF" />
+      <BitField start="5" size="1" name="TXPKIF" />
+      <BitField start="6" size="1" name="RXPKIF" />
+      <BitField start="7" size="1" name="NAKIF" />
+      <BitField start="8" size="1" name="STALLIF" />
+      <BitField start="9" size="1" name="ERRIF" />
+      <BitField start="10" size="1" name="STSDONEIF" />
+      <BitField start="11" size="1" name="BUFFULLIF" />
+      <BitField start="12" size="1" name="BUFEMPTYIF" />
+    </Register>
+    <Register start="0x40009038" name="USBD_CEPTXCNT" access="Read/Write">
+      <BitField start="0" size="8" name="TXCNT" />
+    </Register>
+    <Register start="0x4000903c" name="USBD_CEPRXCNT" access="Read/Write">
+      <BitField start="0" size="8" name="RXCNT" />
+    </Register>
+    <Register start="0x40009040" name="USBD_CEPDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+    </Register>
+    <Register start="0x40009044" name="USBD_SETUP1_0" access="Read/Write">
+      <BitField start="0" size="8" name="SETUP0" />
+      <BitField start="8" size="8" name="SETUP1" />
+    </Register>
+    <Register start="0x40009048" name="USBD_SETUP3_2" access="Read/Write">
+      <BitField start="0" size="8" name="SETUP2" />
+      <BitField start="8" size="8" name="SETUP3" />
+    </Register>
+    <Register start="0x4000904c" name="USBD_SETUP5_4" access="Read/Write">
+      <BitField start="0" size="8" name="SETUP4" />
+      <BitField start="8" size="8" name="SETUP5" />
+    </Register>
+    <Register start="0x40009050" name="USBD_SETUP7_6" access="Read/Write">
+      <BitField start="0" size="8" name="SETUP6" />
+      <BitField start="8" size="8" name="SETUP7" />
+    </Register>
+    <Register start="0x40009054" name="USBD_CEPBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009058" name="USBD_CEPBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x4000905c" name="USBD_DMACTL" access="Read/Write">
+      <BitField start="0" size="4" name="EPNUM" />
+      <BitField start="4" size="1" name="DMARD" />
+      <BitField start="5" size="1" name="DMAEN" />
+      <BitField start="6" size="1" name="SGEN" />
+      <BitField start="7" size="1" name="DMARST" />
+    </Register>
+    <Register start="0x40009060" name="USBD_DMACNT" access="Read/Write">
+      <BitField start="0" size="20" name="DMACNT" />
+    </Register>
+    <Register start="0x40009064" name="USBD_EPADAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009068" name="USBD_EPAINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x4000906c" name="USBD_EPAINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009070" name="USBD_EPADATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x40009074" name="USBD_EPARSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009078" name="USBD_EPAMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x4000907c" name="USBD_EPATXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009080" name="USBD_EPACFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x40009084" name="USBD_EPABUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009088" name="USBD_EPABUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x4000908c" name="USBD_EPBDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009090" name="USBD_EPBINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x40009094" name="USBD_EPBINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009098" name="USBD_EPBDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x4000909c" name="USBD_EPBRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x400090a0" name="USBD_EPBMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x400090a4" name="USBD_EPBTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x400090a8" name="USBD_EPBCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x400090ac" name="USBD_EPBBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x400090b0" name="USBD_EPBBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x400090b4" name="USBD_EPCDAT" access="Read/Write">
+    </Register>
+    <Register start="0x400090b8" name="USBD_EPCINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x400090bc" name="USBD_EPCINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x400090c0" name="USBD_EPCDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x400090c4" name="USBD_EPCRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x400090c8" name="USBD_EPCMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x400090cc" name="USBD_EPCTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x400090d0" name="USBD_EPCCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x400090d4" name="USBD_EPCBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x400090d8" name="USBD_EPCBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x400090dc" name="USBD_EPDDAT" access="Read/Write">
+    </Register>
+    <Register start="0x400090e0" name="USBD_EPDINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x400090e4" name="USBD_EPDINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x400090e8" name="USBD_EPDDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x400090ec" name="USBD_EPDRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x400090f0" name="USBD_EPDMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x400090f4" name="USBD_EPDTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x400090f8" name="USBD_EPDCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x400090fc" name="USBD_EPDBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009100" name="USBD_EPDBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x40009104" name="USBD_EPEDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009108" name="USBD_EPEINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x4000910c" name="USBD_EPEINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009110" name="USBD_EPEDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x40009114" name="USBD_EPERSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009118" name="USBD_EPEMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x4000911c" name="USBD_EPETXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009120" name="USBD_EPECFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x40009124" name="USBD_EPEBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009128" name="USBD_EPEBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x4000912c" name="USBD_EPFDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009130" name="USBD_EPFINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x40009134" name="USBD_EPFINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009138" name="USBD_EPFDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x4000913c" name="USBD_EPFRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009140" name="USBD_EPFMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x40009144" name="USBD_EPFTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009148" name="USBD_EPFCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x4000914c" name="USBD_EPFBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009150" name="USBD_EPFBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x40009154" name="USBD_EPGDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009158" name="USBD_EPGINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x4000915c" name="USBD_EPGINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009160" name="USBD_EPGDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x40009164" name="USBD_EPGRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009168" name="USBD_EPGMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x4000916c" name="USBD_EPGTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009170" name="USBD_EPGCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x40009174" name="USBD_EPGBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009178" name="USBD_EPGBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x4000917c" name="USBD_EPHDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009180" name="USBD_EPHINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x40009184" name="USBD_EPHINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009188" name="USBD_EPHDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x4000918c" name="USBD_EPHRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009190" name="USBD_EPHMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x40009194" name="USBD_EPHTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009198" name="USBD_EPHCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x4000919c" name="USBD_EPHBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x400091a0" name="USBD_EPHBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x400091a4" name="USBD_EPIDAT" access="Read/Write">
+    </Register>
+    <Register start="0x400091a8" name="USBD_EPIINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x400091ac" name="USBD_EPIINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x400091b0" name="USBD_EPIDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x400091b4" name="USBD_EPIRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x400091b8" name="USBD_EPIMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x400091bc" name="USBD_EPITXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x400091c0" name="USBD_EPICFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x400091c4" name="USBD_EPIBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x400091c8" name="USBD_EPIBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x400091cc" name="USBD_EPJDAT" access="Read/Write">
+    </Register>
+    <Register start="0x400091d0" name="USBD_EPJINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x400091d4" name="USBD_EPJINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x400091d8" name="USBD_EPJDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x400091dc" name="USBD_EPJRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x400091e0" name="USBD_EPJMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x400091e4" name="USBD_EPJTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x400091e8" name="USBD_EPJCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x400091ec" name="USBD_EPJBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x400091f0" name="USBD_EPJBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x400091f4" name="USBD_EPKDAT" access="Read/Write">
+    </Register>
+    <Register start="0x400091f8" name="USBD_EPKINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x400091fc" name="USBD_EPKINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009200" name="USBD_EPKDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x40009204" name="USBD_EPKRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009208" name="USBD_EPKMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x4000920c" name="USBD_EPKTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009210" name="USBD_EPKCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x40009214" name="USBD_EPKBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009218" name="USBD_EPKBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x4000921c" name="USBD_EPLDAT" access="Read/Write">
+    </Register>
+    <Register start="0x40009220" name="USBD_EPLINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIF" />
+      <BitField start="1" size="1" name="BUFEMPTYIF" />
+      <BitField start="2" size="1" name="SHORTTXIF" />
+      <BitField start="3" size="1" name="TXPKIF" />
+      <BitField start="4" size="1" name="RXPKIF" />
+      <BitField start="5" size="1" name="OUTTKIF" />
+      <BitField start="6" size="1" name="INTKIF" />
+      <BitField start="7" size="1" name="PINGIF" />
+      <BitField start="8" size="1" name="NAKIF" />
+      <BitField start="9" size="1" name="STALLIF" />
+      <BitField start="10" size="1" name="NYETIF" />
+      <BitField start="11" size="1" name="ERRIF" />
+      <BitField start="12" size="1" name="SHORTRXIF" />
+    </Register>
+    <Register start="0x40009224" name="USBD_EPLINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BUFFULLIEN" />
+      <BitField start="1" size="1" name="BUFEMPTYIEN" />
+      <BitField start="2" size="1" name="SHORTTXIEN" />
+      <BitField start="3" size="1" name="TXPKIEN" />
+      <BitField start="4" size="1" name="RXPKIEN" />
+      <BitField start="5" size="1" name="OUTTKIEN" />
+      <BitField start="6" size="1" name="INTKIEN" />
+      <BitField start="7" size="1" name="PINGIEN" />
+      <BitField start="8" size="1" name="NAKIEN" />
+      <BitField start="9" size="1" name="STALLIEN" />
+      <BitField start="10" size="1" name="NYETIEN" />
+      <BitField start="11" size="1" name="ERRIEN" />
+      <BitField start="12" size="1" name="SHORTRXIEN" />
+    </Register>
+    <Register start="0x40009228" name="USBD_EPLDATCNT" access="Read/Write">
+      <BitField start="0" size="16" name="DATCNT" />
+      <BitField start="16" size="15" name="DMALOOP" />
+    </Register>
+    <Register start="0x4000922c" name="USBD_EPLRSPCTL" access="Read/Write">
+      <BitField start="0" size="1" name="FLUSH" />
+      <BitField start="1" size="2" name="MODE" />
+      <BitField start="3" size="1" name="TOGGLE" />
+      <BitField start="4" size="1" name="HALT" />
+      <BitField start="5" size="1" name="ZEROLEN" />
+      <BitField start="6" size="1" name="SHORTTXEN" />
+      <BitField start="7" size="1" name="DISBUF" />
+    </Register>
+    <Register start="0x40009230" name="USBD_EPLMPS" access="Read/Write">
+      <BitField start="0" size="11" name="EPMPS" />
+    </Register>
+    <Register start="0x40009234" name="USBD_EPLTXCNT" access="Read/Write">
+      <BitField start="0" size="11" name="TXCNT" />
+    </Register>
+    <Register start="0x40009238" name="USBD_EPLCFG" access="Read/Write">
+      <BitField start="0" size="1" name="EPEN" />
+      <BitField start="1" size="2" name="EPTYPE" />
+      <BitField start="3" size="1" name="EPDIR" />
+      <BitField start="4" size="4" name="EPNUM" />
+    </Register>
+    <Register start="0x4000923c" name="USBD_EPLBUFSTART" access="Read/Write">
+      <BitField start="0" size="12" name="SADDR" />
+    </Register>
+    <Register start="0x40009240" name="USBD_EPLBUFEND" access="Read/Write">
+      <BitField start="0" size="12" name="EADDR" />
+    </Register>
+    <Register start="0x40009248" name="USBD_UVCHDAT0" access="Read/Write">
+    </Register>
+    <Register start="0x4000924c" name="USBD_UVCHDAT1" access="Read/Write">
+    </Register>
+    <Register start="0x40009250" name="USBD_UVCHDAT2" access="Read/Write">
+    </Register>
+    <Register start="0x40009254" name="USBD_UVCEPAHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009258" name="USBD_UVCEPBHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x4000925c" name="USBD_UVCEPCHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009260" name="USBD_UVCEPDHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009264" name="USBD_UVCEPEHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009268" name="USBD_UVCEPFHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x4000926c" name="USBD_UVCEPGHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009270" name="USBD_UVCEPHHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009274" name="USBD_UVCEPIHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009278" name="USBD_UVCEPJHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x4000927c" name="USBD_UVCEPKHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009280" name="USBD_UVCEPLHCNT" access="Read/Write">
+      <BitField start="0" size="4" name="CNT" />
+    </Register>
+    <Register start="0x40009700" name="USBD_DMAADDR" access="Read/Write">
+    </Register>
+    <Register start="0x40009704" name="USBD_PHYCTL" access="Read/Write">
+      <BitField start="8" size="1" name="DPPUEN" />
+      <BitField start="9" size="1" name="PHYEN" />
+      <BitField start="24" size="1" name="WKEN" />
+      <BitField start="31" size="1" name="VBUSDET" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="USBH">
+    <Register start="0x4000b000" name="HCREVISION" access="Read/Write">
+      <BitField start="0" size="8" name="REV" />
+    </Register>
+    <Register start="0x4000b004" name="HCCONTROL" access="Read/Write">
+      <BitField start="0" size="2" name="CBSR" />
+      <BitField start="2" size="1" name="PLE" />
+      <BitField start="3" size="1" name="IE" />
+      <BitField start="4" size="1" name="CLE" />
+      <BitField start="5" size="1" name="BLE" />
+      <BitField start="6" size="2" name="HCFS" />
+    </Register>
+    <Register start="0x4000b008" name="HCCOMMANDSTATUS" access="Read/Write">
+      <BitField start="0" size="1" name="HCR" />
+      <BitField start="1" size="1" name="CLF" />
+      <BitField start="2" size="1" name="BLF" />
+      <BitField start="16" size="2" name="SOC" />
+    </Register>
+    <Register start="0x4000b00c" name="HCINTERRUPTSTATUS" access="Read/Write">
+      <BitField start="0" size="1" name="SO" />
+      <BitField start="1" size="1" name="WDH" />
+      <BitField start="2" size="1" name="SF" />
+      <BitField start="3" size="1" name="RD" />
+      <BitField start="5" size="1" name="FNO" />
+      <BitField start="6" size="1" name="RHSC" />
+    </Register>
+    <Register start="0x4000b010" name="HCINTERRUPTENABLE" access="Read/Write">
+      <BitField start="0" size="1" name="SO" />
+      <BitField start="1" size="1" name="WDH" />
+      <BitField start="2" size="1" name="SF" />
+      <BitField start="3" size="1" name="RD" />
+      <BitField start="5" size="1" name="FNO" />
+      <BitField start="6" size="1" name="RHSC" />
+      <BitField start="31" size="1" name="MIE" />
+    </Register>
+    <Register start="0x4000b014" name="HCINTERRUPTDISABLE" access="Read/Write">
+      <BitField start="0" size="1" name="SO" />
+      <BitField start="1" size="1" name="WDH" />
+      <BitField start="2" size="1" name="SF" />
+      <BitField start="3" size="1" name="RD" />
+      <BitField start="5" size="1" name="FNO" />
+      <BitField start="6" size="1" name="RHSC" />
+      <BitField start="31" size="1" name="MIE" />
+    </Register>
+    <Register start="0x4000b018" name="HCHCCA" access="Read/Write">
+      <BitField start="8" size="24" name="HCCA" />
+    </Register>
+    <Register start="0x4000b01c" name="HCPERIODCURRENTED" access="Read/Write">
+      <BitField start="4" size="28" name="PCED" />
+    </Register>
+    <Register start="0x4000b020" name="HCCONTROLHEADED" access="Read/Write">
+      <BitField start="4" size="28" name="CHED" />
+    </Register>
+    <Register start="0x4000b024" name="HCCONTROLCURRENTED" access="Read/Write">
+      <BitField start="4" size="28" name="CCED" />
+    </Register>
+    <Register start="0x4000b028" name="HCBULKHEADED" access="Read/Write">
+      <BitField start="4" size="28" name="BHED" />
+    </Register>
+    <Register start="0x4000b02c" name="HCBULKCURRENTED" access="Read/Write">
+      <BitField start="4" size="28" name="BCED" />
+    </Register>
+    <Register start="0x4000b030" name="HCDONEHEAD" access="Read/Write">
+      <BitField start="4" size="28" name="DH" />
+    </Register>
+    <Register start="0x4000b034" name="HCFMINTERVAL" access="Read/Write">
+      <BitField start="0" size="14" name="FI" />
+      <BitField start="16" size="15" name="FSMPS" />
+      <BitField start="31" size="1" name="FIT" />
+    </Register>
+    <Register start="0x4000b038" name="HCFMREMAINING" access="Read/Write">
+      <BitField start="0" size="14" name="FR" />
+      <BitField start="31" size="1" name="FRT" />
+    </Register>
+    <Register start="0x4000b03c" name="HCFMNUMBER" access="Read/Write">
+      <BitField start="0" size="16" name="FN" />
+    </Register>
+    <Register start="0x4000b040" name="HCPERIODICSTART" access="Read/Write">
+      <BitField start="0" size="14" name="PS" />
+    </Register>
+    <Register start="0x4000b044" name="HCLSTHRESHOLD" access="Read/Write">
+      <BitField start="0" size="12" name="LST" />
+    </Register>
+    <Register start="0x4000b048" name="HCRHDESCRIPTORA" access="Read/Write">
+      <BitField start="0" size="8" name="NDP" />
+      <BitField start="8" size="1" name="PSM" />
+      <BitField start="11" size="1" name="OCPM" />
+      <BitField start="12" size="1" name="NOCP" />
+    </Register>
+    <Register start="0x4000b04c" name="HCRHDESCRIPTORB" access="Read/Write">
+      <BitField start="16" size="16" name="PPCM" />
+    </Register>
+    <Register start="0x4000b050" name="HCRHSTATUS" access="Read/Write">
+      <BitField start="0" size="1" name="LPS" />
+      <BitField start="1" size="1" name="OCI" />
+      <BitField start="15" size="1" name="DRWE" />
+      <BitField start="16" size="1" name="LPSC" />
+      <BitField start="17" size="1" name="OCIC" />
+      <BitField start="31" size="1" name="CRWE" />
+    </Register>
+    <Register start="0x4000b054" name="HCRHPORTSTATUS1" access="Read/Write">
+      <BitField start="0" size="1" name="CCS" />
+      <BitField start="1" size="1" name="PES" />
+      <BitField start="2" size="1" name="PSS" />
+      <BitField start="3" size="1" name="POCI" />
+      <BitField start="4" size="1" name="PRS" />
+      <BitField start="8" size="1" name="PPS" />
+      <BitField start="9" size="1" name="LSDA" />
+      <BitField start="16" size="1" name="CSC" />
+      <BitField start="17" size="1" name="PESC" />
+      <BitField start="18" size="1" name="PSSC" />
+      <BitField start="19" size="1" name="OCIC" />
+      <BitField start="20" size="1" name="PRSC" />
+    </Register>
+    <Register start="0x4000b058" name="HCRHPORTSTATUS2" access="Read/Write">
+      <BitField start="0" size="1" name="CCS" />
+      <BitField start="1" size="1" name="PES" />
+      <BitField start="2" size="1" name="PSS" />
+      <BitField start="3" size="1" name="POCI" />
+      <BitField start="4" size="1" name="PRS" />
+      <BitField start="8" size="1" name="PPS" />
+      <BitField start="9" size="1" name="LSDA" />
+      <BitField start="16" size="1" name="CSC" />
+      <BitField start="17" size="1" name="PESC" />
+      <BitField start="18" size="1" name="PSSC" />
+      <BitField start="19" size="1" name="OCIC" />
+      <BitField start="20" size="1" name="PRSC" />
+    </Register>
+    <Register start="0x4000b200" name="HCPHYCONTROL" access="Read/Write">
+      <BitField start="27" size="1" name="STBYEN" />
+    </Register>
+    <Register start="0x4000b204" name="HCMISCCONTROL" access="Read/Write">
+      <BitField start="0" size="1" name="DBR16" />
+      <BitField start="1" size="1" name="ABORT" />
+      <BitField start="3" size="1" name="OCAL" />
+      <BitField start="4" size="1" name="PCAL" />
+      <BitField start="8" size="1" name="SIEPD" />
+      <BitField start="16" size="1" name="DPRT1" />
+      <BitField start="17" size="1" name="DPRT2" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="SDH">
+    <Register start="0x4000a000" name="SDH_FB_0" access="Read/Write">
+    </Register>
+    <Register start="0x4000a004" name="SDH_FB_1" access="Read/Write">
+    </Register>
+    <Register start="0x4000a008" name="SDH_FB_2" access="Read/Write">
+    </Register>
+    <Register start="0x4000a00c" name="SDH_FB_3" access="Read/Write">
+    </Register>
+    <Register start="0x4000a010" name="SDH_FB_4" access="Read/Write">
+    </Register>
+    <Register start="0x4000a014" name="SDH_FB_5" access="Read/Write">
+    </Register>
+    <Register start="0x4000a018" name="SDH_FB_6" access="Read/Write">
+    </Register>
+    <Register start="0x4000a01c" name="SDH_FB_7" access="Read/Write">
+    </Register>
+    <Register start="0x4000a020" name="SDH_FB_8" access="Read/Write">
+    </Register>
+    <Register start="0x4000a024" name="SDH_FB_9" access="Read/Write">
+    </Register>
+    <Register start="0x4000a028" name="SDH_FB_10" access="Read/Write">
+    </Register>
+    <Register start="0x4000a02c" name="SDH_FB_11" access="Read/Write">
+    </Register>
+    <Register start="0x4000a030" name="SDH_FB_12" access="Read/Write">
+    </Register>
+    <Register start="0x4000a034" name="SDH_FB_13" access="Read/Write">
+    </Register>
+    <Register start="0x4000a038" name="SDH_FB_14" access="Read/Write">
+    </Register>
+    <Register start="0x4000a03c" name="SDH_FB_15" access="Read/Write">
+    </Register>
+    <Register start="0x4000a040" name="SDH_FB_16" access="Read/Write">
+    </Register>
+    <Register start="0x4000a044" name="SDH_FB_17" access="Read/Write">
+    </Register>
+    <Register start="0x4000a048" name="SDH_FB_18" access="Read/Write">
+    </Register>
+    <Register start="0x4000a04c" name="SDH_FB_19" access="Read/Write">
+    </Register>
+    <Register start="0x4000a050" name="SDH_FB_20" access="Read/Write">
+    </Register>
+    <Register start="0x4000a054" name="SDH_FB_21" access="Read/Write">
+    </Register>
+    <Register start="0x4000a058" name="SDH_FB_22" access="Read/Write">
+    </Register>
+    <Register start="0x4000a05c" name="SDH_FB_23" access="Read/Write">
+    </Register>
+    <Register start="0x4000a060" name="SDH_FB_24" access="Read/Write">
+    </Register>
+    <Register start="0x4000a064" name="SDH_FB_25" access="Read/Write">
+    </Register>
+    <Register start="0x4000a068" name="SDH_FB_26" access="Read/Write">
+    </Register>
+    <Register start="0x4000a06c" name="SDH_FB_27" access="Read/Write">
+    </Register>
+    <Register start="0x4000a070" name="SDH_FB_28" access="Read/Write">
+    </Register>
+    <Register start="0x4000a074" name="SDH_FB_29" access="Read/Write">
+    </Register>
+    <Register start="0x4000a078" name="SDH_FB_30" access="Read/Write">
+    </Register>
+    <Register start="0x4000a07c" name="SDH_FB_31" access="Read/Write">
+    </Register>
+    <Register start="0x4000a400" name="SDH_DMACTL" access="Read/Write">
+      <BitField start="0" size="1" name="DMAEN" />
+      <BitField start="1" size="1" name="DMARST" />
+      <BitField start="3" size="1" name="SGEN" />
+      <BitField start="9" size="1" name="DMABUSY" />
+    </Register>
+    <Register start="0x4000a408" name="SDH_DMASA" access="Read/Write">
+      <BitField start="0" size="1" name="ORDER" />
+      <BitField start="1" size="31" name="DMASA" />
+    </Register>
+    <Register start="0x4000a40c" name="SDH_DMABCNT" access="Read/Write">
+      <BitField start="0" size="26" name="BCNT" />
+    </Register>
+    <Register start="0x4000a410" name="SDH_DMAINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="ABORTIEN" />
+      <BitField start="1" size="1" name="WEOTIEN" />
+    </Register>
+    <Register start="0x4000a414" name="SDH_DMAINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="ABORTIF" />
+      <BitField start="1" size="1" name="WEOTIF" />
+    </Register>
+    <Register start="0x4000a800" name="SDH_GCTL" access="Read/Write">
+      <BitField start="0" size="1" name="GCTLRST" />
+      <BitField start="1" size="1" name="SDEN" />
+    </Register>
+    <Register start="0x4000a804" name="SDH_GINTEN" access="Read/Write">
+      <BitField start="0" size="1" name="DTAIEN" />
+    </Register>
+    <Register start="0x4000a808" name="SDH_GINTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="DTAIF" />
+    </Register>
+    <Register start="0x4000a820" name="SDH_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="COEN" />
+      <BitField start="1" size="1" name="RIEN" />
+      <BitField start="2" size="1" name="DIEN" />
+      <BitField start="3" size="1" name="DOEN" />
+      <BitField start="4" size="1" name="R2EN" />
+      <BitField start="5" size="1" name="CLK74OEN" />
+      <BitField start="6" size="1" name="CLK8OEN" />
+      <BitField start="7" size="1" name="CLKKEEP0" />
+      <BitField start="8" size="6" name="CMDCODE" />
+      <BitField start="14" size="1" name="CTLRST" />
+      <BitField start="15" size="1" name="DBW" />
+      <BitField start="16" size="8" name="BLKCNT" />
+      <BitField start="24" size="4" name="SDNWR" />
+    </Register>
+    <Register start="0x4000a824" name="SDH_CMDARG" access="Read/Write">
+    </Register>
+    <Register start="0x4000a828" name="SDH_INTEN" access="Read/Write">
+      <BitField start="0" size="1" name="BLKDIEN" />
+      <BitField start="1" size="1" name="CRCIEN" />
+      <BitField start="8" size="1" name="CDIEN0" />
+      <BitField start="10" size="1" name="SDHIEN0" />
+      <BitField start="12" size="1" name="RTOIEN" />
+      <BitField start="13" size="1" name="DITOIEN" />
+      <BitField start="30" size="1" name="CDSRC0" />
+    </Register>
+    <Register start="0x4000a82c" name="SDH_INTSTS" access="Read/Write">
+      <BitField start="0" size="1" name="BLKDIF" />
+      <BitField start="1" size="1" name="CRCIF" />
+      <BitField start="2" size="1" name="CRC7" />
+      <BitField start="3" size="1" name="CRC16" />
+      <BitField start="4" size="3" name="CRCSTS" />
+      <BitField start="7" size="1" name="DAT0STS" />
+      <BitField start="8" size="1" name="CDIF0" />
+      <BitField start="10" size="1" name="SDHIF0" />
+      <BitField start="12" size="1" name="RTOIF" />
+      <BitField start="13" size="1" name="DITOIF" />
+      <BitField start="16" size="1" name="CDSTS0" />
+      <BitField start="18" size="1" name="DAT1STS" />
+    </Register>
+    <Register start="0x4000a830" name="SDH_RESP0" access="Read/Write">
+    </Register>
+    <Register start="0x4000a834" name="SDH_RESP1" access="Read/Write">
+      <BitField start="0" size="8" name="RESPTK1" />
+    </Register>
+    <Register start="0x4000a838" name="SDH_BLEN" access="Read/Write">
+      <BitField start="0" size="11" name="BLKLEN" />
+    </Register>
+    <Register start="0x4000a83c" name="SDH_TOUT" access="Read/Write">
+      <BitField start="0" size="24" name="TOUT" />
+    </Register>
+  </RegisterGroup>
+  <RegisterGroup name="ADC">
+    <Register start="0x400e2000" name="ADC_CTL" access="Read/Write">
+      <BitField start="0" size="1" name="SWTRG" />
+      <BitField start="13" size="1" name="PD" />
+      <BitField start="15" size="1" name="PDKEY" />
+      <BitField start="16" size="3" name="CHSEL" />
+      <BitField start="24" size="8" name="EXTSMPT" />
+    </Register>
+    <Register start="0x400e2004" name="ADC_INTCTL" access="Read/Write">
+      <BitField start="0" size="1" name="ADCIF" />
+      <BitField start="1" size="1" name="KEYIF" />
+      <BitField start="8" size="1" name="ADCIEN" />
+      <BitField start="9" size="1" name="KEYIEN" />
+    </Register>
+    <Register start="0x400e2008" name="ADC_DAT" access="Read/Write">
+      <BitField start="0" size="12" name="RESULT" />
+    </Register>
+  </RegisterGroup>
+</Processor>

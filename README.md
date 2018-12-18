@@ -3,6 +3,8 @@ MCUmisfits
 
 This is a collection of unofficial support packages for microcontrollers that are not already supported by [Rowley Crossworks for ARM](http://www.rowley.co.uk/arm/).
 
+[Nuvoton NUC505](./Nuvoton_NUC505/README.md)
+
 [Cypress PSoC4](./Cypress_PSoC4/README.md)
 
 [Synwit SWM](./Synwit_SWM/README.md)
