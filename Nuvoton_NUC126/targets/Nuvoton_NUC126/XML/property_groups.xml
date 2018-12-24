@@ -1,0 +1,88 @@
+<!DOCTYPE CrossStudio_Group_Values>
+<propertyGroups>
+  <group short="Target Processor" group="Build Options" long="Select a set of target options" name="Target" default="NUC126VG4AE">
+    <groupEntry name="NUC126VG4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126VG4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x40000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+    <groupEntry name="NUC126SG4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126SG4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x40000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+    <groupEntry name="NUC126LG4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126LG4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x40000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+    <groupEntry name="NUC126SE4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126SE4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x20000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+    <groupEntry name="NUC126LE4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126LE4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x20000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+    <groupEntry name="NUC126NE4AE" family="NUC126">
+      <property name="arm_architecture" value="v6M" />
+      <property name="arm_core_type" value="Cortex-M0" />
+      <property name="arm_endian" value="Little" />
+      <property name="arm_fpu_type" value="None" />
+      <property name="arm_target_device_name" value="NUC126NE4AE" />
+      <property name="macros" value="DeviceIncludePath=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include;DeviceHeaderFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/Nuvoton_NUC126/XML/NUC126_Registers.xml;DeviceSystemFile=$(TargetsDir)/Nuvoton_NUC126/CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126;DeviceVectorsFile=$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s;DeviceLoaderFile=$(TargetsDir)/Nuvoton_NUC126/Loader/NUC126_Loader.elf" />
+      <property name="linker_memory_map_macros" value="FLASH_SIZE=0x20000" />
+      <cdefine name="ARM_MATH_CM0" />
+    </groupEntry>
+  </group>
+  <group short="Section Placement" group="Build Options" long="Select a set of options based on section placement." name="Placement" default="Flash">
+    <groupEntry name="Flash">
+      <property name="linker_section_placement_file" value="$(StudioDir)/targets/Cortex_M/flash_placement.xml" />
+      <property name="arm_target_loader_applicable_loaders" value="Flash" />
+      <property name="arm_target_loader_default_loader" value="Flash" />
+      <cdefine name="FLASH_PLACEMENT" value="1" />
+    </groupEntry>
+    <groupEntry name="RAM">
+      <property name="linker_section_placement_file" value="$(StudioDir)/targets/Cortex_M/ram_placement.xml" />
+      <property name="arm_target_loader_applicable_loaders" value=""/>
+      <property name="arm_target_loader_default_loader" value=""/>
+      <cdefine name="RAM_PLACEMENT" value="1" />
+    </groupEntry>
+  </group>
+  <group short="Startup From Reset" group="Build Options" long="Specify whether application will startup up by itself from reset." name="Startup" default="Release Only">
+    <groupEntry name="No" />
+    <groupEntry name="Release Only">
+      <cdefine name="STARTUP_FROM_RESET" configuration="Release" />
+    </groupEntry>
+    <groupEntry name="Yes">
+      <cdefine name="STARTUP_FROM_RESET" />
+    </groupEntry>
+  </group>
+</propertyGroups>

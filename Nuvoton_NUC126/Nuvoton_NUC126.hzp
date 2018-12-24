@@ -1,0 +1,21 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Nuvoton_NUC126_Package" target="8" version="2">
+  <configuration Name="Common" batch_build_configurations="Common" />
+  <project Name="BUILDME">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Nuvoton_NUC126/Loader/build -exclude targets/Nuvoton_NUC126/Loader/Loader.hzs Nuvoton_NUC126.hzq Nuvoton_NUC126_package.xml targets/Nuvoton_NUC126"
+      stage_post_build_command_wd="$(ProjectDir)" />
+    <file file_name="Nuvoton_NUC126_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="targets/Nuvoton_NUC126/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="targets/Nuvoton_NUC126/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+</solution>

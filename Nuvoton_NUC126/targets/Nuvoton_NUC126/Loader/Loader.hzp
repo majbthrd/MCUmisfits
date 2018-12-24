@@ -1,0 +1,71 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Loader" target="8" version="2">
+  <configuration
+    Name="NUC126 Release"
+    inherited_configurations="NUC126;Release" />
+  <configuration
+    Name="NUC126 Debug"
+    inherited_configurations="NUC126;Debug" />
+  <project Name="Nuvoton NUC126 Loader">
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Common"
+      arm_library_optimization="Small"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_interface_type="SWD"
+      batch_build_configurations="NUC126 Release"
+      build_intermediate_directory="build/$(ProjectName) $(Configuration)"
+      build_output_directory="build/$(ProjectName) $(Configuration)"
+      c_preprocessor_definitions="NO_SYSTEM_INIT;NO_VTOR_CONFIG"
+      debug_register_definition_file="$(DeviceRegisterDefinitionFile)"
+      gcc_entry_point="Reset_Handler"
+      linker_additional_files="$(StudioDir)/lib/libmem$(LibExt)$(LIB);$(StudioDir)/lib/libmem_loader$(LibExt)$(LIB)"
+      linker_map_file="No"
+      linker_memory_map_file="$(DeviceMemoryMapFile)"
+      linker_section_placement_file="$(StudioDir)/targets/Cortex_M/ram_placement.xml"
+      package_dependencies="CMSIS"
+      project_type="Executable"
+      property_groups_file_path="$(PackagesDir)/libraries/CMSIS_5/propertyGroups.xml"
+      target_reset_script="Reset();" />
+    <configuration
+      Name="Debug"
+      c_preprocessor_definitions="DEBUG"
+      gcc_debugging_level="Level 3"
+      gcc_optimization_level="None"
+      hidden="Yes" />
+    <configuration
+      Name="Release"
+      c_preprocessor_definitions="NDEBUG"
+      gcc_debugging_level="Level 1"
+      gcc_optimization_level="Optimize For Size"
+      hidden="Yes"
+      linker_strip_debug_information="Yes" />
+    <configuration
+      Name="NUC126"
+      arm_architecture="v6M"
+      arm_core_type="Cortex-M0"
+      arm_fpu_type="None"
+      arm_endian="Little"
+      arm_linker_heap_size="0"
+      arm_linker_stack_size="256"
+      arm_target_device_name="NUC126"
+      build_output_file_name="NUC126_Loader.elf"
+      c_preprocessor_definitions="ARM_MATH_CM0"
+      c_user_include_directories="$(DeviceIncludePath)"
+      linker_keep_symbols=""
+      linker_memory_map_macros=""
+      macros="DeviceIncludePath=../CMSIS/Device/NUC126/Include;DeviceHeaderFile=../CMSIS/Device/NUC126/Include/NUC126.h;DeviceMemoryMapFile=../XML/NUC126_MemoryMap.xml;DeviceRegisterDefinitionFile=../XML/NUC126_Registers.xml;DeviceSystemFile=../CMSIS/Device/NUC126/Source/system_NUC126.c;DeviceFamily=NUC126" />
+    <folder Name="Source Files">
+      <file file_name="Loader_Startup.s" />
+      <file file_name="NUC126_Loader.c" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="$(DeviceMemoryMapFile)" />
+    </folder>
+    <folder Name="Script Files">
+      <file file_name="../Scripts/NUC126_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+  </project>
+</solution>

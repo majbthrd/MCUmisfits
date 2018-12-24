@@ -1,0 +1,7 @@
+<!DOCTYPE Board_Memory_Definition_File>
+<Root name="NUC126" >
+  <MemorySegment name="FLASH"  start="0x00000000" size="$(FLASH_SIZE:0x80000)" access="ReadOnly" />
+  <MemorySegment name="LDROM"  start="0x00100000" size="0x1000" access="ReadOnly" />
+  <MemorySegment name="SPROM"  start="0x00200000" size="0x800"  access="ReadOnly" />
+  <MemorySegment name="RAM"    start="0x20000000" size="0x5000" access="Read/Write" />
+</Root>
