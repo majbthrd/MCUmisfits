@@ -142,8 +142,8 @@ USBD_IRQHandler:
   b .
 
   .thumb_func
-  .weak SC01_IRCHandler
-SC01_IRCHandler:
+  .weak SC01_IRQHandler
+SC01_IRQHandler:
   b .
 
   .thumb_func
@@ -235,7 +235,7 @@ _vectors:
   .word Default_Handler
   .word USCI_IRQHandler
   .word USBD_IRQHandler
-  .word SC01_IRCHandler
+  .word SC01_IRQHandler
   .word ACMP01_IRQHandler
   .word PDMA_IRQHandler
   .word Default_Handler

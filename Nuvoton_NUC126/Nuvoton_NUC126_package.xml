@@ -1,5 +1,5 @@
 <!DOCTYPE CrossStudio_Package_Description_File>
-<package cpu_manufacturer="Nuvoton" cpu_family="NUC126" version="0.1" crossstudio_versions="8:1.6-" >
+<package cpu_manufacturer="Nuvoton" cpu_family="NUC126" version="0.2" crossstudio_versions="8:1.6-" >
   <group title="System Files">
     <file file_name="$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Vectors.s" title="NUC126 Vector Table" />
     <file file_name="$(TargetsDir)/Nuvoton_NUC126/Source/NUC126_Startup.s" title="NUC126 Startup Code" />
@@ -9,6 +9,9 @@
     <file file_name="$(TargetsDir)/Nuvoton_NUC126/Loader/Loader.hzp" title="NUC126 Loader Solution" />
   </group>
   <history>
+    <version name="0.2" >
+      <description>corrected some typos</description>
+    </version>
     <version name="0.1" >
       <description>development</description>
     </version>

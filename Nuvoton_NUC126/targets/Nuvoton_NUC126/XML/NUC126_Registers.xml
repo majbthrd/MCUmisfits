@@ -1,5 +1,5 @@
 <!DOCTYPE Register_Definition_File>
-<Processor name="foo" description="foo foo">
+<Processor name="NUC126" description="Nuvoton NUC126">
   <RegisterGroup name="SYS">
     <Register start="0x50000000" name="SYS_PDID" access="Read/Write">
     </Register>

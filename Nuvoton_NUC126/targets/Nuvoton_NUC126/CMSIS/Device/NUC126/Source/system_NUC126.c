@@ -22,7 +22,7 @@
 uint32_t SystemCoreClock  = __HSI;              /*!< System Clock Frequency (Core Clock) */
 uint32_t CyclesPerUs      = (__HSI / 1000000);  /*!< Cycles per micro second             */
 uint32_t PllClock         = __HSI;              /*!< PLL Output Clock Frequency          */
-static const uint32_t gau32ClkSrcTbl[] = {__HXT, __LXT, __HSI, __LIRC, __HIRC48, NULL, NULL, __HIRC};
+static const uint32_t gau32ClkSrcTbl[] = { (uint32_t)__HXT, (uint32_t)__LXT, (uint32_t)__HSI, (uint32_t)__LIRC, (uint32_t)__HIRC48, (uint32_t)NULL, (uint32_t)NULL, (uint32_t)__HIRC};
 
 
 /**
