@@ -6,7 +6,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Synwit_SWM/Loader/build -exclude targets/Synwit_SWM/Loader/Loader.hzs $(ProjectDir)/Synwit_SWM.hzq packages targets/Synwit_SWM"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Synwit_SWM/Loader/build -exclude targets/Synwit_SWM/Loader/Loader.hzs ../Synwit_SWM.hzq packages targets/Synwit_SWM"
       stage_post_build_command_wd="$(ProjectDir)/RCS" />
     <file file_name="./RCS/packages/Synwit_SWM_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />
@@ -23,7 +23,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Synwit_SWM.emPackage packages Synwit_SWM"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c ../Synwit_SWM.emPackage packages Synwit_SWM"
       stage_post_build_command_wd="$(ProjectDir)/SES" />
     <file file_name="./SES/packages/Synwit_SWM_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />

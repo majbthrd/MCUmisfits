@@ -6,7 +6,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Cypress_PSoC4/Loader/build -exclude targets/Cypress_PSoC4/Loader/Loader.hzs $(ProjectDir)/Cypress_PSoC4.hzq packages targets/Cypress_PSoC4"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Cypress_PSoC4/Loader/build -exclude targets/Cypress_PSoC4/Loader/Loader.hzs ../Cypress_PSoC4.hzq packages targets/Cypress_PSoC4"
       stage_post_build_command_wd="$(ProjectDir)/RCS" />
     <file file_name="./RCS/packages/Cypress_PSoC4_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />
@@ -23,7 +23,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Cypress_PSoC4.emPackage packages Cypress_PSoC4"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c ../Cypress_PSoC4.emPackage packages Cypress_PSoC4"
       stage_post_build_command_wd="$(ProjectDir)/SES" />
     <file file_name="./SES/packages/Cypress_PSoC4_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />

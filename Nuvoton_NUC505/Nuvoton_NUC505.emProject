@@ -6,7 +6,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Nuvoton_NUC505/Loader/build -exclude targets/Nuvoton_NUC505/Loader/Loader.hzs $(ProjectDir)/Nuvoton_NUC505.hzq packages targets/Nuvoton_NUC505"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Nuvoton_NUC505/Loader/build -exclude targets/Nuvoton_NUC505/Loader/Loader.hzs ../Nuvoton_NUC505.hzq packages targets/Nuvoton_NUC505"
       stage_post_build_command_wd="$(ProjectDir)/RCS" />
     <file file_name="./RCS/packages/Nuvoton_NUC505_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />
@@ -23,7 +23,7 @@
       Name="Common"
       project_dependencies=""
       project_type="Staging"
-      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Nuvoton_NUC505.emPackage packages Nuvoton_NUC505"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c ../Nuvoton_NUC505.emPackage packages Nuvoton_NUC505"
       stage_post_build_command_wd="$(ProjectDir)/SES" />
     <file file_name="./SES/packages/Nuvoton_NUC505_package.xml">
       <configuration Name="Common" build_exclude_from_build="Yes" />
