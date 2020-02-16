@@ -1,0 +1,76 @@
+<!DOCTYPE CrossStudio_Package_Description_File>
+<package crossstudio_versions="8:3.0-" version="0.2" dependencies="CMSIS" filetype="hzq" cpu_family="PSoC4" cpu_manufacturer="Cypress" name="Cypress_PSoC4">
+  <group title="System Files">
+    <file file_name="$(TargetsDir)/Cypress_PSoC4/Source/PSoC4000_Vectors.s" title="PSoC4000 Vector Table" />
+    <file file_name="$(TargetsDir)/Cypress_PSoC4/Source/PSoC4_Startup.s" title="PSoC4 Startup Code" />
+    <file file_name="$(TargetsDir)/Cypress_PSoC4/Scripts/PSoC4_Target.js" title="PSoC4 Target Script" />
+  </group>
+  <group title="System Solutions">
+    <file file_name="$(TargetsDir)/Cypress_PSoC4/Loader/Loader.hzp" title="PSoC4 Loader Solution" />
+  </group>
+  <history>
+    <version name="0.2" >
+      <description>revised package files to target Rowley CrossStudio and SEGGER Embedded Studio</description>
+    </version>
+    <version name="0.1" >
+      <description>in development</description>
+    </version>
+  </history>
+  <targets>
+    <category name="CY8C4013">
+      <cpu name="CY8C4013SXI-400"/>
+      <cpu name="CY8C4013SXI-410"/>
+      <cpu name="CY8C4013SXI-411"/>
+      <cpu name="CY8C4013LQI-411"/>
+    </category>
+    <category name="CY8C4014">
+      <cpu name="CY8C4014SXI-420"/>
+      <cpu name="CY8C4014SXI-411"/>
+      <cpu name="CY8C4014SXI-421"/>
+      <cpu name="CY8C4014LQI-421"/>
+      <cpu name="CY8C4014LQI-412"/>
+      <cpu name="CY8C4014LQI-422"/>
+      <cpu name="CY8C4014PVI-412"/>
+      <cpu name="CY8C4014PVI-422"/>
+      <cpu name="CY8C4014FNI-421"/>
+      <cpu name="CY8C4014FNI-421A"/>
+    </category>
+    <category name="Other">
+      <cpu name="CY8C4014LQI-SLT1"/>
+      <cpu name="CY8C4014LQI-SLT2"/>
+    </category>
+    <category name="CY8C4024">
+      <cpu name="CY8C4024FNI-S402"/>
+      <cpu name="CY8C4024LQI-S401"/>
+      <cpu name="CY8C4024LQI-S402"/>
+      <cpu name="CY8C4024AXI-S402"/>
+      <cpu name="CY8C4024LQI-S403"/>
+      <cpu name="CY8C4024AZI-S403"/>
+      <cpu name="CY8C4024FNI-S412"/>
+      <cpu name="CY8C4024LQI-S411"/>
+      <cpu name="CY8C4024LQI-S412"/>
+      <cpu name="CY8C4024AXI-S412"/>
+      <cpu name="CY8C4024LQI-S413"/>
+      <cpu name="CY8C4024AZI-S413"/>
+    </category>
+    <category name="CY8C4025">
+      <cpu name="CY8C4025FNI-S402"/>
+      <cpu name="CY8C4025LQI-S401"/>
+      <cpu name="CY8C4025LQI-S402"/>
+      <cpu name="CY8C4025AXI-S402"/>
+      <cpu name="CY8C4025AZI-S403"/>
+      <cpu name="CY8C4025FNI-S412"/>
+      <cpu name="CY8C4025LQI-S411"/>
+      <cpu name="CY8C4025LQI-S412"/>
+      <cpu name="CY8C4025AXI-S412"/>
+      <cpu name="CY8C4025AZI-S413"/>
+    </category>
+    <category name="CY8C4045">
+      <cpu name="CY8C4045FNI-S412"/>
+      <cpu name="CY8C4045LQI-S411"/>
+      <cpu name="CY8C4045LQI-S412"/>
+      <cpu name="CY8C4045AXI-S412"/>
+      <cpu name="CY8C4045AZI-S413"/>
+    </category>
+  </targets>
+</package>

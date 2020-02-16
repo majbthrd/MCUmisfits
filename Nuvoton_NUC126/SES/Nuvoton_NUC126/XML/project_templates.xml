@@ -1,0 +1,130 @@
+<projects>
+  <project cpu_manufacturer="Nuvoton" cpu_name="" cpu_generic_name="NUC126" board_manufacturer="" board_name="" name="NUC126 C Executable" description="A C executable for Nuvoton NUC126." type="Executable" template_name="NUC126_EXE">
+    <property name="package_dependencies" value="Nuvoton_NUC126;CMSIS-CORE_V5" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_5/CMSIS/Core/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Nuvoton_NUC126/XML/property_groups.xml" />
+    <propertygroup name="Target" value="NUC126" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="debug_target_connection" value="J-Link" />
+    <property name="gcc_entry_point" value="Reset_Handler" />
+    <property name="linker_output_format" />
+    <property name="linker_printf_fmt_level" />
+    <property name="linker_printf_width_precision_supported" />
+    <property name="linker_printf_fp_enabled" />
+    <property name="linker_scanf_fmt_level" />
+    <property name="linker_scanf_fp_enabled" />
+    <property name="linker_scanf_character_group_matching_enabled" />
+    <property name="arm_linker_stack_size" value="1024" choose="Yes" />
+    <property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+    <property name="arm_linker_heap_size" value="1024" choose="Yes" />
+    <folder name="CMSIS Files">
+      <file name="$(DeviceHeaderFile)" expand="no" />
+      <file name="$(DeviceSystemFile)" expand="no">
+        <property name="default_code_section" value=".init" />
+        <property name="default_const_section" value=".init_rodata" />
+      </file>
+    </folder>
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Nuvoton_NUC126/Scripts/NUC126_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="main.c" source="$(PackagesDir)/Nuvoton_NUC126/Source/main.c" />
+    </folder>
+    <folder name="System Files">
+      <file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+        <property name="c_preprocessor_definitions" value="" />
+      </file>
+      <file name="$(PackagesDir)/Nuvoton_NUC126/Source/NUC126_Startup.s" expand="no" />
+      <file name="$(DeviceVectorsFile)" expand="no">
+        <property name="file_type" value="Assembly" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Nuvoton" cpu_name="" cpu_generic_name="NUC126" board_manufacturer="" board_name="" name="NUC126 Assembly Code Only Executable" description="An assembly code only executable for Nuvoton NUC126." type="Executable" template_name="NUC126_ASM_EXE">
+    <property name="package_dependencies" value="Nuvoton_NUC126;CMSIS-CORE_V5" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_5/CMSIS/Core/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Nuvoton_NUC126/XML/property_groups.xml" />
+    <propertygroup name="Target" value="NUC126" choose="Yes" />
+    <propertygroup name="Placement" value="Flash Copy To RAM" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="debug_target_connection" value="J-Link" />
+    <property name="gcc_entry_point" value="Reset_Handler" />
+    <property name="arm_linker_stack_size" value="1024" choose="Yes" />
+    <property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+    <property name="arm_linker_heap_size" value="0" choose="Yes" />
+    <property name="debug_initial_breakpoint" value="_start" />
+    <property name="debug_startup_completion_point" value="_start" />
+    <property name="link_include_standard_libraries" value="No" />
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Nuvoton_NUC126/Scripts/NUC126_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="start.s" source="$(PackagesDir)/Nuvoton_NUC126/Source/start.s" />
+    </folder>
+    <folder name="System Files">
+      <property name="c_preprocessor_definitions" value="NO_SYSTEM_INIT" />
+      <file name="$(PackagesDir)/Nuvoton_NUC126/Source/NUC126_Startup.s" expand="no" />
+      <file name="$(DeviceVectorsFile)" expand="no">
+        <property name="file_type" value="Assembly" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Nuvoton" cpu_name="" cpu_generic_name="NUC126" board_manufacturer="" board_name="" name="NUC126 Externally Built Executable" description="An externally built executable for Nuvoton NUC126." type="Externally Built Executable" template_name="NUC126_EXT_EXE">
+    <property name="package_dependencies" value="Nuvoton_NUC126;CMSIS-CORE_V5" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Nuvoton_NUC126/XML/property_groups.xml" />
+    <propertygroup name="Target" value="NUC126" choose="Yes" />
+    <propertygroup name="Placement" value="Flash Copy To RAM" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="external_build_file_name" />
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Nuvoton_NUC126/Scripts/NUC126_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Nuvoton" cpu_name="" cpu_generic_name="NUC126" board_manufacturer="" board_name="" name="NUC126 Library" description="A library for Nuvoton NUC126." type="Library" template_name="NUC126_LIB">
+    <property name="package_dependencies" value="Nuvoton_NUC126;CMSIS-CORE_V5" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_5/CMSIS/Core/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Nuvoton_NUC126/XML/property_groups.xml" />
+    <propertygroup name="Target" value="NUC126" choose="Yes" />
+    <propertygroup name="Placement" value="Flash Copy To RAM" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+  </project>
+</projects>

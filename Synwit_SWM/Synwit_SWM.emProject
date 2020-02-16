@@ -1,0 +1,39 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Synwit_SWM_Package" target="8" version="2">
+  <configuration Name="Common" batch_build_configurations="Common" />
+  <project Name="BUILDME for RCS">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Synwit_SWM/Loader/build -exclude targets/Synwit_SWM/Loader/Loader.hzs $(ProjectDir)/Synwit_SWM.hzq packages targets/Synwit_SWM"
+      stage_post_build_command_wd="$(ProjectDir)/RCS" />
+    <file file_name="./RCS/packages/Synwit_SWM_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Synwit_SWM/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Synwit_SWM/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <project Name="BUILDME for SES">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Synwit_SWM.emPackage packages Synwit_SWM"
+      stage_post_build_command_wd="$(ProjectDir)/SES" />
+    <file file_name="./SES/packages/Synwit_SWM_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Synwit_SWM/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Synwit_SWM/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <import file_name="./RCS/targets/Synwit_SWM/Loader/Loader.hzp" />
+</solution>

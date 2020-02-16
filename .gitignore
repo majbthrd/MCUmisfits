@@ -1,6 +1,11 @@
 *.bak
 *.hzs
 *.hzq
-./Cypress_PSoC4/targets/Cypress_PSoC4/build/*
-./Synwit_SWM/targets/Synwit_SWM/build/*
-
+*.elf
+Cypress_PSoC4/RCS/targets/Cypress_PSoC4/Loader/build/
+Synwit_SWM/RCS/targets/Synwit_SWM/Loader/build/
+Nuvoton_NUC126/RCS/targets/Nuvoton_NUC126/Loader/build/
+Nuvoton_NUC121_125/RCS/targets/Nuvoton_NUC121_125/Loader/build/
+Nuvoton_NUC505/RCS/targets/Nuvoton_NUC505/Loader/build/
+*.emSession
+*.emPackage

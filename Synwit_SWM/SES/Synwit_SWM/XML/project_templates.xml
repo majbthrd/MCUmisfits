@@ -1,0 +1,134 @@
+<projects>
+  <project cpu_manufacturer="Synwit" cpu_name="" cpu_generic_name="SWM" board_manufacturer="" board_name="" name="SWM C Executable" description="A C executable for Synwit SWM." type="Executable" template_name="SWM_EXE">
+    <property name="package_dependencies" value="Synwit_SWM" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_4/CMSIS/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Synwit_SWM/XML/property_groups.xml" />
+    <propertygroup name="Target" value="SWM050" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="debug_target_connection" value="J-Link" />
+    <property name="gcc_entry_point" value="Reset_Handler" />
+    <property name="linker_output_format" />
+    <property name="linker_printf_fmt_level" />
+    <property name="linker_printf_width_precision_supported" />
+    <property name="linker_printf_fp_enabled" />
+    <property name="linker_scanf_fmt_level" />
+    <property name="linker_scanf_fp_enabled" />
+    <property name="linker_scanf_character_group_matching_enabled" />
+    <property name="arm_linker_stack_size" value="256" choose="Yes" />
+    <property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+    <property name="arm_linker_heap_size" value="256" choose="Yes" />
+    <folder name="CMSIS Files">
+      <file name="$(DeviceHeaderFile)" expand="no" />
+      <file name="$(DeviceSystemFile)" expand="no">
+        <property name="default_code_section" value=".init" />
+        <property name="default_const_section" value=".init_rodata" />
+      </file>
+    </folder>
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Synwit_SWM/Scripts/SWM_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="main.c" source="$(PackagesDir)/Synwit_SWM/Source/main.c" />
+    </folder>
+    <folder name="System Files">
+      <file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+        <property name="c_preprocessor_definitions" value="" />
+      </file>
+      <file name="$(PackagesDir)/Synwit_SWM/Source/SWM_Startup.s" expand="no" />
+      <file name="$(DeviceVectorsFile)" expand="no">
+        <property name="file_type" value="Assembly" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Synwit" cpu_name="" cpu_generic_name="SWM" board_manufacturer="" board_name="" name="SWM Assembly Code Only Executable" description="An assembly code only executable for Synwit SWM." type="Executable" template_name="SWM_ASM_EXE">
+    <property name="package_dependencies" value="Synwit_SWM" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_4/CMSIS/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Synwit_SWM/XML/property_groups.xml" />
+    <propertygroup name="Target" value="SWM050" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="debug_target_connection" value="J-Link" />
+    <property name="gcc_entry_point" value="Reset_Handler" />
+    <property name="arm_linker_stack_size" value="256" choose="Yes" />
+    <property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+    <property name="arm_linker_heap_size" value="0" choose="Yes" />
+    <property name="debug_initial_breakpoint" value="_start" />
+    <property name="debug_startup_completion_point" value="_start" />
+    <property name="link_include_standard_libraries" value="No" />
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Synwit_SWM/Scripts/SWM_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+      <file name="start.s" source="$(PackagesDir)/Synwit_SWM/Source/start.s" />
+    </folder>
+    <folder name="System Files">
+      <property name="c_preprocessor_definitions" value="NO_SYSTEM_INIT" />
+      <file name="$(PackagesDir)/Synwit_SWM/Source/SWM_Startup.s" expand="no" />
+      <file name="$(DeviceVectorsFile)" expand="no">
+        <property name="file_type" value="Assembly" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Synwit" cpu_name="" cpu_generic_name="SWM" board_manufacturer="" board_name="" name="SWM Externally Built Executable" description="An externally built executable for Synwit SWM." type="Externally Built Executable" template_name="SWM_EXT_EXE">
+    <property name="package_dependencies" value="Synwit_SWM" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Synwit_SWM/XML/property_groups.xml" />
+    <propertygroup name="Target" value="SWM050" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <property name="external_build_file_name" />
+    <folder name="Script Files">
+      <file name="$(PackagesDir)/Synwit_SWM/Scripts/SWM_Target.js" expand="no">
+        <property name="file_type" value="Reset Script" />
+      </file>
+    </folder>
+  </project>
+  <project cpu_manufacturer="Synwit" cpu_name="" cpu_generic_name="SWM" board_manufacturer="" board_name="" name="SWM Library" description="A library for Synwit SWM." type="Library" template_name="SWM_LIB">
+    <property name="package_dependencies" value="Synwit_SWM" />
+    <configuration name="THUMB Debug" />
+    <configuration name="THUMB Release" />
+    <property name="CMSIS_CORE" value="Yes" />
+    <property name="arm_interwork" value="No" />
+    <property name="c_user_include_directories" value="$(DeviceIncludePath);$(PackagesDir)/CMSIS_4/CMSIS/Include" />
+    <property name="property_groups_file_path" value="$(PackagesDir)/Synwit_SWM/XML/property_groups.xml" />
+    <propertygroup name="Target" value="SWM050" choose="Yes" />
+    <propertygroup name="Placement" value="Flash" choose="Yes" />
+    <property name="arm_target_debug_interface_type" value="ADIv5" />
+    <property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+    <property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+    <property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+    <property name="target_reset_script" value="Reset();" />
+    <property name="arm_target_interface_type" value="SWD" />
+    <folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+  </project>
+</projects>

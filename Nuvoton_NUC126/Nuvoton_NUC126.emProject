@@ -1,0 +1,39 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Nuvoton_NUC126_Package" target="8" version="2">
+  <configuration Name="Common" batch_build_configurations="Common" />
+  <project Name="BUILDME for RCS">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Nuvoton_NUC126/Loader/build -exclude targets/Nuvoton_NUC126/Loader/Loader.hzs $(ProjectDir)/Nuvoton_NUC126.hzq packages targets/Nuvoton_NUC126"
+      stage_post_build_command_wd="$(ProjectDir)/RCS" />
+    <file file_name="./RCS/packages/Nuvoton_NUC126_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Nuvoton_NUC126/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Nuvoton_NUC126/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <project Name="BUILDME for SES">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Nuvoton_NUC126.emPackage packages Nuvoton_NUC126"
+      stage_post_build_command_wd="$(ProjectDir)/SES" />
+    <file file_name="./SES/packages/Nuvoton_NUC126_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Nuvoton_NUC126/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Nuvoton_NUC126/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <import file_name="./RCS/targets/Nuvoton_NUC126/Loader/Loader.hzp" />
+</solution>
