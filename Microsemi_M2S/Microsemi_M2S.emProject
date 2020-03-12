@@ -1,0 +1,39 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Microsemi_M2S_Package" target="8" version="2">
+  <configuration Name="Common" batch_build_configurations="Common" />
+  <project Name="BUILDME for RCS">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c -exclude targets/Microsemi_M2S/Loader/build -exclude targets/Microsemi_M2S/Loader/Loader.hzs $(ProjectDir)/Microsemi_M2S.hzq packages targets/Microsemi_M2S"
+      stage_post_build_command_wd="$(ProjectDir)/RCS" />
+    <file file_name="./RCS/packages/Microsemi_M2S_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Microsemi_M2S/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./RCS/targets/Microsemi_M2S/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <project Name="BUILDME for SES">
+    <configuration
+      Name="Common"
+      project_dependencies=""
+      project_type="Staging"
+      stage_post_build_command="$(StudioDir)/bin/mkpkg -c $(ProjectDir)/Microsemi_M2S.emPackage packages Microsemi_M2S"
+      stage_post_build_command_wd="$(ProjectDir)/SES" />
+    <file file_name="./SES/packages/Microsemi_M2S_package.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Microsemi_M2S/XML/project_templates.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+    <file file_name="./SES/Microsemi_M2S/XML/property_groups.xml">
+      <configuration Name="Common" build_exclude_from_build="Yes" />
+    </file>
+  </project>
+  <import file_name="./RCS/targets/Microsemi_M2S/Loader/Loader.hzp" />
+</solution>

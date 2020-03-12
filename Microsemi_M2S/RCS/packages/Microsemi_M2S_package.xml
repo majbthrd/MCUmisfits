@@ -1,0 +1,29 @@
+<!DOCTYPE CrossStudio_Package_Description_File>
+<package cpu_manufacturer="Microsemi" cpu_family="M2S" version="0.1" crossstudio_versions="8:1.6-" >
+  <group title="System Files">
+    <file file_name="$(TargetsDir)/Microsemi_M2S/Source/M2S_Vectors.s" title="M2S Vector Table" />
+    <file file_name="$(TargetsDir)/Microsemi_M2S/Source/M2S_Startup.s" title="M2S Startup Code" />
+    <file file_name="$(TargetsDir)/Microsemi_M2S/Scripts/M2S_Target.js" title="M2S Target Script" />
+  </group>
+  <group title="System Solutions">
+    <file file_name="$(TargetsDir)/Microsemi_M2S/Loader/Loader.hzp" title="M2S Loader Solution" />
+  </group>
+  <history>
+    <version name="0.1" >
+      <description>development</description>
+    </version>
+  </history>
+  <targets>
+    <category name="M2S (SmartFusion2)">
+      <cpu name="M2S005"/>
+      <cpu name="M2S010"/>
+      <cpu name="M2S025"/>
+      <cpu name="M2S050"/>
+      <cpu name="M2S060"/>
+      <cpu name="M2S080"/>
+      <cpu name="M2S090"/>
+      <cpu name="M2S120"/>
+      <cpu name="M2S150"/>
+    </category>
+  </targets>
+</package>

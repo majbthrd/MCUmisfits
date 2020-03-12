@@ -1,0 +1,17 @@
+<!DOCTYPE Board_Memory_Definition_File>
+<root name="SmartFusion2">
+  <MemorySegment name="remap"         start="0x00000000" size="$(FLASH_SIZE:131072)" access="ReadOnly" />
+  <MemorySegment name="FLASH"         start="0x60000000" size="$(FLASH_SIZE:131072)" access="ReadOnly" />
+  <MemorySegment name="SRAM"          start="0x20000000" size="$(SRAM_SIZE:65536)" access="Read/Write" />
+  <MemorySegment name="FIC Region 0"  start="0x30000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="registers"     start="0x40000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="FIC Region 1"  start="0x50000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="FIC Region 2"  start="0x70000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="FIC Region 3"  start="0x80000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="FIC Region 4"  start="0x90000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="MDDR Space 0"  start="0xA0000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="MDDR Space 1"  start="0xB0000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="MDDR Space 2"  start="0xC0000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="MDDR Space 3"  start="0xD0000000" size="0x10000000" access="Read/Write" />
+  <MemorySegment name="FIC Region 5"  start="0xF0000000" size="0x10000000" access="Read/Write" />
+</root>

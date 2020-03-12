@@ -1,0 +1,71 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="Loader" target="8" version="2">
+  <configuration
+    Name="M2S Release"
+    inherited_configurations="M2S;Release" />
+  <configuration
+    Name="M2S Debug"
+    inherited_configurations="M2S;Debug" />
+  <project Name="Microsemi M2S Loader">
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Common"
+      arm_library_optimization="Small"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_interface_type="SWD"
+      batch_build_configurations="M2S Release"
+      build_intermediate_directory="build/$(ProjectName) $(Configuration)"
+      build_output_directory="build/$(ProjectName) $(Configuration)"
+      c_preprocessor_definitions="NO_SYSTEM_INIT;NO_VTOR_CONFIG"
+      debug_register_definition_file="$(DeviceRegisterDefinitionFile)"
+      gcc_entry_point="Reset_Handler"
+      linker_additional_files="$(StudioDir)/lib/libmem$(LibExt)$(LIB);$(StudioDir)/lib/libmem_loader$(LibExt)$(LIB)"
+      linker_map_file="No"
+      linker_memory_map_file="$(DeviceMemoryMapFile)"
+      linker_section_placement_file="$(StudioDir)/targets/Cortex_M/ram_placement.xml"
+      package_dependencies="CMSIS"
+      project_type="Executable"
+      property_groups_file_path="$(PackagesDir)/libraries/CMSIS_5/propertyGroups.xml"
+      target_reset_script="Reset();" />
+    <configuration
+      Name="Debug"
+      c_preprocessor_definitions="DEBUG"
+      gcc_debugging_level="Level 3"
+      gcc_optimization_level="None"
+      hidden="Yes" />
+    <configuration
+      Name="Release"
+      c_preprocessor_definitions="NDEBUG"
+      gcc_debugging_level="Level 1"
+      gcc_optimization_level="Optimize For Size"
+      hidden="Yes"
+      linker_strip_debug_information="Yes" />
+    <configuration
+      Name="M2S"
+      arm_architecture="v7M"
+      arm_core_type="Cortex-M3"
+      arm_fpu_type="None"
+      arm_endian="Little"
+      arm_linker_heap_size="0"
+      arm_linker_stack_size="256"
+      arm_target_device_name="M2S"
+      build_output_file_name="M2S_Loader.elf"
+      c_user_include_directories="$(DeviceIncludePath)"
+      linker_keep_symbols=""
+      linker_memory_map_macros=""
+      macros="DeviceIncludePath=../CMSIS/Device/M2S/Include;DeviceHeaderFile=../CMSIS/Device/M2S/Include/M2S.h;DeviceMemoryMapFile=../XML/M2S_MemoryMap.xml;DeviceRegisterDefinitionFile=../XML/M2S_Registers.xml;DeviceSystemFile=../CMSIS/Device/M2S/Source/system_M2S.c;DeviceFamily=M2S" />
+    <folder Name="Source Files">
+      <file file_name="Loader_Startup.s" />
+      <file file_name="M2S_Loader.c" />
+      <file file_name="mss_nvm.c" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="$(DeviceMemoryMapFile)" />
+    </folder>
+    <folder Name="Script Files">
+      <file file_name="../Scripts/M2S_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+  </project>
+</solution>

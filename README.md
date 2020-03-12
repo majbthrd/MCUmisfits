@@ -19,6 +19,8 @@ This is a collection of unofficial CPU support packages for some such microcontr
 
 [Synwit SWM](./Synwit_SWM/README.md)
 
+[Microsemi SmartFusion2](./Microsemi_M2S/README.md)
+
 ## Installing a pre-built package (most likely option)
 
 Most users will likely just want to download the Rowley .hzq / SEGGER .emPackage files from the Releases tab near the top of this page.

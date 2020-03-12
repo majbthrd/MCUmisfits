@@ -7,5 +7,6 @@ Synwit_SWM/RCS/targets/Synwit_SWM/Loader/build/
 Nuvoton_NUC126/RCS/targets/Nuvoton_NUC126/Loader/build/
 Nuvoton_NUC121_125/RCS/targets/Nuvoton_NUC121_125/Loader/build/
 Nuvoton_NUC505/RCS/targets/Nuvoton_NUC505/Loader/build/
+Microsemi_M2S/RCS/targets/Microsemi_M2S/Loader/build/
 *.emSession
 *.emPackage
