@@ -13,20 +13,19 @@ Rather than put both FPGA and ARM Cortex-M3 JTAG interfaces in the same boundary
 
 Confusingly, there are at least four variants of FlashPro5 devices sold by Actel/Microsemi/Microchip.  Each has the same USB VID:PID, but all have different internal signal mappings that render them incompatible.  So, one variant might use one of the pins as an output enable to a driver buffer, but another might use that same pin in a different manner that might cause electrical contention or erroneous behavior.  One of those FlashPro5 variants is embedded in the inexpensive [SmartFusion2 Maker Board](https://www.digikey.com/en/product-highlight/m/microsemi-soc/smartfusion2-maker-board).
 
-Due to bugs in Segger's implementation, Segger Embedded Studio cannot properly debug a SmartFusion2 target.  When asked to debug a SmartFusion2 target, it falsely claims that the user must purchase a higher cost J-Link with flash breakpoints.  However, with the exact same J-Link hardware and J-Link driver, but with Rowley Crossworks for ARM as the debugger, the Segger J-Link does not make such an erroneous claim.
+A SEGGER J-Link can only be used with a JTAGSEL = '0' configuration.  Even though the J-Link can be directed to issue the special bit sequence that works with JTAGSEL = '1', SEGGER's implementation insists on performing a JTAG test logic reset whenever connecting to the ARM target, and that action immediately reverses all that hard work.
 
-When using Rowley Crossworks for ARM, a Segger J-Link can be used with a JTAGSEL = '0' configuration.  Even though the J-Link can be directed to issue the special bit sequence that works with JTAGSEL = '1', Segger's implementation insists on performing a JTAG test logic reset whenever connecting to the ARM target, and that action immediately reverses all that hard work.
+This package was tested successfully with the following configurations:
 
-This package was tested successfully with the following Rowley Crossworks for ARM configurations:
+|JTAGSEL|target         |debugger       |IDE                      |
+|-------|---------------|---------------|-------------------------|
+|0      |Emcraft SF2 kit|SEGGER J-Link  |Rowley Crossworks for ARM|
+|0      |Emcraft SF2 kit|SEGGER J-Link  |SEGGER Embedded Studio   |
+|0      |Emcraft SF2 kit|Amontec JTAGkey|Rowley Crossworks for ARM|
+|1      |[SmartFusion2 Maker Board](https://www.digikey.com/en/product-highlight/m/microsemi-soc/smartfusion2-maker-board)|integrated Embedded FlashPro5|Rowley Crossworks for ARM|
+|1      |Emcraft SF2 kit|Amontec JTAGkey|Rowley Crossworks for ARM|
 
-|JTAGSEL|target         |debugger       |
-|-------|---------------|---------------|
-|0      |Emcraft SF2 kit|Segger J-Link  |
-|0      |Emcraft SF2 kit|Amontec JTAGkey|
-|1      |[SmartFusion2 Maker Board](https://www.digikey.com/en/product-highlight/m/microsemi-soc/smartfusion2-maker-board)|integrated Embedded FlashPro5|
-|1      |Emcraft SF2 kit|Amontec JTAGkey|
-
-To use the [SmartFusion2 Maker Board](https://www.digikey.com/en/product-highlight/m/microsemi-soc/smartfusion2-maker-board), you must add a new target interface of type 'Generic FT2232 Device' and employ this configuration:
+To use the [SmartFusion2 Maker Board](https://www.digikey.com/en/product-highlight/m/microsemi-soc/smartfusion2-maker-board), you must use Rowley Crossworks for ARM; SEGGER Embedded Studio is incompatible with this target.  When first using the board, add a new target interface of type 'Generic FT2232 Device' and employ this configuration:
 
 ```
 <GenericFT2232TargetInterface outputDirection="0x007B" fastMemoryAccessesEnabled="No" favorite="Yes" trstMask="0x0010" usbPid="0x2008" srstMask="0x0000" outputValue="0x0078" name="Microsemi Embedded FlashPro5" usbVid="0x1514" jtagDivider="5"/>
@@ -38,4 +37,6 @@ If using the [SmartFusion2 Maker Board](https://www.digikey.com/en/product-highl
 # Microsemi Embedded FlashPro5
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="1514", ATTRS{idProduct}=="2008", MODE="0666"
 ```
+
+In the more unusual scenario where the user has both Rowley Crossworks for ARM and SEGGER Embedded Studio installed on the same PC, at the time of writing there is a bug in SEGGER's implementation.  If the J-Link is not unplugged and then plugged back in before loading the IDE, SEGGER Embedded Studio will falsely claim that the user must purchase a higher cost J-Link with flash breakpoints.
 
